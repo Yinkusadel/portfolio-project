@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+body {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: url(images/header-illsutration-mobile@2x.png);
+}
+
+.welcome-nav {
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    height: 200px;
+}
+
+.welcome-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.enabled-img {
+    width: 100px;
+    height: 100px;
+}
