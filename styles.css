@@ -3,14 +3,17 @@
 body {
     padding-left: 20px;
     padding-right: 20px;
+    font-family: 'Inter', sans-serif;
     background-image: url(images/header-illsutration-mobile@2x.png);
+    background-repeat: no-repeat;;
+    background-size: 100% 100%;
 }
 
+/* Header welcome nav styled */
 .welcome-nav {
     font-size: 25px;
-    font-family: 'Inter', sans-serif;
     font-weight: 600;
-    height: 200px;
+    height: 150px;
 }
 
 .welcome-content {
@@ -21,4 +24,32 @@ body {
 .enabled-img {
     width: 100px;
     height: 100px;
+}
+
+/* INFO style starts here  */
+
+.my-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.my-info .info-name {
+    color:#172B4D;
+}
+
+.my-info .occupation {
+    color: #36B37E;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.description-text {
+    width: 50%;
 }
