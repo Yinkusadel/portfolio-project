@@ -1,16 +1,22 @@
-# Project Name
+# portfolio project 1
 
-> One paragraph statement about the project.
+> A portfolio project with links to my social media accounts
 
 ![screenshot](./app_screenshot.png)
 
-Additional description of the project and its features.
-
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- ### HTML5 elements
+  - **Block element** `div` `p`
+- ### CSS properties
+  - CSS Typography `font-size`, `font-style`, `font-family`
+  - CSS `flexbox`
+  - CSS background for page aesthetic using `background-image`
+- ### Linters
+  - [prettier](prettier),
+  - [stylelint](stylelint).
+
+### GitHub Action
 
 ## Live Demo
 
@@ -21,7 +27,7 @@ Additional description of the project and its features.
 - Clone the project
 
 ```bash
-git clone https://github.com/user/html-css-template.git
+git clone https://github.com/Yinkusadel/portfolio-project/pull/1
 
 ```
 
@@ -65,14 +71,14 @@ yarn hint
 
 - [CSS Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
 - [HTML Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
-- [JavaScript Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
 - [Git Style Guide](https://udacity.github.io/git-styleguide/)
 
 ## 👤 Author
 
-- Github: [@author](https://github.com/author)
-- Twitter: [@author](https://twitter.com/author)
-- Linkedin: [@author](https://www.linkedin.com/in/author/)
+- Github: [@yinkusadel](https://github.com/yinkusadel)
+- Twitter: [@HashiraAdel](https://twitter.com/HashiraAdel)
+- Linkedin: [@adeleyeolayinka](https://www.linkedin.com/in/adeleye-olayinka/)
+- FreeCodeCamp: [@yinkusadel](https://www.freecodecamp.org/Yinkusadel)
 
 ## 🤝 Contributing
 
@@ -86,9 +92,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration, resources/assets used
-- etc
+- Portfolio project: [@portfolio project](https://www.figma.com/file/LKueaSlr8Kc2yMKeZkKgtm/portfolio_project?type=design&node-id=1-468&t=g1nOg1ehal0IHfKH-0)
 
 ## 📝 License
 
