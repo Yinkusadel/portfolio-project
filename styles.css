@@ -3,6 +3,9 @@
 body {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.header {
   font-family: Inter, sans-serif;
   background-image: url("images/header-illsutration-mobile@2x.png");
   background-repeat: no-repeat;
@@ -34,6 +37,7 @@ body {
   align-items: center;
   font-size: 40px;
   font-weight: bold;
+  line-height: 52px;
 }
 
 .my-info .info-name {
@@ -48,19 +52,35 @@ body {
   display: flex;
   justify-content: center;
   font-weight: 500;
-  height: 150px;
 }
 
 .description-text {
-  width: 50%;
+  width: 80%;
 }
+
+/* social media icon style starts here  */
 
 .socialmedias {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
 }
 
-.socialmedias a {
+.socialmedias ul {
   display: flex;
+}
+
+.socialmedias li {
+  display: flex;
+  align-items: center;
   padding: 10px;
+  list-style-type: none;
+}
+
+.socialmedias span {
+  display: none;
+}
+
+.socialmedias a:hover {
+  background-color: #5287e4;
 }
