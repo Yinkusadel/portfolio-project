@@ -1,6 +1,6 @@
-# portfolio project 1
+# portfolio project
 
-> A portfolio project with links to my social media accounts
+> A portfolio project that show case my skills
 
 ![screenshot](./app_screenshot.png)
 
@@ -20,15 +20,14 @@
 
 ## Live Demo
 
-[Live Demo Link](portfolio-projectss.netlify.app)
+[Live Demo Link](https://portfolio-projectss.netlify.app)
 
 ### Development (Running locally)
 
 - Clone the project
 
 ```bash
-git clone https://github.com/Yinkusadel/portfolio-project/pull/1
-
+git clone git@github.com:Yinkusadel/portfolio-project.git
 ```
 
 - Install Dependencies

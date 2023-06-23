@@ -1,4 +1,9 @@
-@import "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap";
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 :root {
   --text-color-blue: #172b4d;
@@ -6,27 +11,31 @@
 }
 
 body {
-  padding-left: 20px;
-  padding-right: 20px;
+  font-family: Inter, sans-serif;
 }
 
-.header {
-  font-family: Inter, sans-serif;
-  background-image: url("images/header-illsutration-mobile@2x.png");
-  background-repeat: no-repeat;
+.hero-section {
+  background: url("images/header-illsutration-mobile@2x.png") no-repeat;
   background-size: 100% 100%;
 }
 
 /* Header welcome nav styled */
-.welcome-nav {
+
+.welcome-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 25px;
   font-weight: 600;
   height: 100px;
 }
 
-.welcome-content {
-  display: flex;
-  justify-content: space-between;
+.welcome-content header {
+  padding-left: 25px;
+}
+
+.welcome-content svg {
+  padding-right: 25px;
 }
 
 .enabled-img {
@@ -49,10 +58,14 @@ body {
 
 .my-info .info-name {
   color: var(--text-color-blue);
+  width: 80%;
+  margin-bottom: 20px;
 }
 
 .my-info .occupation {
   color: var(--text-color-green);
+  width: 80%;
+  margin-bottom: 50px;
 }
 
 .description {
@@ -66,6 +79,7 @@ body {
   font-size: 20px;
   line-height: 28px;
   font-weight: 400;
+  width: 90%;
 }
 
 /* social media icon style starts here  */
@@ -74,6 +88,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .socialmedias ul {
@@ -91,8 +106,16 @@ body {
   display: none;
 }
 
-.socialmedias a:hover {
-  background-color: #5287e4;
+.socialmedias #twitter-icon:hover {
+  fill: #1da1e2;
+}
+
+.socialmedias #linkedin-icon:hover {
+  fill: #0072b1;
+}
+
+.socialmedias #github-icon:hover {
+  fill: #171515;
 }
 
 .svg-icons {
