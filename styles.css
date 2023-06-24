@@ -91,6 +91,10 @@ body {
   margin-bottom: 40px;
 }
 
+.socialmedias svg {
+  fill: #505f79;
+}
+
 .socialmedias ul {
   display: flex;
 }
@@ -106,20 +110,16 @@ body {
   display: none;
 }
 
-.socialmedias #twitter-icon:hover {
+.socialmedias .svg-twitter:hover {
   fill: #1da1e2;
 }
 
-.socialmedias #linkedin-icon:hover {
+.socialmedias .svg-linkedin:hover {
   fill: #0072b1;
 }
 
-.socialmedias #github-icon:hover {
+.socialmedias .svg-github:hover {
   fill: #171515;
-}
-
-.svg-icons {
-  fill: #505f79;
 }
 
 .svg-icons:hover {
@@ -130,12 +130,17 @@ body {
 .arrowdown {
   display: flex;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 .arrowdown span {
   display: none;
 }
 
+.arrowdown-icon {
+  fill: #172b4d;
+}
+
 .arrowdown-icon:hover {
-  background-color: #5287e4;
+  fill: #000000ef;
 }
