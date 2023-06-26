@@ -137,3 +137,76 @@ body {
 .arrowdown-icon:hover {
   fill: #000000ef;
 }
+
+/*  section my recent works */
+
+.recent-works .info-name {
+  width: 60%;
+}
+
+.green-border {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid green;
+  width: 30px;
+  margin: auto;
+}
+
+.card-container {
+  margin: 50px 0;
+}
+
+.cards {
+  border: 1px solid #d8d7d7;
+  width: 90%;
+  margin: 40px auto;
+  height: 450px;
+  border-radius: 8px;
+}
+
+.card-images {
+  display: block;
+  margin: auto;
+  height: 200px;
+  width: 100%;
+}
+
+.card-text {
+  width: 60%;
+  margin: auto;
+  display: block;
+  padding-top: 20px;
+  text-align: center;
+  font: 600 24px/32px Inter, sans-serif;
+}
+
+.card-projects {
+  margin: auto;
+  width: 90%;
+  padding-top: 20px;
+}
+
+.card-projects span {
+  margin: 5px;
+  background-color: #ebf0ee;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+}
+
+.see-projects {
+  padding: 12px 24px;
+  margin-top: 50px;
+  background-color: green;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  letter-spacing: 3%;
+  font: 500 17px/24px Inter, sans-serif;
+}
