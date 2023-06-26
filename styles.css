@@ -1,0 +1,139 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --text-color-blue: #172b4d;
+  --text-color-green: #36b37e;
+}
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+.hero-section {
+  background: url("images/header-illsutration-mobile@2x.png") center/100% 100% no-repeat;
+}
+
+/* Header welcome nav styled */
+
+.welcome-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  height: 100px;
+}
+
+.welcome-content header {
+  padding-left: 25px;
+}
+
+.welcome-content svg {
+  padding-right: 25px;
+}
+
+.enabled-img {
+  width: 100px;
+  height: 100px;
+}
+
+/* INFO style starts here  */
+
+.my-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font: 700 40px/52px Inter, sans-serif;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.my-info .info-name {
+  color: var(--text-color-blue);
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.my-info .occupation {
+  color: var(--text-color-green);
+  width: 80%;
+  margin-bottom: 50px;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+}
+
+.description-text {
+  text-align: center;
+  font: 400 20px/28px Inter, sans-serif;
+  width: 90%;
+}
+
+/* social media icon style starts here  */
+
+.socialmedias {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.socialmedias svg {
+  fill: #505f79;
+}
+
+.socialmedias ul {
+  display: flex;
+}
+
+.socialmedias li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  list-style-type: none;
+}
+
+.socialmedias span {
+  display: none;
+}
+
+.socialmedias .svg-twitter:hover {
+  fill: #1da1e2;
+}
+
+.socialmedias .svg-linkedin:hover {
+  fill: #0072b1;
+}
+
+.socialmedias .svg-github:hover {
+  fill: #171515;
+}
+
+.svg-icons:hover {
+  fill: red;
+}
+
+/*             arrow   nav            */
+.arrowdown {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.arrowdown span {
+  display: none;
+}
+
+.arrowdown-icon {
+  fill: #172b4d;
+}
+
+.arrowdown-icon:hover {
+  fill: #000000ef;
+}
