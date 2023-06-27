@@ -188,6 +188,7 @@ body {
 .card-projects {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-top: 20px;
   font: 600 12px/16px Inter, sans-serif;
   letter-spacing: 3%;
@@ -200,13 +201,12 @@ body {
 
 .card-projects ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card-projects li {
   list-style: none;
-}
-
-.card-projects p {
   margin: 5px;
   background-color: var(--cards-background);
   padding: 10px 15px;
@@ -284,7 +284,7 @@ body {
 }
 
 .languages-icon {
-  height: 200px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -306,20 +306,16 @@ body {
 .languages-card .card-projects {
   color: var(--text-color-green);
   text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.language-textspan {
-  margin: 5px;
-  background-color: yellow;
-  padding: 10px 15px;
-  border-radius: 4px;
-}
-
-.language-project p {
+.language-project li {
   background-color: #fffdfd;
-  white-space: nowrap;
 }
 
 .language-project a {
   color: var(--text-color-green);
 }
+
+/*    contact section    */
