@@ -10,6 +10,7 @@
   --text-color-green: #36b37e;
   --button-background: #36b37f;
   --button-text: #ffff;
+  --cards-background: #ebf0ee;
 }
 
 body {
@@ -150,7 +151,7 @@ body {
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid var(--text-color-green);
   width: 30px;
   margin: auto;
 }
@@ -185,16 +186,32 @@ body {
 }
 
 .card-projects {
-  margin: auto;
-  width: 90%;
+  display: flex;
+  justify-content: center;
   padding-top: 20px;
+  font: 600 12px/16px Inter, sans-serif;
+  letter-spacing: 3%;
 }
 
-.card-projects span {
+.card-projects a {
+  text-decoration: none;
+  color: #000;
+}
+
+.card-projects ul {
+  display: flex;
+}
+
+.card-projects li {
+  list-style: none;
+}
+
+.card-projects p {
   margin: 5px;
-  background-color: #ebf0ee;
-  padding: 5px 10px;
+  background-color: var(--cards-background);
+  padding: 10px 15px;
   border-radius: 4px;
+  text-align: center;
 }
 
 .card-button {
@@ -254,4 +271,55 @@ body {
   text-align: center;
   letter-spacing: 3%;
   color: var(--button-text);
+}
+
+.languages-card {
+  width: 90%;
+  height: 400px;
+  background-color: var(--cards-background);
+  margin: auto;
+  border-radius: 4px;
+  border: 1px solid #c1c7d0;
+  margin-bottom: 40px;
+}
+
+.languages-icon {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.languages-icon span {
+  background-color: #fefeff;
+  padding: 15px;
+  border-radius: 200px;
+}
+
+.languages-card h2 {
+  text-align: center;
+  color: #344563;
+  font: 600 24px/32px Inter, sans-serif;
+  padding: 30px 0;
+}
+
+.languages-card .card-projects {
+  color: var(--text-color-green);
+  text-align: center;
+}
+
+.language-textspan {
+  margin: 5px;
+  background-color: yellow;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.language-project p {
+  background-color: #fffdfd;
+  white-space: nowrap;
+}
+
+.language-project a {
+  color: var(--text-color-green);
 }
