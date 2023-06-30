@@ -1,6 +1,6 @@
-# portfolio project
+# portfolio project:finish mobile version
 
-> A portfolio project that show case my skills
+> A portfolio mobile website section where my portfolio projects are listed.
 
 ![screenshot](./app_screenshot.png)
 

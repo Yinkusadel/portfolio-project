@@ -11,6 +11,9 @@
   --button-background: #36b37f;
   --button-text: #ffff;
   --cards-background: #ebf0ee;
+  --text-color-lightblue: #42526e;
+  --red-color: #f00;
+  --hover-blue: #2727ac;
 }
 
 body {
@@ -199,6 +202,22 @@ body {
   color: #000;
 }
 
+.language-project a {
+  color: var(--text-color-green);
+}
+
+.mymail-link a {
+  text-decoration: none;
+  color: var(--text-color-lightblue);
+  font: 400 20px/32px Inter, sans-serif;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.card-projects a:hover {
+  color: var(--red-color);
+}
+
 .card-projects ul {
   display: flex;
   flex-wrap: wrap;
@@ -231,6 +250,10 @@ body {
   font: 500 17px/24px Inter, sans-serif;
 }
 
+.see-projects:hover {
+  background-color: var(--hover-blue);
+}
+
 /* section about me  */
 
 .aboutme-header {
@@ -250,7 +273,7 @@ body {
   width: 81%;
   margin: auto;
   font: 400 20px/32px Inter, sans-serif;
-  color: #42526e;
+  color: var(--text-color-lightblue);
 }
 
 .aboutme-footer {
@@ -271,6 +294,10 @@ body {
   text-align: center;
   letter-spacing: 3%;
   color: var(--button-text);
+}
+
+.aboutme-footer button:hover {
+  background-color: var(--hover-blue);
 }
 
 .languages-card {
@@ -314,8 +341,100 @@ body {
   background-color: #fffdfd;
 }
 
-.language-project a {
-  color: var(--text-color-green);
+/*    contact section    */
+
+.contact-body {
+  background: url("/images/contactimg.png") bottom right/50px 200px no-repeat;
 }
 
-/*    contact section    */
+.contact-header {
+  display: flex;
+  justify-content: center;
+}
+
+.intrest-header {
+  text-align: center;
+  font: 700 40px/52px Inter, sans-serif;
+  color: var(--text-color-blue);
+  padding: 60px;
+}
+
+.customer-contacts {
+  display: flex;
+  justify-content: center;
+}
+
+.customer-contacts form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.customer-contacts label {
+  display: none;
+}
+
+.customer-contacts input {
+  height: 48px;
+  border-radius: 4px;
+  margin: 10px 0;
+  font-weight: 18;
+  padding-left: 10px;
+  width: 327px;
+  border: 1px solid #d0d9d4;
+}
+
+.customer-contacts input:hover {
+  border: 1px solid var(--hover-blue);
+}
+
+input[type="submit"] {
+  background-color: var(--button-background);
+  border: none;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 48px;
+  width: 129px;
+  font: 500 17px/24px Inter, sans-serif;
+  letter-spacing: 3%;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--hover-blue);
+}
+
+.customer-textarea {
+  border: 1px solid #60c095;
+  width: 340px;
+  border-radius: 4px;
+  height: 114px;
+  padding: 10px;
+  font: 400 15px/24px Inter, sans-serif;
+}
+
+.customer-textarea:hover {
+  border: 1px solid var(--hover-blue);
+}
+
+.mymail-link {
+  display: flex;
+  justify-content: center;
+}
+
+.mymail-link a:hover {
+  color: #171515;
+}
+
+.black-border {
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 5px solid black;
+  width: 134px;
+  height: 5px;
+  margin: 20px auto;
+  border-radius: 4px;
+}
