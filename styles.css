@@ -132,12 +132,13 @@ body {
   margin-bottom: 40px;
 }
 
-.arrowdown span {
-  display: none;
-}
-
 .arrowdown-icon {
   fill: #172b4d;
+  border: 1px solid #dfe1e6;
+  border-radius: 200px;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .arrowdown-icon:hover {
@@ -154,7 +155,8 @@ body {
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 2px solid var(--text-color-green);
+  border-bottom: 5px solid var(--text-color-green);
+  border-radius: 20px;
   width: 30px;
   margin: auto;
 }
@@ -167,14 +169,14 @@ body {
   border: 1px solid #d8d7d7;
   width: 90%;
   margin: 40px auto;
-  height: 450px;
   border-radius: 8px;
+  position: relative;
+  list-style-type: none;
 }
 
 .card-images {
   display: block;
   margin: auto;
-  height: 200px;
   width: 100%;
 }
 
@@ -197,11 +199,6 @@ body {
   letter-spacing: 3%;
 }
 
-.card-projects a {
-  text-decoration: none;
-  color: #000;
-}
-
 .language-project a {
   color: var(--text-color-green);
 }
@@ -212,10 +209,6 @@ body {
   font: 400 20px/32px Inter, sans-serif;
   text-align: center;
   margin-bottom: 100px;
-}
-
-.card-projects a:hover {
-  color: var(--red-color);
 }
 
 .card-projects ul {
@@ -240,18 +233,16 @@ body {
 
 .see-projects {
   padding: 12px 24px;
-  margin-top: 50px;
+  margin: 25px 0;
   background-color: var(--button-background);
   color: var(--button-text);
   border-radius: 4px;
   border: none;
-  text-align: center;
-  letter-spacing: 3%;
   font: 500 17px/24px Inter, sans-serif;
 }
 
-.see-projects:hover {
-  background-color: var(--hover-blue);
+.see-projects:active {
+  background-color: #008552;
 }
 
 /* section about me  */
@@ -296,8 +287,8 @@ body {
   color: var(--button-text);
 }
 
-.aboutme-footer button:hover {
-  background-color: var(--hover-blue);
+.aboutme-footer button:active {
+  background-color: #008552;
 }
 
 .languages-card {
@@ -339,102 +330,4 @@ body {
 
 .language-project li {
   background-color: #fffdfd;
-}
-
-/*    contact section    */
-
-.contact-body {
-  background: url("/images/contactimg.png") bottom right/50px 200px no-repeat;
-}
-
-.contact-header {
-  display: flex;
-  justify-content: center;
-}
-
-.intrest-header {
-  text-align: center;
-  font: 700 40px/52px Inter, sans-serif;
-  color: var(--text-color-blue);
-  padding: 60px;
-}
-
-.customer-contacts {
-  display: flex;
-  justify-content: center;
-}
-
-.customer-contacts form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.customer-contacts label {
-  display: none;
-}
-
-.customer-contacts input {
-  height: 48px;
-  border-radius: 4px;
-  margin: 10px 0;
-  font-weight: 18;
-  padding-left: 10px;
-  width: 327px;
-  border: 1px solid #d0d9d4;
-}
-
-.customer-contacts input:hover {
-  border: 1px solid var(--hover-blue);
-}
-
-input[type="submit"] {
-  background-color: var(--button-background);
-  border: none;
-  color: white;
-  padding: 12px;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 4px;
-  height: 48px;
-  width: 129px;
-  font: 500 17px/24px Inter, sans-serif;
-  letter-spacing: 3%;
-}
-
-input[type="submit"]:hover {
-  background-color: var(--hover-blue);
-}
-
-.customer-textarea {
-  border: 1px solid #60c095;
-  width: 340px;
-  border-radius: 4px;
-  height: 114px;
-  padding: 10px;
-  font: 400 15px/24px Inter, sans-serif;
-}
-
-.customer-textarea:hover {
-  border: 1px solid var(--hover-blue);
-}
-
-.mymail-link {
-  display: flex;
-  justify-content: center;
-}
-
-.mymail-link a:hover {
-  color: #171515;
-}
-
-.black-border {
-  border-bottom: 0;
-  border-left: 0;
-  border-right: 0;
-  border-top: 5px solid black;
-  width: 134px;
-  height: 5px;
-  margin: 20px auto;
-  border-radius: 4px;
 }
