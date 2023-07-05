@@ -14,6 +14,10 @@
   --text-color-lightblue: #42526e;
   --red-color: #f00;
   --hover-blue: #2727ac;
+  --languages-icon: #fefeff;
+  --light-blue: #344563;
+  --light-white-border: #c1c7d0;
+  --active-green: #008552;
 }
 
 body {
@@ -288,7 +292,7 @@ body {
 }
 
 .aboutme-footer button:active {
-  background-color: #008552;
+  background-color: var(--active-green);
 }
 
 .languages-card {
@@ -297,7 +301,7 @@ body {
   background-color: var(--cards-background);
   margin: auto;
   border-radius: 4px;
-  border: 1px solid #c1c7d0;
+  border: 1px solid var(--light-white-border);
   margin-bottom: 40px;
 }
 
@@ -308,15 +312,15 @@ body {
   align-items: center;
 }
 
-.languages-icon span {
-  background-color: #fefeff;
+.languages-icon-span {
+  background-color: var(--languages-icon);
   padding: 15px;
   border-radius: 200px;
 }
 
 .languages-card h2 {
   text-align: center;
-  color: #344563;
+  color: var(--light-blue);
   font: 600 24px/32px Inter, sans-serif;
   padding: 30px 0;
 }
@@ -329,5 +333,5 @@ body {
 }
 
 .language-project li {
-  background-color: #fffdfd;
+  background-color: var(--languages-icon);
 }
