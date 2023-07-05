@@ -437,3 +437,64 @@ body {
 }
 
 /*  styles for desktop version begins here */
+
+@media screen and (min-width: 768px) {
+  .desktopversion-header-background {
+    background: url("images/desktop-version/Header-llustration-desktop.png") center/100% 100% no-repeat;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .desktopversion-header-content-center {
+    width: 60%;
+  }
+
+  .hero-section {
+    background: none;
+  }
+
+  /*  styles for desktop version begins here header nav */
+  .desktopversion-header-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+
+  .desktopversion-header-nav-ul {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+  }
+
+  .desktopversion-header-nav-li {
+    list-style-type: none;
+    font: 600 15px/20px Inter, sans-serif;
+  }
+
+  /* content not to be displayed when screen size is >= 768px stays here */
+
+  .welcome-content {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+  /*  styles for desktop version begins here header nav */
+
+
+
+  
+  /* content not to be displayed when screen size is <= 767px stays here */
+  .desktopversion-header-nav {
+    display: none;
+  }
+}
