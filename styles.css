@@ -499,6 +499,18 @@ body {
     margin: 10px;
   }
 
+  /*   styles for desktop version aboutme background begins here    */
+
+  .about-me-header-background-right {
+    background: url("/images/rightimage.png") right bottom/100px 250px no-repeat;
+  }
+
+
+  .aboutme-footer {
+    background: url("images/leftimage.png") left/100px 150px no-repeat;
+  }
+
+
   /* content not to be displayed when screen size is >= 768px stays here */
 
   .welcome-content {
@@ -508,11 +520,14 @@ body {
   .green-border {
     display: none;
   }
+
+  .aboutme-header {
+    background: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
   /*  styles for desktop version begins here header nav */
-
 
   /* content not to be displayed when screen size is <= 767px stays here */
   .desktopversion-header-nav {
