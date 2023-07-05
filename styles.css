@@ -8,6 +8,16 @@
 :root {
   --text-color-blue: #172b4d;
   --text-color-green: #36b37e;
+  --button-background: #36b37f;
+  --button-text: #ffff;
+  --cards-background: #ebf0ee;
+  --text-color-lightblue: #42526e;
+  --red-color: #f00;
+  --hover-blue: #2727ac;
+  --languages-icon: #fefeff;
+  --light-blue: #344563;
+  --light-white-border: #c1c7d0;
+  --active-green: #008552;
 }
 
 body {
@@ -126,14 +136,202 @@ body {
   margin-bottom: 40px;
 }
 
-.arrowdown span {
-  display: none;
-}
-
 .arrowdown-icon {
   fill: #172b4d;
+  border: 1px solid #dfe1e6;
+  border-radius: 200px;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .arrowdown-icon:hover {
   fill: #000000ef;
+}
+
+/*  section my recent works */
+
+.recent-works .info-name {
+  width: 60%;
+}
+
+.green-border {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 5px solid var(--text-color-green);
+  border-radius: 20px;
+  width: 30px;
+  margin: auto;
+}
+
+.card-container {
+  margin: 50px 0;
+}
+
+.cards {
+  border: 1px solid #d8d7d7;
+  width: 90%;
+  margin: 40px auto;
+  border-radius: 8px;
+  position: relative;
+  list-style-type: none;
+}
+
+.card-images {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.card-text {
+  width: 60%;
+  margin: auto;
+  display: block;
+  padding-top: 20px;
+  text-align: center;
+  font: 600 24px/32px Inter, sans-serif;
+  color: #3a4a42;
+}
+
+.card-projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  font: 600 12px/16px Inter, sans-serif;
+  letter-spacing: 3%;
+}
+
+.language-project a {
+  color: var(--text-color-green);
+}
+
+.mymail-link a {
+  text-decoration: none;
+  color: var(--text-color-lightblue);
+  font: 400 20px/32px Inter, sans-serif;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.card-projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-projects li {
+  list-style: none;
+  margin: 5px;
+  background-color: var(--cards-background);
+  padding: 10px 15px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+}
+
+.see-projects {
+  padding: 12px 24px;
+  margin: 25px 0;
+  background-color: var(--button-background);
+  color: var(--button-text);
+  border-radius: 4px;
+  border: none;
+  font: 500 17px/24px Inter, sans-serif;
+}
+
+.see-projects:active {
+  background-color: #008552;
+}
+
+/* section about me  */
+
+.aboutme-header {
+  background: url("/images/rightimage.png") right top/100px 130px no-repeat;
+  height: 150px;
+}
+
+.aboutme-header h1 {
+  text-align: center;
+  padding-top: 60px;
+  font: 700 40px/52px Inter, sans-serif;
+  color: var(--text-color-blue);
+}
+
+.abtme-description p {
+  text-align: center;
+  width: 81%;
+  margin: auto;
+  font: 400 20px/32px Inter, sans-serif;
+  color: var(--text-color-lightblue);
+}
+
+.aboutme-footer {
+  background: url("images/leftimage.png") left/70px 70px no-repeat;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutme-footer button {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  height: 48px;
+  background-color: var(--button-background);
+  font: 500 17px/24px Inter, sans-serif;
+  text-align: center;
+  letter-spacing: 3%;
+  color: var(--button-text);
+}
+
+.aboutme-footer button:active {
+  background-color: var(--active-green);
+}
+
+.languages-card {
+  width: 90%;
+  height: 400px;
+  background-color: var(--cards-background);
+  margin: auto;
+  border-radius: 4px;
+  border: 1px solid var(--light-white-border);
+  margin-bottom: 40px;
+}
+
+.languages-icon {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.languages-icon-span {
+  background-color: var(--languages-icon);
+  padding: 15px;
+  border-radius: 200px;
+}
+
+.languages-card h2 {
+  text-align: center;
+  color: var(--light-blue);
+  font: 600 24px/32px Inter, sans-serif;
+  padding: 30px 0;
+}
+
+.languages-card .card-projects {
+  color: var(--text-color-green);
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.language-project li {
+  background-color: var(--languages-icon);
 }
