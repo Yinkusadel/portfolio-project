@@ -505,11 +505,24 @@ body {
     background: url("/images/rightimage.png") right bottom/100px 250px no-repeat;
   }
 
-
   .aboutme-footer {
     background: url("images/leftimage.png") left/100px 150px no-repeat;
   }
 
+  /*   styles for desktop version languages card begins here    */
+
+  .languagescard-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .desktopversion-languagescard-container {
+    display: flex;
+  }
+
+  .languages-card {
+    margin: 10px;
+  }
 
   /* content not to be displayed when screen size is >= 768px stays here */
 
