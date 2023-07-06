@@ -351,7 +351,7 @@ body {
   text-align: center;
   font: 700 40px/52px Inter, sans-serif;
   color: var(--text-color-blue);
-  padding: 60px;
+  width: 70%;
 }
 
 .customer-contacts {
@@ -524,6 +524,66 @@ body {
     margin: 10px;
   }
 
+  /*   styles for desktop version contacts begins here    */
+  .contact-body {
+    display: flex;
+    justify-content: center;
+    background: url("/images/desktop-version/contact\ form-illustratoin-3-desktop.png") bottom right/150px 300px no-repeat;
+  }
+
+  .desktopversion-contact-body {
+    display: flex;
+    width: 87%;
+  }
+
+  .intrest-header {
+    font: 700 30px/52px Inter, sans-serif;
+    width: 100%;
+    text-align: justify;
+  }
+
+  .contact-header {
+    align-self: center;
+    height: 400px;
+    padding-top: 50px;
+    background: url("/images/desktop-version/illustration-1-contact-form-desktop.png") bottom center/100px 100px no-repeat;
+  }
+
+  .customer-contacts input {
+    height: 48px;
+    border-radius: 4px;
+    font-weight: 18;
+    width: 810px;
+    border: 1px solid #d0d9d4;
+  }
+
+  .desktop-version-form-container {
+    display: flex;
+    width: 800px;
+  }
+
+  .desktop-version-form-container input[type="text"] {
+    margin: 5px;
+  }
+
+  .customer-contacts input[type="email"] {
+    margin: 10px 20px;
+    width: 780px;
+  }
+
+  .customer-textarea {
+    width: 780px;
+  }
+
+  .customer-contacts input[type="submit"] {
+    align-self: flex-start;
+    margin-left: 15px;
+  }
+
+  .contacts {
+    background: url("/images/desktop-version/illustration-1-contact-form-desktop.png") bottom left/100px 300px no-repeat;
+  }
+
   /* content not to be displayed when screen size is >= 768px stays here */
 
   .welcome-content {
@@ -537,6 +597,18 @@ body {
   .aboutme-header {
     background: none;
   }
+
+  .fname {
+    display: none;
+  }
+
+  .mymail-link {
+    display: none;
+  }
+
+  .black-border {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -544,6 +616,10 @@ body {
 
   /* content not to be displayed when screen size is <= 767px stays here */
   .desktopversion-header-nav {
+    display: none;
+  }
+
+  .desktop-version-form-container {
     display: none;
   }
 }
