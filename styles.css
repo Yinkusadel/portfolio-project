@@ -534,6 +534,7 @@ body {
   .desktopversion-contact-body {
     display: flex;
     width: 87%;
+    margin-top: 100px;
   }
 
   .intrest-header {
@@ -581,7 +582,7 @@ body {
   }
 
   .contacts {
-    background: url("/images/desktop-version/illustration-1-contact-form-desktop.png") bottom left/100px 300px no-repeat;
+    background: url("/images/desktop-version/illustration-1-contact-form-desktop.png") bottom left/100px 200px no-repeat;
   }
 
   /* content not to be displayed when screen size is >= 768px stays here */
