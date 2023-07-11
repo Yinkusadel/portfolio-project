@@ -439,29 +439,25 @@ body {
   border-radius: 4px;
 }
 
-.desktopversion-header-nav {
+.d-none {
   display: none;
 }
 
-.desktop-version-form-container {
-  display: none;
-}
-
-.desktop-version-ending-socialmedia {
+.md-version-ending-socialmedia {
   margin-bottom: 200px;
 }
 
 /*  styles for desktop version begins here */
 
 @media screen and (min-width: 768px) {
-  .desktopversion-header-background {
+  .md-header-background {
     background: url("images/desktop-version/Header-llustration-desktop.png") center/100% 100% no-repeat;
     height: 1000px;
     display: flex;
     justify-content: center;
   }
 
-  .desktopversion-header-content-center {
+  .md-header-content-center {
     width: 60%;
   }
 
@@ -470,30 +466,30 @@ body {
   }
 
   /*  styles for desktop version header nav begins here */
-  .desktopversion-header-nav {
+  .md-header-nav {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 100px;
   }
 
-  .desktopversion-header-nav-ul {
+  .md-header-nav-ul {
     display: flex;
     justify-content: space-between;
     width: 200px;
   }
 
-  .desktopversion-header-nav-li {
+  .md-header-nav-li {
     list-style-type: none;
     font: 600 15px/20px Inter, sans-serif;
   }
 
-  .desktopversion-header-nav-li-a {
+  .md-header-nav-li-a {
     text-decoration: none;
     color: var(--light-blue);
   }
 
-  .desktopversion-header-nav-li-a:hover {
+  .md-header-nav-li-a:hover {
     color: var(--hover-light-blue-text);
   }
 
@@ -505,16 +501,16 @@ body {
     align-items: center;
   }
 
-  .desktop-version-multipost-cards-container {
+  .md-multipost-cards-container {
     width: 90%;
     list-style-type: none;
   }
 
-  .desktop-version-multipost {
+  .md-multipost {
     list-style-type: none;
   }
 
-  .desktop-version-multipost-card-flex {
+  .md-multipost-card-flex {
     display: flex;
     justify-content: space-between;
   }
@@ -525,7 +521,7 @@ body {
 
   /*   styles for desktop version aboutme background begins here    */
 
-  .about-me-desktop-version {
+  .about-me-md {
     width: 90%;
   }
 
@@ -549,7 +545,7 @@ body {
     justify-content: center;
   }
 
-  .desktopversion-languagescard-container {
+  .md-languagescard-container {
     display: flex;
   }
 
@@ -564,7 +560,7 @@ body {
     justify-content: center;
   }
 
-  .desktopversion-contact-body {
+  .md-contact-body {
     display: flex;
     width: 90%;
     margin-top: 100px;
@@ -591,11 +587,11 @@ body {
     justify-content: flex-end;
   }
 
-  .desktop-version-form-container {
+  .md-version-form-container {
     display: flex;
   }
 
-  .desktop-version-form-container input[type="text"] {
+  .md-version-form-container input[type="text"] {
     margin: 10px;
   }
 
