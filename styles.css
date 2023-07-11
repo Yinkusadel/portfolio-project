@@ -428,17 +428,6 @@ body {
   border: 1px solid var(--hover-blue);
 }
 
-.mymail-link {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 300px;
-  height: 30px;
-}
-
-.mymail-link a:hover {
-  color: #171515;
-}
-
 .black-border {
   border-bottom: 0;
   border-left: 0;
@@ -448,6 +437,18 @@ body {
   height: 5px;
   margin: 20px auto;
   border-radius: 4px;
+}
+
+.desktopversion-header-nav {
+  display: none;
+}
+
+.desktop-version-form-container {
+  display: none;
+}
+
+.desktop-version-ending-socialmedia {
+  margin-bottom: 200px;
 }
 
 /*  styles for desktop version begins here */
@@ -558,7 +559,7 @@ body {
 
   /*   styles for desktop version contacts begins here    */
   .contact-body {
-    background: url("/images/desktop-version/contact\ form-illustratoin-3-desktop.png") bottom right/150px 300px no-repeat;
+    background: url("/images/desktop-version/contact-form-illustratoin-3-desktop.png") bottom right/150px 300px no-repeat;
     display: flex;
     justify-content: center;
   }
@@ -634,24 +635,7 @@ body {
     display: none;
   }
 
-  .mymail-link {
-    display: none;
-  }
-
   .black-border {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  /*  styles for desktop version begins here header nav */
-
-  /* content not to be displayed when screen size is <= 767px stays here */
-  .desktopversion-header-nav {
-    display: none;
-  }
-
-  .desktop-version-form-container {
     display: none;
   }
 }
