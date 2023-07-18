@@ -67,7 +67,6 @@ body {
 
 .my-info .info-name {
   color: var(--text-color-blue);
-  width: 80%;
   margin-bottom: 20px;
 }
 
@@ -495,6 +494,10 @@ body {
 
   /*  styles for desktop version multipost cards begins here  */
 
+  .recent-works {
+    margin: 0 20px;
+  }
+
   .card-container {
     display: flex;
     flex-direction: column;
@@ -521,10 +524,6 @@ body {
 
   /*   styles for desktop version aboutme background begins here    */
 
-  .about-me-md {
-    width: 90%;
-  }
-
   .about-me {
     display: flex;
     justify-content: center;
@@ -547,6 +546,8 @@ body {
 
   .md-languagescard-container {
     display: flex;
+    width: 90%;
+    margin: 0 20px;
   }
 
   .languages-card {
@@ -563,7 +564,8 @@ body {
   .md-contact-body {
     display: flex;
     width: 90%;
-    margin-top: 100px;
+    padding-top: 100px;
+    margin: 0 20px;
   }
 
   .intrest-header {
@@ -583,30 +585,32 @@ body {
 
   .customer-contacts {
     width: 60%;
-    display: flex;
-    justify-content: flex-end;
   }
 
   .md-version-form-container {
     display: flex;
+    width: 100%;
   }
 
-  .md-version-form-container input[type="text"] {
-    margin: 10px;
+  .md-version-form-container .firstname {
+    margin-right: 5px;
+  }
+
+  .md-version-form-container .lastname {
+    margin-left: 5px;
   }
 
   .customer-contacts input[type="email"] {
-    width: 690px;
+    width: 98%;
   }
 
   .customer-textarea {
-    width: 680px;
+    width: 98%;
     margin-top: 10px;
   }
 
   .customer-contacts input[type="submit"] {
     align-self: flex-start;
-    margin-left: 15px;
   }
 
   .contacts {
