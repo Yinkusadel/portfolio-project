@@ -549,10 +549,12 @@ body {
     display: flex;
     width: 90%;
     margin: 0 20px;
+    list-style-type: none;
   }
 
   .languages-card {
     margin: 10px;
+    width: 33%;
   }
 
   /*   styles for desktop version contacts begins here    */
