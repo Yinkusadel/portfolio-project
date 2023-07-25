@@ -311,6 +311,7 @@ body {
   border-radius: 4px;
   border: 1px solid var(--light-white-border);
   margin-bottom: 40px;
+  list-style-type: none;
 }
 
 .languages-icon {
