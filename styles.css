@@ -26,6 +26,11 @@ body {
   font-family: Inter, sans-serif;
 }
 
+input,
+textarea {
+  outline: none;
+}
+
 .hero-section {
   background: url("images/header-illsutration-mobile@2x.png") center/100% 100% no-repeat;
 }
@@ -372,6 +377,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding: 30px;
 }
 
 .customer-contacts label {
@@ -383,13 +390,9 @@ body {
   border-radius: 4px;
   margin: 10px 0;
   font-weight: 18;
-  padding-left: 10px;
-  width: 327px;
+  width: 100%;
+  padding: 10px;
   border: 1px solid #d0d9d4;
-}
-
-.customer-contacts input:hover {
-  border: 1px solid var(--hover-blue);
 }
 
 .customer-contacts input[type="submit"] {
@@ -416,16 +419,17 @@ body {
 }
 
 .customer-textarea {
-  border: 1px solid var(--textarea-green-border);
-  width: 340px;
+  border: 1px solid #d0d9d4;
   border-radius: 4px;
   height: 114px;
+  width: 100%;
   padding: 10px;
   font: 400 15px/24px Inter, sans-serif;
 }
 
-.customer-textarea:hover {
-  border: 1px solid var(--hover-blue);
+input:focus-visible,
+textarea:focus-visible {
+  border: 2px solid var(--textarea-green-border);
 }
 
 .black-border {
@@ -575,7 +579,7 @@ body {
   .intrest-header {
     font: 700 30px/52px Inter, sans-serif;
     width: 100%;
-    text-align: justify;
+    text-align: left;
   }
 
   .contact-header {
