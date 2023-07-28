@@ -570,6 +570,7 @@ textarea:focus-visible {
     margin-top: 100px;
     padding: 0 55px;
     width: 100%;
+    justify-content: space-between;
   }
 
   .intrest-header {
@@ -592,7 +593,7 @@ textarea:focus-visible {
   }
 
   .customer-contacts {
-    width: 60%;
+    width: 55%;
   }
 
   .md-version-form-container {
