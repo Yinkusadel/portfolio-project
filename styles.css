@@ -500,7 +500,7 @@ textarea:focus-visible {
   /*  styles for desktop version multipost cards begins here  */
 
   .recent-works {
-    margin: 0 20px;
+    padding: 0 50px;
   }
 
   .card-container {
@@ -520,11 +520,11 @@ textarea:focus-visible {
   .md-multipost-card-flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .cards {
-    margin: 10px;
     width: 30%;
   }
 
@@ -533,6 +533,10 @@ textarea:focus-visible {
   .about-me {
     display: flex;
     justify-content: center;
+  }
+
+  .about-me-md {
+    padding: 0 50px;
   }
 
   .about-me-header-background-right {
@@ -545,35 +549,27 @@ textarea:focus-visible {
 
   /*   styles for desktop version languages card begins here    */
 
-  .languagescard-container {
-    display: flex;
-    justify-content: center;
-  }
-
   .md-languagescard-container {
     display: flex;
-    width: 90%;
-    margin: 0 20px;
+    justify-content: space-evenly;
     list-style-type: none;
   }
 
   .languages-card {
-    margin: 10px;
-    width: 33%;
+    width: 31%;
   }
 
   /*   styles for desktop version contacts begins here    */
   .contact-body {
-    background: url("/images/desktop-version/contact-form-illustratoin-3-desktop.png") bottom right/150px 300px no-repeat;
+    background: url("/images/desktop-version/contact-form-illustratoin-3-desktop.png") bottom right/100px 270px no-repeat;
     display: flex;
-    justify-content: center;
   }
 
   .md-contact-body {
     display: flex;
-    width: 90%;
-    padding-top: 100px;
-    margin: 0 20px;
+    margin-top: 100px;
+    padding: 0 55px;
+    width: 100%;
   }
 
   .intrest-header {
@@ -591,6 +587,10 @@ textarea:focus-visible {
     background: url("/images/desktop-version/illustration-1-contact-form-desktop.png") bottom center/100px 100px no-repeat;
   }
 
+  .customer-contacts form {
+    padding: 0;
+  }
+
   .customer-contacts {
     width: 60%;
   }
@@ -601,19 +601,21 @@ textarea:focus-visible {
   }
 
   .md-version-form-container .firstname {
+    width: 50%;
     margin-right: 5px;
   }
 
   .md-version-form-container .lastname {
+    width: 50%;
     margin-left: 5px;
   }
 
   .customer-contacts input[type="email"] {
-    width: 98%;
+    width: 97%;
   }
 
   .customer-textarea {
-    width: 98%;
+    width: 97%;
     margin-top: 10px;
   }
 
