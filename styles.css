@@ -535,10 +535,6 @@ textarea:focus-visible {
     justify-content: center;
   }
 
-  .about-me-md {
-    padding: 0 50px;
-  }
-
   .about-me-header-background-right {
     background: url("/images/rightimage.png") right bottom/100px 250px no-repeat;
   }
@@ -553,22 +549,23 @@ textarea:focus-visible {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
+    padding: 0 50px;
   }
 
   .languages-card {
-    width: 31%;
+    width: 30%;
   }
 
   /*   styles for desktop version contacts begins here    */
   .contact-body {
     background: url("/images/desktop-version/contact-form-illustratoin-3-desktop.png") bottom right/100px 270px no-repeat;
     display: flex;
+    padding: 0 72px;
   }
 
   .md-contact-body {
     display: flex;
     margin-top: 100px;
-    padding: 0 55px;
     width: 100%;
     justify-content: space-between;
   }
