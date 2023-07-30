@@ -22,6 +22,7 @@
 ## Live Demo
 
 [Live Demo Link](https://portfolio-projectss.netlify.app)
+[github Live Demo Link](https://yinkusadel.github.io/portfolio-project/)
 
 ### Development (Running locally)
 
