@@ -19,10 +19,16 @@
   --light-white-border: #c1c7d0;
   --active-green: #008552;
   --textarea-green-border: #60c095;
+  --hover-light-blue-text: #1e488f;
 }
 
 body {
   font-family: Inter, sans-serif;
+}
+
+input,
+textarea {
+  outline: none;
 }
 
 .hero-section {
@@ -66,7 +72,6 @@ body {
 
 .my-info .info-name {
   color: var(--text-color-blue);
-  width: 80%;
   margin-bottom: 20px;
 }
 
@@ -180,8 +185,6 @@ body {
 }
 
 .card-images {
-  display: block;
-  margin: auto;
   width: 100%;
 }
 
@@ -245,6 +248,11 @@ body {
   font: 500 17px/24px Inter, sans-serif;
 }
 
+.see-projects:hover {
+  box-shadow: 0 8px 16px 0 #36b37f3d;
+  background-color: var(--button-background);
+}
+
 .see-projects:active {
   background-color: #008552;
 }
@@ -291,6 +299,11 @@ body {
   color: var(--button-text);
 }
 
+.aboutme-footer button:hover {
+  box-shadow: 0 8px 16px 0 #36b37f3d;
+  background-color: var(--button-background);
+}
+
 .aboutme-footer button:active {
   background-color: var(--active-green);
 }
@@ -303,6 +316,7 @@ body {
   border-radius: 4px;
   border: 1px solid var(--light-white-border);
   margin-bottom: 40px;
+  list-style-type: none;
 }
 
 .languages-icon {
@@ -351,7 +365,7 @@ body {
   text-align: center;
   font: 700 40px/52px Inter, sans-serif;
   color: var(--text-color-blue);
-  padding: 60px;
+  width: 70%;
 }
 
 .customer-contacts {
@@ -363,6 +377,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding: 30px;
 }
 
 .customer-contacts label {
@@ -374,13 +390,9 @@ body {
   border-radius: 4px;
   margin: 10px 0;
   font-weight: 18;
-  padding-left: 10px;
-  width: 327px;
+  width: 100%;
+  padding: 10px;
   border: 1px solid #d0d9d4;
-}
-
-.customer-contacts input:hover {
-  border: 1px solid var(--hover-blue);
 }
 
 .customer-contacts input[type="submit"] {
@@ -397,32 +409,27 @@ body {
   letter-spacing: 3%;
 }
 
+.customer-contacts input[type="submit"]:hover {
+  box-shadow: 0 8px 16px 0 #36b37f3d;
+  background-color: var(--button-background);
+}
+
 .customer-contacts input[type="submit"]:active {
   background-color: var(--active-green);
 }
 
 .customer-textarea {
-  border: 1px solid var(--textarea-green-border);
-  width: 340px;
+  border: 1px solid #d0d9d4;
   border-radius: 4px;
   height: 114px;
+  width: 100%;
   padding: 10px;
   font: 400 15px/24px Inter, sans-serif;
 }
 
-.customer-textarea:hover {
-  border: 1px solid var(--hover-blue);
-}
-
-.mymail-link {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 300px;
-  height: 30px;
-}
-
-.mymail-link a:hover {
-  color: #171515;
+input:focus-visible,
+textarea:focus-visible {
+  border: 2px solid var(--textarea-green-border);
 }
 
 .black-border {
@@ -434,4 +441,209 @@ body {
   height: 5px;
   margin: 20px auto;
   border-radius: 4px;
+}
+
+.d-none {
+  display: none;
+}
+
+.md-version-ending-socialmedia {
+  margin-bottom: 200px;
+}
+
+/*  styles for desktop version begins here */
+
+@media screen and (min-width: 768px) {
+  .md-header-background {
+    background: url("images/desktop-version/Header-llustration-desktop.png") center/100% 100% no-repeat;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .md-header-content-center {
+    width: 60%;
+  }
+
+  .hero-section {
+    background: none;
+  }
+
+  /*  styles for desktop version header nav begins here */
+  .md-header-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+
+  .md-header-nav-ul {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+  }
+
+  .md-header-nav-li {
+    list-style-type: none;
+    font: 600 15px/20px Inter, sans-serif;
+  }
+
+  .md-header-nav-li-a {
+    text-decoration: none;
+    color: var(--light-blue);
+  }
+
+  .md-header-nav-li-a:hover {
+    color: var(--hover-light-blue-text);
+  }
+
+  /*  styles for desktop version multipost cards begins here  */
+
+  .recent-works {
+    padding: 0 50px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .md-multipost-cards-container {
+    list-style-type: none;
+  }
+
+  .md-multipost {
+    list-style-type: none;
+  }
+
+  .md-multipost-card-flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .cards {
+    width: 30%;
+  }
+
+  /*   styles for desktop version aboutme background begins here    */
+
+  .about-me {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-me-header-background-right {
+    background: url("/images/rightimage.png") right bottom/100px 250px no-repeat;
+  }
+
+  .aboutme-footer {
+    background: url("images/leftimage.png") left/100px 150px no-repeat;
+  }
+
+  /*   styles for desktop version languages card begins here    */
+
+  .md-languagescard-container {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0 50px;
+  }
+
+  .languages-card {
+    width: 30%;
+  }
+
+  /*   styles for desktop version contacts begins here    */
+  .contact-body {
+    background: url("/images/desktop-version/contact-form-illustratoin-3-desktop.png") bottom right/100px 270px no-repeat;
+    display: flex;
+    padding: 0 72px;
+  }
+
+  .md-contact-body {
+    display: flex;
+    margin-top: 100px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .intrest-header {
+    font: 700 30px/52px Inter, sans-serif;
+    width: 100%;
+    text-align: left;
+  }
+
+  .contact-header {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    height: 400px;
+    padding-top: 50px;
+    background: url("/images/desktop-version/illustration-1-contact-form-desktop.png") bottom center/100px 100px no-repeat;
+  }
+
+  .customer-contacts form {
+    padding: 0;
+  }
+
+  .customer-contacts {
+    width: 55%;
+  }
+
+  .md-version-form-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .md-version-form-container .firstname {
+    width: 50%;
+    margin-right: 5px;
+  }
+
+  .md-version-form-container .lastname {
+    width: 50%;
+    margin-left: 5px;
+  }
+
+  .customer-contacts input[type="email"] {
+    width: 97%;
+  }
+
+  .customer-textarea {
+    width: 97%;
+    margin-top: 10px;
+  }
+
+  .customer-contacts input[type="submit"] {
+    align-self: flex-start;
+  }
+
+  .contacts {
+    background: url("/images/desktop-version/illustration-1-contact-form-desktop.png") bottom left/100px 200px no-repeat;
+  }
+
+  /* content not to be displayed when screen size is >= 768px stays here */
+
+  .welcome-content {
+    display: none;
+  }
+
+  .green-border {
+    display: none;
+  }
+
+  .aboutme-header {
+    background: none;
+  }
+
+  .fname {
+    display: none;
+  }
+
+  .black-border {
+    display: none;
+  }
 }

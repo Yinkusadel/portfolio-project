@@ -12,6 +12,7 @@
   - CSS Typography `font-size`, `font-style`, `font-family`
   - CSS `flexbox`
   - CSS background for page aesthetic using `background-image`
+  - CSS media query
 - ### Linters
   - [prettier](prettier),
   - [stylelint](stylelint).
