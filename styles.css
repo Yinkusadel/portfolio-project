@@ -7,8 +7,8 @@
 
 :root {
   --text-color-blue: #172b4d;
-  --text-color-green: #36b37e;
-  --button-background: #36b37f;
+  --text-color-green: #205b3e;
+  --button-background: #226344;
   --button-text: #ffff;
   --cards-background: #ebf0ee;
   --text-color-lightblue: #42526e;
@@ -264,7 +264,7 @@ textarea {
   height: 150px;
 }
 
-.aboutme-header h1 {
+.aboutme-header h2 {
   text-align: center;
   padding-top: 60px;
   font: 700 40px/52px Inter, sans-serif;
@@ -382,7 +382,7 @@ textarea {
 }
 
 .customer-contacts label {
-  display: none;
+  width: 100%;
 }
 
 .customer-contacts input {
@@ -390,9 +390,9 @@ textarea {
   border-radius: 4px;
   margin: 10px 0;
   font-weight: 18;
-  width: 100%;
   padding: 10px;
   border: 1px solid #d0d9d4;
+  width: 100%;
 }
 
 .customer-contacts input[type="submit"] {
@@ -599,12 +599,12 @@ textarea:focus-visible {
   }
 
   .md-version-form-container .firstname {
-    width: 50%;
+    width: 92%;
     margin-right: 5px;
   }
 
   .md-version-form-container .lastname {
-    width: 50%;
+    width: 92%;
     margin-left: 5px;
   }
 
