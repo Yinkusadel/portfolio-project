@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Project</title>
+    <title>Ibrohim Software Developer Portfolio Project</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -63,6 +63,7 @@
                   <a href="https://twitter.com/HashiraAdel" target="_blank" rel="noopener"
                     ><span>twitter</span
                     ><svg
+                      aria-label="twitter"
                       class="svg-twitter"
                       width="21"
                       height="20"
@@ -82,6 +83,7 @@
                     rel="noopener"
                     ><span>linkedin</span
                     ><svg
+                      aria-label="linkedin"
                       class="svg-linkedin"
                       width="21"
                       height="20"
@@ -104,6 +106,7 @@
                   <a href="link address" target="_blank" rel="noopener"
                     ><span>medium</span
                     ><svg
+                      aria-label="medium"
                       class="svg-icons"
                       width="21"
                       height="16"
@@ -120,6 +123,7 @@
                   <a href="https://github.com/yinkusadel" target="_blank" rel="noopener"
                     ><span>github</span
                     ><svg
+                      aria-label="github"
                       class="svg-github"
                       width="19"
                       height="20"
@@ -136,6 +140,7 @@
                   <a href="link address" target="_blank" rel="noopener"
                     ><span>angelists</span
                     ><svg
+                      aria-label="angelists"
                       class="svg-icons"
                       width="15"
                       height="20"
@@ -153,6 +158,7 @@
             <nav class="arrowdown">
               <a href="#portfolio-projects" title="arrowdown"
                 ><svg
+                  aria-label="arrowdown"
                   xmlns="http://www.w3.org/2000/svg"
                   width="14"
                   height="8"
@@ -184,7 +190,7 @@
                 <ul class="md-multipost-card-flex">
                   <li class="cards">
                     <figure>
-                      <img src="images/tonic.png" alt="card image" class="card-images" />
+                      <img src="images/tonic.png" alt="tonic project" class="card-images" />
                       <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
                     </figure>
 
@@ -202,7 +208,7 @@
 
                   <li class="cards">
                     <figure>
-                      <img src="images/tonic2.png" alt="card image" class="card-images" />
+                      <img src="images/tonic2.png" alt="tonic project" class="card-images" />
                       <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
                     </figure>
 
@@ -220,7 +226,11 @@
 
                   <li class="cards">
                     <figure>
-                      <img src="images/multipost.png" alt="card image" class="card-images" />
+                      <img
+                        src="images/multipost.png"
+                        alt="multi-post stories project"
+                        class="card-images"
+                      />
                       <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
                     </figure>
 
@@ -238,7 +248,11 @@
 
                   <li class="cards">
                     <figure>
-                      <img src="images/multipost2.png" alt="card image" class="card-images" />
+                      <img
+                        src="images/multipost2.png"
+                        alt="professional art printing project"
+                        class="card-images"
+                      />
                       <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
                     </figure>
 
@@ -256,7 +270,11 @@
 
                   <li class="cards">
                     <figure>
-                      <img src="images/facebook.png" alt="card image" class="card-images" />
+                      <img
+                        src="images/facebook.png"
+                        alt="facebook 360 project"
+                        class="card-images"
+                      />
                       <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
                     </figure>
 
@@ -274,7 +292,11 @@
 
                   <li class="cards">
                     <figure>
-                      <img src="images/nature.png" alt="card image" class="card-images" />
+                      <img
+                        src="images/nature.png"
+                        alt="printing and typesetting project"
+                        class="card-images"
+                      />
                       <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
                     </figure>
 
@@ -301,7 +323,7 @@
       <div class="about-me-md">
         <div class="about-me-header-background-right">
           <div class="aboutme-header">
-            <h1>About me</h1>
+            <h2>About me</h2>
           </div>
 
           <div class="abtme-description">
@@ -339,7 +361,7 @@
 
             <li class="languages-card">
               <div class="languages-icon">
-                <span><img src="/images/group.png" alt="language icon" /></span>
+                <span><img src="/images/group.png" alt="framework icon" /></span>
               </div>
               <h2>Frameworks</h2>
 
@@ -356,7 +378,7 @@
 
             <li class="languages-card">
               <div class="languages-icon">
-                <span><img src="/images/bolt.png" alt="language icon" /></span>
+                <span><img src="/images/bolt.png" alt="skills icon" /></span>
               </div>
               <h2>Skills</h2>
 
@@ -386,52 +408,68 @@
 
           <div class="customer-contacts">
             <form action="https://formspree.io/f/xzblbbzd" method="post">
-              <label for="fname">Full name:</label>
-              <input
-                type="text"
-                id="fname"
-                class="fname"
-                name="fname"
-                placeholder="Full name"
-                maxlength="30"
-                required
-              />
+              <label for="fname">
+                <input
+                  title="Full name:"
+                  type="text"
+                  id="fname"
+                  class="fname"
+                  name="fname"
+                  placeholder="Full name"
+                  maxlength="30"
+                  required
+                />
+              </label>
 
               <div class="md-version-form-container d-none">
-                <label for="firstname">First name:</label>
-                <input
-                  type="text"
-                  id="firstname"
-                  class="firstname"
-                  name="firstname"
-                  placeholder="First name"
-                  maxlength="30"
-                  required
-                />
+                <label for="firstname">
+                  <input
+                    title="First name:"
+                    type="text"
+                    id="firstname"
+                    class="firstname"
+                    name="firstname"
+                    placeholder="First name"
+                    maxlength="30"
+                    required
+                  />
+                </label>
 
-                <label for="lastname">Last name:</label>
-                <input
-                  type="text"
-                  id="lastname"
-                  class="lastname"
-                  name="lastname"
-                  placeholder="Last name"
-                  maxlength="30"
-                  required
-                />
+                <label for="lastname">
+                  <input
+                    title="Last name:"
+                    type="text"
+                    id="lastname"
+                    class="lastname"
+                    name="lastname"
+                    placeholder="Last name"
+                    maxlength="30"
+                    required
+                  />
+                </label>
               </div>
 
-              <label for="email">Enter your email:</label>
-              <input type="email" id="email" name="email" placeholder="Email address" required />
-              <label for="text-here">Enter text here:</label>
-              <textarea
-                id="text-here"
-                class="customer-textarea"
-                name="text-here"
-                placeholder="Enter text here"
-                required
-                maxlength="500"
-              ></textarea>
+              <label for="email">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email address"
+                  required
+                  title="Enter your email:"
+                />
+              </label>
+              <label for="text-here">
+                <textarea
+                  title="Enter text here:"
+                  id="text-here"
+                  class="customer-textarea"
+                  name="text-here"
+                  placeholder="Enter text here"
+                  required
+                  maxlength="500"
+                ></textarea>
+              </label>
 
               <input type="submit" value="Get in touch" class="contact-get-in-touch-button" />
             </form>
@@ -447,6 +485,7 @@
             <a href="https://twitter.com/HashiraAdel" target="_blank" rel="noopener"
               ><span>twitter</span
               ><svg
+                aria-label="twitter"
                 class="svg-twitter"
                 width="21"
                 height="20"
@@ -463,6 +502,7 @@
             <a href="https://www.linkedin.com/in/adeleye-olayinka/" target="_blank" rel="noopener"
               ><span>linkedin</span
               ><svg
+                aria-label="linkedin"
                 class="svg-linkedin"
                 width="21"
                 height="20"
@@ -485,6 +525,7 @@
             <a href="link address" target="_blank" rel="noopener"
               ><span>medium</span
               ><svg
+                aria-label="medium"
                 class="svg-icons"
                 width="21"
                 height="16"
@@ -501,6 +542,7 @@
             <a href="https://github.com/yinkusadel" target="_blank" rel="noopener"
               ><span>github</span
               ><svg
+                aria-label="github"
                 class="svg-github"
                 width="19"
                 height="20"
@@ -517,6 +559,7 @@
             <a href="link address" target="_blank" rel="noopener"
               ><span>angelists</span
               ><svg
+                aria-label="angelists"
                 class="svg-icons"
                 width="15"
                 height="20"
