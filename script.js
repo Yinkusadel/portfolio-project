@@ -5,10 +5,12 @@ const mdHeaderNavLinks = document.querySelectorAll('.md-header-nav-li');
 
 const openMenuBtnFunc = () => {
   mdHeaderNav.classList.add('d-flex');
+  openMenuBtn.classList.add('d-none');
 };
 
 const closeMenuBtnFunc = () => {
   mdHeaderNav.classList.remove('d-flex');
+  openMenuBtn.classList.remove('d-none');
 };
 
 for (let i = 0; i < mdHeaderNavLinks.length; i += 1) {
