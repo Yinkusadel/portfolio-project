@@ -11,8 +11,16 @@
     <div class="md-header-background">
       <div class="md-header-content-center">
         <div class="welcome-nav">
-          <div class="md-header-nav">
-            <ul class="md-header-nav-ul">
+          <div class="md-header-nav small-header-nav d-none">
+            <div class="close-menu-div d-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="close-menu-svg">
+                <path
+                  d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
+                />
+              </svg>
+            </div>
+
+            <ul class="md-header-nav-ul small-header-nav-ul">
               <li class="md-header-nav-li">
                 <a class="md-header-nav-li-a" href="#portfolio-projects">Portfolio</a>
               </li>
@@ -20,7 +28,7 @@
                 <a class="md-header-nav-li-a" href="#about-me">About</a>
               </li>
               <li class="md-header-nav-li">
-                <a class="md-header-nav-li-a" href="#contacts">contact</a>
+                <a class="md-header-nav-li-a" href="#socialmedias">Contact</a>
               </li>
             </ul>
           </div>
@@ -32,6 +40,7 @@
               height="40"
               viewBox="0 0 40 40"
               fill="none"
+              class="open-menu-svg"
             >
               <path
                 fill-rule="evenodd"
@@ -479,7 +488,7 @@
     </section>
 
     <div class="md-version-ending-socialmedia">
-      <div class="socialmedias">
+      <div class="socialmedias" id="socialmedias">
         <ul>
           <li>
             <a href="https://twitter.com/HashiraAdel" target="_blank" rel="noopener"
@@ -577,5 +586,6 @@
     </div>
 
     <div class="black-border"></div>
+    <script src="script.js"></script>
   </body>
 </html>
