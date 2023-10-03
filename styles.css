@@ -483,6 +483,7 @@ textarea:focus-visible {
     transition: all 0.5s ease-out;
     transition-duration: 0.4s;
     border-radius: 10px;
+    animation: displaymenu 1s linear;
   }
 
   .small-header-nav-ul {
@@ -521,6 +522,11 @@ textarea:focus-visible {
 
   .close-menu-svg:not(:hover) {
     transition-duration: 0.4s;
+  }
+
+  @keyframes displaymenu {
+    from { left: 100%; }
+    to { left: 0; }
   }
 }
 
