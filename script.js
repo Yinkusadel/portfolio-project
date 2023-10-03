@@ -16,6 +16,7 @@ const closeMenuBtnFunc = () => {
 for (let i = 0; i < mdHeaderNavLinks.length; i += 1) {
   mdHeaderNavLinks[i].addEventListener('click', function () {
     mdHeaderNav.classList.remove('d-flex');
+    openMenuBtn.classList.remove('d-none');
   });
 }
 
