@@ -442,6 +442,10 @@ textarea:focus-visible {
   border-radius: 4px;
 }
 
+.md-version-ending-socialmedia {
+  margin-bottom: 200px;
+}
+
 .d-none {
   display: none;
 }
@@ -452,10 +456,6 @@ textarea:focus-visible {
 
 .d-block {
   display: block;
-}
-
-.md-version-ending-socialmedia {
-  margin-bottom: 200px;
 }
 
 /*  styles for desktop version begins here */

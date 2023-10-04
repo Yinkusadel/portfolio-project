@@ -13,12 +13,12 @@ const closeMenuBtnFunc = () => {
   openMenuBtn.classList.remove('d-none');
 };
 
-for (let i = 0; i < mdHeaderNavLinks.length; i += 1) {
-  mdHeaderNavLinks[i].addEventListener('click', function () {
+mdHeaderNavLinks.forEach((mdHeaderNavLinks) => {
+  mdHeaderNavLinks.addEventListener('click', function () {
     mdHeaderNav.classList.remove('d-flex');
     openMenuBtn.classList.remove('d-none');
   });
-}
+});
 
 const openMenu = document.querySelector('.open-menu-svg');
 openMenu.addEventListener('click', openMenuBtnFunc);
