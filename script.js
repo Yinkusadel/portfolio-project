@@ -1,5 +1,4 @@
 const openMenuBtn = document.querySelector('.open-menu-svg');
-const closeMenuBtn = document.querySelector('.close-menu-svg');
 const mdHeaderNav = document.querySelector('.small-header-nav');
 const mdHeaderNavLinks = document.querySelectorAll('.md-header-nav-li');
 
@@ -13,8 +12,8 @@ const closeMenuBtnFunc = () => {
   openMenuBtn.classList.remove('d-none');
 };
 
-mdHeaderNavLinks.forEach((mdHeaderNavLinks) => {
-  mdHeaderNavLinks.addEventListener('click', function () {
+mdHeaderNavLinks.forEach((mobileMenuLinks) => {
+  mobileMenuLinks.addEventListener('click', function () {
     mdHeaderNav.classList.remove('d-flex');
     openMenuBtn.classList.remove('d-none');
   });

@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -460,7 +460,7 @@ textarea:focus-visible {
 
 /*  styles for desktop version begins here */
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .close-menu-div {
     width: 90%;
     display: flex;
@@ -537,7 +537,7 @@ textarea:focus-visible {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (width >= 768px) {
   .md-header-background {
     background: url("images/desktop-version/Header-llustration-desktop.png") center/100% 100% no-repeat;
     height: 1000px;
