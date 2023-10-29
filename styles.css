@@ -535,6 +535,70 @@ textarea:focus-visible {
     from { left: 100%; }
     to { left: 0; }
   }
+
+  .popup-card-container {
+    display: none;
+    
+    /* display: flex; */
+    position: fixed;
+    background-color: #fcfcfc;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+  
+  .popup-card {
+    width: 90%;
+    height: 100%;
+  }
+  
+  .popup-card-image-container {
+    width: 100%;
+    height: 55%;
+  }
+  
+  .popup-card-text{
+    font: 600 24px/32px Inter, sans-serif;
+    color: var(--text-color-blue);
+    width: 50%;
+  
+  }
+  
+  .popup-card-image{
+    width: 100%;
+    height: 70%;
+  
+  }
+  
+  .popup-card-projects {
+    display: flex;
+  }
+  
+  .popup-card-projects li {
+    list-style: none;
+    margin: 5px;
+    background-color: var(--cards-background);
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .popup-card-button {
+    display: flex;
+    justify-content: space-between;
+    height: 5%;
+    margin-top: 10px;
+  }
+  
+  .popup-button{
+    width: 48%;
+    background-color: var(--text-color-green);
+    color: #ffff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (width >= 768px) {
