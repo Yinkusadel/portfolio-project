@@ -13,6 +13,9 @@
   - CSS `flexbox`
   - CSS background for page aesthetic using `background-image`
   - CSS media query
+- ### js
+  - addEventListener
+  - for loop
 - ### Linters
   - [prettier](prettier),
   - [stylelint](stylelint).
@@ -73,6 +76,7 @@ yarn hint
 - [CSS Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
 - [HTML Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
 - [Git Style Guide](https://udacity.github.io/git-styleguide/)
+- [JavaScript Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
 
 ## 👤 Author
 
