@@ -510,7 +510,7 @@ textarea:focus-visible {
 
   .small-header-nav a:hover {
     color: var(--textarea-green-border);
-    background-color: #1d1a1a;
+    background-color: #97e673;
   }
 
   .open-menu-svg:hover {
