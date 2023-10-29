@@ -8,15 +8,23 @@
   </head>
 
   <body>
-    <div class="popup-card-container">
+    <div class="popup-card-container d-none">
       <div class="popup-card">
         <figure class="popup-card-image-container">
-          <img
-            class="popup-card-image"
-            src="images/tonic.png"
-            title="tonic image"
-            alt="tonic project"
-          />
+          <div class="popup-card-close-btn-container">
+            <svg
+              class="popup-card-close-btn"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
+              ></path>
+            </svg>
+          </div>
+
+          <img class="popup-card-image" src="" title="tonic image" alt="tonic project" />
           <figcaption class="popup-card-text">Keeping track of hundreds of components</figcaption>
         </figure>
 
@@ -302,7 +310,7 @@
                     </ul>
 
                     <div class="card-button">
-                      <button class="see-projects">See Projects</button>
+                      <button class="see-projects tonic-popup">See Projects</button>
                     </div>
                   </li>
 
@@ -325,7 +333,7 @@
                     </ul>
 
                     <div class="card-button">
-                      <button class="see-projects">See Projects</button>
+                      <button class="see-projects tonic-two-popup">See Projects</button>
                     </div>
                   </li>
 
@@ -348,7 +356,7 @@
                     </ul>
 
                     <div class="card-button">
-                      <button class="see-projects">See Projects</button>
+                      <button class="see-projects multipost-popup">See Projects</button>
                     </div>
                   </li>
 
@@ -371,7 +379,7 @@
                     </ul>
 
                     <div class="card-button">
-                      <button class="see-projects">See Projects</button>
+                      <button class="see-projects multipost-two-popup">See Projects</button>
                     </div>
                   </li>
 
@@ -394,7 +402,7 @@
                     </ul>
 
                     <div class="card-button">
-                      <button class="see-projects">See Projects</button>
+                      <button class="see-projects facebook-popup">See Projects</button>
                     </div>
                   </li>
 
@@ -417,7 +425,7 @@
                     </ul>
 
                     <div class="card-button">
-                      <button class="see-projects">See Projects</button>
+                      <button class="see-projects nature-popup">See Projects</button>
                     </div>
                   </li>
                 </ul>
@@ -703,6 +711,7 @@
     </div>
 
     <div class="black-border"></div>
+    <script src="baseScript.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
