@@ -20,7 +20,7 @@ const popUpCardCloseBtn = document.querySelector('.popup-card-close-btn');
 //   'images/multipost2.png',
 //   'images/facebook.png',
 //   'images/nature.png',
-// ];
+// ];++
 
 const projectCardImages = {
   zero: 'images/tonic.png',
@@ -103,3 +103,36 @@ naturePopup.addEventListener('click', function () {
   PopUpCardContainer.classList.add('d-flex');
   popUpCardImage.src = projectCardImages.five;
 });
+
+// const projects = [
+//   {
+//     title: "hjfjfj",
+//     description: "jfjf fjfjf f",
+//     screenshot:  'images/tonic.png',
+//     tags: ['ruby', 'react', 'javascript']
+
+//   }
+// ]
+
+// const generateProjectCard = (screenshot, tags) => `
+// <li class="cards">
+// <figure>
+//   <img
+//     class="card-images"
+//     src="${screenshot}"
+//     title="tonic 2 image"
+//     alt="tonic project"ta
+//   />
+//   <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
+// </figure>
+
+// <ul class="card-projects">
+// ${tags.map(tag => `<li>${tag}</li>`)}
+// </ul>
+
+// <div class="card-button">
+//   <button class="see-projects tonic-two-popup">See Projects</button>
+// </div>
+// </li>`
+
+// projects.map(project => (generateProjectCard(project.screenshot, project.tags)))
