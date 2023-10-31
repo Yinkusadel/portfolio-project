@@ -446,6 +446,114 @@ textarea:focus-visible {
   margin-bottom: 200px;
 }
 
+.popup-card-close-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.popup-card-close-btn {
+  fill: #93a79d;
+  position: absolute;
+  top: 10px;
+  padding-right: 12px;
+}
+
+.popup-card-close-btn:hover {
+  transform: scale(1.4);
+  transition-duration: 0.4s;
+}
+
+.popup-card-close-btn:not(:hover) {
+  transition-duration: 0.4s;
+}
+
+.popup-card-container {
+  position: fixed;
+  background-color: #fcfcfc;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.popup-card {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.popup-card-text{
+  font: 600 32px/44px Inter, sans-serif;
+  color: var(--text-color-blue);
+  width: 80%;
+  height: 33%;
+
+}
+
+.popup-card-image-container {
+  height: 40%;
+}
+
+.popup-card-image{
+  width: 100%;
+  height: 100%;
+
+}
+
+.project-card-details {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-card-projects {
+  display: flex;
+  height: 10%;
+}
+
+.popup-card-projects li {
+  list-style: none;
+  margin: 5px;
+  background-color: var(--cards-background);
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.popup-loremipsum-text{
+  color: var(--text-color-blue);
+  height: 40%;
+  font-size: 95%;
+}
+
+.popup-card-button {
+  display: flex;
+  justify-content: space-between;
+  height: 10%;
+  margin-top: 10px;
+}
+
+.popup-button{
+  width: 48%;
+  background-color:#36b37e;
+  border: none;
+  color: #ffff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-button:hover {
+  background-color: var(--text-color-green);
+}
+
+.popup-button:active {
+  background-color:#36b37e;
+}
+
 .d-none {
   display: none;
 }
@@ -535,89 +643,6 @@ textarea:focus-visible {
     from { left: 100%; }
     to { left: 0; }
   }
-
-  .popup-card-close-btn-container {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .popup-card-close-btn {
-    fill: #93a79d;
-    position: absolute;
-    top: 10px;
-    padding-right: 12px;
-  }
-
-  .popup-card-close-btn:hover {
-    transform: scale(1.4);
-    transition-duration: 0.4s;
-  }
-
-  .popup-card-close-btn:not(:hover) {
-    transition-duration: 0.4s;
-}
-
-  .popup-card-container {
-    /* display: flex; */
-    position: fixed;
-    background-color: #fcfcfc;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-  }
-  
-  .popup-card {
-    width: 90%;
-    height: 100%;
-  }
-  
-  .popup-card-image-container {
-    width: 100%;
-    height: 55%;
-  }
-  
-  .popup-card-text{
-    font: 600 24px/32px Inter, sans-serif;
-    color: var(--text-color-blue);
-    width: 50%;
-  
-  }
-  
-  .popup-card-image{
-    width: 100%;
-    height: 70%;
-  
-  }
-  
-  .popup-card-projects {
-    display: flex;
-  }
-  
-  .popup-card-projects li {
-    list-style: none;
-    margin: 5px;
-    background-color: var(--cards-background);
-    padding: 5px 10px;
-    border-radius: 4px;
-    text-align: center;
-  }
-  
-  .popup-card-button {
-    display: flex;
-    justify-content: space-between;
-    height: 5%;
-    margin-top: 10px;
-  }
-  
-  .popup-button{
-    width: 48%;
-    background-color: var(--text-color-green);
-    color: #ffff;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 @media screen and (width >= 768px) {
@@ -700,19 +725,21 @@ textarea:focus-visible {
   width: 100%;
   height: 100%;
   justify-content: center;
-  background-color: #fff8f8;
+  background-color:rgb(168 164 162 / 70%)
 }
 
 .popup-card-close-btn-container {
   display: flex;
+  height: 5%;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .popup-card-close-btn {
   fill: #93a79d;
-  position: absolute;
-  top: 10px;
-  padding-right: 12px;
+  padding-right: 0;
+  position: relative;
+  top: 0;
 }
 
 .popup-card-close-btn:hover {
@@ -725,13 +752,17 @@ textarea:focus-visible {
 }
 
 .popup-card {
-  width: 90%;
-  height: 100%;
+  max-width: 500px;
+  height: 85%;
+  background-color: #e4ebe4;
+  border-radius: 10px;
+  margin-top: 3%;
+  padding: 0 30px;
 }
 
 .popup-card-image-container {
   width: 100%;
-  height: 45%;
+  height: 50%;
 }
 
 .popup-card-image {
@@ -739,51 +770,60 @@ textarea:focus-visible {
   height: 100%;
 }
 
+.project-card-details {
+  height: 40%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .popup-card-text {
-  font: 600 24px/32px Inter, sans-serif;
+  font: 600 15px/24px Inter, sans-serif;
   color: var(--text-color-blue);
-  width: 45%;
+  width: 40%;
+  height: 20%;
+  order: -2;
 }
 
 .popup-loremipsum-text{
   color: var(--text-color-blue);
+  font-size: 80%;
+  height: 40%;
 }
 
 .popup-card-projects {
   display: flex;
+  height: 15%;
 }
 
 .popup-card-projects li{
   list-style: none;
-  margin: 5px;
   background-color: #dad0d0;
   color: var(--text-color-blue);
   padding: 5px 10px;
   border-radius: 4px;
   text-align: center;
-  margin-top: 140px;
 }
  
 .popup-card-button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  width: 18%;
-  height: 7%;
-  bottom: 43%;
-  left: 73%;
+  width: 50%;
+  height: 20%;
+  order: -1;
+  margin-top: 0;
 
 }
 
 .popup-button {
-  background-color: var(--text-color-green);
   color: #f8f2f2;
-  border-radius: 4px;
+  border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px 10px;
+  padding: 10px 12px;
+  width: 120px;
 }
 
   /*   styles for desktop version aboutme background begins here    */
