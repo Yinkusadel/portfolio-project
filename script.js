@@ -2,13 +2,6 @@ const openMenuBtn = document.querySelector('.open-menu-svg');
 const mdHeaderNav = document.querySelector('.small-header-nav');
 const mdHeaderNavLinks = document.querySelectorAll('.md-header-nav-li');
 
-// const PopUpCardContainer = document.querySelector('.popup-card-container');
-
-// const popUpCardImage = document.querySelector('.popup-card-image');
-// const popUpCardCloseBtn = document.querySelector('.popup-card-close-btn');
-
-// popUpCardImage.setAttribute('src', 'images/tonic.png');
-
 const openMenuBtnFunc = () => {
   mdHeaderNav.classList.add('d-flex');
   openMenuBtn.classList.add('d-none');
@@ -20,7 +13,7 @@ const closeMenuBtnFunc = () => {
 };
 
 mdHeaderNavLinks.forEach((mobileMenuLinks) => {
-  mobileMenuLinks.addEventListener('click', function () {
+  mobileMenuLinks.addEventListener('click', function mdHeaderNavLinksClickEvent() {
     mdHeaderNav.classList.remove('d-flex');
     openMenuBtn.classList.remove('d-none');
   });
