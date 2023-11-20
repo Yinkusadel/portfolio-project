@@ -4,7 +4,6 @@ const multiPostPopup = document.querySelector('.multipost-popup');
 const multiPostTwoPopup = document.querySelector('.multipost-two-popup');
 const faceBookPopup = document.querySelector('.facebook-popup');
 const naturePopup = document.querySelector('.nature-popup');
-const PopUpCardContainer = document.querySelector('.popup-card-container');
 const popUpCardImage = document.querySelector('.popup-card-image');
 
 popUpCardImage.setAttribute('src', 'images/tonic.png');
