@@ -4,6 +4,7 @@ const multiPostPopup = document.querySelector('.multipost-popup');
 const multiPostTwoPopup = document.querySelector('.multipost-two-popup');
 const faceBookPopup = document.querySelector('.facebook-popup');
 const naturePopup = document.querySelector('.nature-popup');
+const popUpCardContainerNew = document.querySelector('.popup-card-container');
 const popUpCardImage = document.querySelector('.popup-card-image');
 
 popUpCardImage.setAttribute('src', 'images/tonic.png');
@@ -18,37 +19,37 @@ const projectCardImages = {
 };
 
 seeProjectTonicBtn.addEventListener('click', function tonicBtnClickEvent() {
-  PopUpCardContainer.classList.remove('d-none');
-  PopUpCardContainer.classList.add('d-flex');
+  popUpCardContainerNew.classList.remove('d-none');
+  popUpCardContainerNew.classList.add('d-flex');
   popUpCardImage.src = projectCardImages.zero;
 });
 
 seeProjectTonicTwoBtn.addEventListener('click', function tonicTwoBtnClickEvent() {
-  PopUpCardContainer.classList.remove('d-none');
-  PopUpCardContainer.classList.add('d-flex');
+  popUpCardContainerNew.classList.remove('d-none');
+  popUpCardContainerNew.classList.add('d-flex');
   popUpCardImage.src = projectCardImages.one;
 });
 
 multiPostPopup.addEventListener('click', function multiPopupClickEvent() {
-  PopUpCardContainer.classList.remove('d-none');
-  PopUpCardContainer.classList.add('d-flex');
+  popUpCardContainerNew.classList.remove('d-none');
+  popUpCardContainerNew.classList.add('d-flex');
   popUpCardImage.src = projectCardImages.two;
 });
 
 multiPostTwoPopup.addEventListener('click', function multiPopupTwoClickEvent() {
-  PopUpCardContainer.classList.remove('d-none');
-  PopUpCardContainer.classList.add('d-flex');
+  popUpCardContainerNew.classList.remove('d-none');
+  popUpCardContainerNew.classList.add('d-flex');
   popUpCardImage.src = projectCardImages.three;
 });
 
 faceBookPopup.addEventListener('click', function fbPopupClickEvent() {
-  PopUpCardContainer.classList.remove('d-none');
-  PopUpCardContainer.classList.add('d-flex');
+  popUpCardContainerNew.classList.remove('d-none');
+  popUpCardContainerNew.classList.add('d-flex');
   popUpCardImage.src = projectCardImages.four;
 });
 
 naturePopup.addEventListener('click', function naturePopupClickEvent() {
-  PopUpCardContainer.classList.remove('d-none');
-  PopUpCardContainer.classList.add('d-flex');
+  popUpCardContainerNew.classList.remove('d-none');
+  popUpCardContainerNew.classList.add('d-flex');
   popUpCardImage.src = projectCardImages.five;
 });
