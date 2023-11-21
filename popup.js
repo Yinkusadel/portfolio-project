@@ -14,7 +14,7 @@ const popupImageAttributesArray = [
     alt: 'Image 0 Alt Text',
     tagLi: ['Ruby on rails', 'Css', 'JavaScript', 'html'],
     btnHrefFirst: 'hjdfhjdfjhfj',
-    btnHrefSecond: 'hjdfhjdfjhfj',
+    btnHrefSecond: 'https://github.com/Yinkusadel/odin-project-rock-paper-scissors/pull/1',
   },
   {
     id: 'tonic-two-popup',
@@ -24,7 +24,7 @@ const popupImageAttributesArray = [
     alt: 'Image 1 Alt Text',
     tagLi: ['C++', 'Ruby', 'Python', 'Jquery'],
     btnHrefFirst: 'hjdfhjdfjhfj',
-    btnHrefSecond: 'hjdfhjdfjhfj',
+    btnHrefSecond: 'https://github.com/Yinkusadel/random-password-generator/pull/1',
   },
   {
     id: 'multipost-popup',
@@ -34,7 +34,7 @@ const popupImageAttributesArray = [
     alt: 'Image 2 Alt Text',
     tagLi: ['Ember', 'Spring', 'Django', 'Vue'],
     btnHrefFirst: 'hjdfhjdfjhfj',
-    btnHrefSecond: 'hjdfhjdfjhfj',
+    btnHrefSecond: 'https://github.com/Yinkusadel/basketball-scoreboard/pull/1',
   },
   {
     id: 'multipost-two-popup',
@@ -44,7 +44,7 @@ const popupImageAttributesArray = [
     alt: 'Image 3 Alt Text',
     tagLi: ['Laravel', 'Angular', 'React', 'Express'],
     btnHrefFirst: 'hjdfhjdfjhfj',
-    btnHrefSecond: 'hjdfhjdfjhfj',
+    btnHrefSecond: 'https://github.com/Yinkusadel/adel-js-calculator-app/pull/6',
   },
   {
     id: 'facebook-popup',
@@ -54,7 +54,7 @@ const popupImageAttributesArray = [
     alt: 'Image 4 Alt Text',
     tagLi: ['Symfony4', 'Codeigniter', 'Backbone', 'Flask'],
     btnHrefFirst: 'hjdfhjdfjhfj',
-    btnHrefSecond: 'hjdfhjdfjhfj',
+    btnHrefSecond: 'https://github.com/Yinkusadel/scrimba-building-blackjack/pull/1',
   },
   {
     id: 'nature-popup',
@@ -64,7 +64,7 @@ const popupImageAttributesArray = [
     alt: 'Image 5 Alt Text',
     tagLi: ['Svelte', 'Css', 'Software framework', 'Asp.net'],
     btnHrefFirst: 'hjdfhjdfjhfj',
-    btnHrefSecond: 'hjdfhjdfjhfj',
+    btnHrefSecond: 'https://github.com/Yinkusadel/scrimba-passenger-counter-app/pull/1',
   },
 ];
 
