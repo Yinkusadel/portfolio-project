@@ -497,7 +497,7 @@ textarea:focus-visible {
 
 .popup-card-projects {
   display: flex;
-  height: 15%;
+  height: 10%;
 }
 
 .popup-card-projects-li {
@@ -514,7 +514,7 @@ textarea:focus-visible {
 
 .popup-loremipsum-text-container {
   height: 40%;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .popup-loremipsum-text{
@@ -537,6 +537,7 @@ textarea:focus-visible {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .popup-button:hover {
@@ -728,20 +729,24 @@ textarea:focus-visible {
 }
 
 .popup-card-close-btn-container {
-  height: 5%;
+  height: 7%;
   justify-content: flex-end;
   align-items: center;
 }
 
 .popup-card-close-btn {
   fill: #93a79d;
-  padding-right: 0;
+  margin-right: 0;
   position: relative;
   top: 0;
+  padding: 4px;
+  background-color: #EBECF0;
 }
 
+
+
 .popup-card-close-btn:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
   transition-duration: 0.4s;
 }
 
@@ -752,7 +757,7 @@ textarea:focus-visible {
 .popup-card {
   max-width: 500px;
   height: 85%;
-  background-color: #e4ebe4;
+  background-color: #ffff;
   border-radius: 10px;
   padding: 0 30px;
 }
@@ -784,6 +789,7 @@ textarea:focus-visible {
 
 .popup-loremipsum-text{
   color: var(--text-color-blue);
+  font-size: 10px;
 }
 
 .popup-card-projects {
@@ -803,7 +809,7 @@ textarea:focus-visible {
 .popup-card-button {
   align-items: center;
   justify-content: space-between;
-  width: 50%;
+  width: 52%;
   height: 20%;
   order: -1;
   margin-top: 0;
@@ -816,8 +822,9 @@ textarea:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 12px;
-  width: 120px;
+  width: 118px;
+  text-decoration: none;
+  padding: 5px;
 }
 
   /*   styles for desktop version aboutme background begins here    */

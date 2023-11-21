@@ -1,16 +1,9 @@
-const PopUpCardContainer = document.querySelector('.popup-card-container');
-const popUpCardCloseBtn = document.querySelector('.popup-card-close-btn');
-
-popUpCardCloseBtn.addEventListener('click', function popupCardCloseClickEvent() {
-  PopUpCardContainer.classList.add('d-none');
-  PopUpCardContainer.classList.remove('d-flex');
-});
-
 const imageAttributesArray = [
   {
     src: 'images/tonic.png',
     title: 'Image 0',
     alt: 'Image 0 Alt Text',
+    description: 'Tonic image',
     class: 'tonic-popup',
     tagLi: ['Ruby on rails', 'Css', 'JavaScript', 'html'],
   },
@@ -18,6 +11,7 @@ const imageAttributesArray = [
     src: 'images/tonic2.png',
     title: 'Image 1',
     alt: 'Image 1 Alt Text',
+    description: 'Tonic project',
     class: 'tonic-two-popup',
     tagLi: ['C++', 'Ruby', 'Python', 'Jquery'],
   },
@@ -25,6 +19,7 @@ const imageAttributesArray = [
     src: 'images/multipost.png',
     title: 'Image 2',
     alt: 'Image 2 Alt Text',
+    description: 'Availability project',
     class: 'multipost-popup',
     tagLi: ['Ember', 'Spring', 'Django', 'Vue'],
   },
@@ -32,6 +27,7 @@ const imageAttributesArray = [
     src: 'images/multipost2.png',
     title: 'Image 3',
     alt: 'Image 3 Alt Text',
+    description: 'Professional Art Printing',
     class: 'multipost-two-popup',
     tagLi: ['Laravel', 'Angular', 'React', 'Express'],
   },
@@ -39,6 +35,7 @@ const imageAttributesArray = [
     src: 'images/facebook.png',
     title: 'Image 4',
     alt: 'Image 4 Alt Text',
+    description: 'Facebook 360',
     class: 'facebook-popup',
     tagLi: ['Symfony4', 'Codeigniter', 'Backbone', 'Flask'],
   },
@@ -46,6 +43,7 @@ const imageAttributesArray = [
     src: 'images/nature.png',
     title: 'Image 5',
     alt: 'Image 5 Alt Text',
+    description: 'Nature',
     class: 'nature-popup',
     tagLi: ['Svelte', 'Css', 'Software framework', 'Asp.net'],
   },
@@ -53,7 +51,7 @@ const imageAttributesArray = [
 
 const cardUl = document.querySelector('.md-multipost-card-flex');
 
-const generateProjectCard = (imgSrc, imgTitle, imgAlt, popupClass, tags) => `
+const generateProjectCard = (imgSrc, imgTitle, imgAlt, imgDescription, popupClass, tags) => `
     <li class="cards">
     <figure>
       <img
@@ -62,7 +60,7 @@ const generateProjectCard = (imgSrc, imgTitle, imgAlt, popupClass, tags) => `
         title="${imgTitle}"
         alt="${imgAlt}"
       />
-      <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
+      <figcaption class="card-text">${imgDescription}</figcaption>
     </figure>
     
      <ul class="card-projects d-flex">
@@ -80,6 +78,7 @@ const generateProjectCardsAttr = () => {
       attributes.src,
       attributes.title,
       attributes.alt,
+      attributes.description,
       attributes.class,
       attributes.tagLi,
     );

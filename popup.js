@@ -5,51 +5,244 @@ const multiPostTwoPopup = document.querySelector('.multipost-two-popup');
 const faceBookPopup = document.querySelector('.facebook-popup');
 const naturePopup = document.querySelector('.nature-popup');
 const popUpCardContainerNew = document.querySelector('.popup-card-container');
-const popUpCardImage = document.querySelector('.popup-card-image');
+const popupImageAttributesArray = [
+  {
+    id: 'tonic-popup',
+    class: 'popup-card-close-btn',
+    src: 'images/tonic.png',
+    title: 'Image 0',
+    alt: 'Image 0 Alt Text',
+    tagLi: ['Ruby on rails', 'Css', 'JavaScript', 'html'],
+    btnHrefFirst: 'hjdfhjdfjhfj',
+    btnHrefSecond: 'hjdfhjdfjhfj',
+  },
+  {
+    id: 'tonic-two-popup',
+    class: 'popup-card-close-btn',
+    src: 'images/tonic2.png',
+    title: 'Image 1',
+    alt: 'Image 1 Alt Text',
+    tagLi: ['C++', 'Ruby', 'Python', 'Jquery'],
+    btnHrefFirst: 'hjdfhjdfjhfj',
+    btnHrefSecond: 'hjdfhjdfjhfj',
+  },
+  {
+    id: 'multipost-popup',
+    class: 'popup-card-close-btn',
+    src: 'images/multipost.png',
+    title: 'Image 2',
+    alt: 'Image 2 Alt Text',
+    tagLi: ['Ember', 'Spring', 'Django', 'Vue'],
+    btnHrefFirst: 'hjdfhjdfjhfj',
+    btnHrefSecond: 'hjdfhjdfjhfj',
+  },
+  {
+    id: 'multipost-two-popup',
+    class: 'popup-card-close-btn',
+    src: 'images/multipost2.png',
+    title: 'Image 3',
+    alt: 'Image 3 Alt Text',
+    tagLi: ['Laravel', 'Angular', 'React', 'Express'],
+    btnHrefFirst: 'hjdfhjdfjhfj',
+    btnHrefSecond: 'hjdfhjdfjhfj',
+  },
+  {
+    id: 'facebook-popup',
+    class: 'popup-card-close-btn',
+    src: 'images/facebook.png',
+    title: 'Image 4',
+    alt: 'Image 4 Alt Text',
+    tagLi: ['Symfony4', 'Codeigniter', 'Backbone', 'Flask'],
+    btnHrefFirst: 'hjdfhjdfjhfj',
+    btnHrefSecond: 'hjdfhjdfjhfj',
+  },
+  {
+    id: 'nature-popup',
+    class: 'popup-card-close-btn',
+    src: 'images/nature.png',
+    title: 'Image 5',
+    alt: 'Image 5 Alt Text',
+    tagLi: ['Svelte', 'Css', 'Software framework', 'Asp.net'],
+    btnHrefFirst: 'hjdfhjdfjhfj',
+    btnHrefSecond: 'hjdfhjdfjhfj',
+  },
+];
 
-popUpCardImage.setAttribute('src', 'images/tonic.png');
+const cardPopupContainer = document.querySelector('.popup-card-container');
 
-const projectCardImages = {
-  zero: 'images/tonic.png',
-  one: 'images/tonic2.png',
-  two: 'images/multipost.png',
-  three: 'images/multipost2.png',
-  four: 'images/facebook.png',
-  five: 'images/nature.png',
+const generatePopupProjectCard = (
+  cardId,
+  closeBtn,
+  imgSrc,
+  imgTitle,
+  imgAlt,
+  tags,
+  btnHrefOne,
+  btnHrefTwo,
+) => `
+
+<div class="popup-card d-flex">
+<div class="popup-card-close-btn-container d-flex" id="${cardId}" >
+  <svg
+    class="popup-card-close-btn ${closeBtn}"
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+  >
+    <path
+      d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
+    ></path>
+  </svg>
+</div>
+<div class="popup-card-image-container">
+  <img
+    class="popup-card-image"
+    src="${imgSrc}"
+    title="${imgTitle}"
+    alt="${imgAlt}"
+  />
+</div>
+
+<div class="project-card-details">
+  <div class="popup-card-text">Keeping track of hundreds of components</div>
+
+  <ul class="popup-card-projects md-d-flex">
+  ${tags.map((tag) => `<li class="popup-card-projects-li">${tag}</li>`).join('')}
+  </ul>
+
+  <div class="popup-loremipsum-text-container d-flex">
+    <p class="popup-loremipsum-text">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+      has been the industry's standard dummy text ever since the 1500s, when an unknown
+      printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is
+      simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+      industry's standard dummy text ever since the 1500s, when an unknown printer took a
+      galley of type and scrambled it 1960s with the relea
+    </p>
+  </div>
+
+  <div class="popup-card-button d-flex">
+    <a href=""${btnHrefOne}" class="popup-button d-flex">
+      See Live<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M5 12C5 8.13401 8.13401 5 12 5C12.5523 5 13 4.55228 13 4C13 3.44772 12.5523 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 11.4477 20.5523 11 20 11C19.4477 11 19 11.4477 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12ZM16 3C15.4477 3 15 3.44772 15 4C15 4.55228 15.4477 5 16 5H17.5858L11.2929 11.2929C10.9024 11.6834 10.9024 12.3166 11.2929 12.7071C11.6834 13.0976 12.3166 13.0976 12.7071 12.7071L19 6.41421V8C19 8.55228 19.4477 9 20 9C20.5523 9 21 8.55228 21 8V4C21 3.44772 20.5523 3 20 3H16Z"
+          fill="white"
+        />
+      </svg>
+    </a>
+    <a href="${btnHrefTwo}" class="popup-button d-flex">
+      See Source<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <g clip-path="url(#clip0_48_2223)">
+          <g clip-path="url(#clip1_48_2223)">
+            <path
+              d="M20.9992 9.46114C20.9992 8.32124 20.6332 7.25043 19.9345 6.31779C20.2007 5.41969 20.2672 4.27979 20.2007 2.96718C20.1674 2.41451 19.7349 2 19.2025 2C18.9031 2 16.3744 2.03454 14.9105 3.38169C13.6461 3.1399 12.3153 3.1399 11.0177 3.38169C9.58698 2.03454 7.05833 2 6.72561 2C6.19326 2 5.76073 2.41451 5.72746 2.96718C5.62764 4.27979 5.72746 5.41969 5.99363 6.31779C5.29492 7.28497 4.92894 8.35579 4.92894 9.46114C4.92894 11.8791 6.72561 14.0553 9.45389 15.0915C9.35407 15.2988 9.28753 15.5406 9.22099 15.7824C6.32635 15.4715 4.96221 12.7427 4.89566 12.639C4.66276 12.1209 4.06387 11.9136 3.5648 12.19C3.06572 12.4318 2.86609 13.0535 3.13226 13.5717C3.19881 13.7444 5.02875 17.4404 9.05463 17.8549V20.9637C9.05463 21.5509 9.48716 22 10.0528 22H15.8753C16.441 22 16.8735 21.5509 16.8735 20.9637V16.8532C16.8735 16.2314 16.7404 15.6442 16.5075 15.1261C19.2025 14.0553 20.9992 11.9136 20.9992 9.46114Z"
+              fill="white"
+            />
+          </g>
+        </g>
+        <defs>
+          <clippath id="clip0-48-2223">
+            <rect width="18" height="20" fill="white" transform="translate(3 2)" />
+          </clippath>
+          <clippath id="clip1-48-2223">
+            <rect width="18" height="20" fill="white" transform="translate(3 2)" />
+          </clippath>
+        </defs>
+      </svg>
+    </a>
+  </div>
+</div>
+</div>`;
+
+const generatePopupProjectCardAttr = () => {
+  popupImageAttributesArray.forEach((attributes) => {
+    const projectCard = generatePopupProjectCard(
+      attributes.class,
+      attributes.id,
+      attributes.src,
+      attributes.title,
+      attributes.alt,
+      attributes.tagLi,
+      attributes.btnHrefFirst,
+      attributes.btnHrefSecond,
+    );
+    cardPopupContainer.innerHTML += projectCard;
+  });
+};
+
+generatePopupProjectCardAttr();
+
+const updatePopupContent = (id) => {
+  const popupAttributes = popupImageAttributesArray.find((attr) => attr.id === id);
+
+  if (popupAttributes) {
+    const projectCard = generatePopupProjectCard(
+      popupAttributes.class,
+      popupAttributes.id,
+      popupAttributes.src,
+      popupAttributes.title,
+      popupAttributes.alt,
+      popupAttributes.tagLi,
+      popupAttributes.btnHrefFirst,
+      popupAttributes.btnHrefSecond,
+    );
+
+    popUpCardContainerNew.innerHTML = projectCard;
+
+    const closeBtn = document.querySelector('.popup-card-close-btn');
+    closeBtn.addEventListener('click', function closeBtnForPopup() {
+      popUpCardContainerNew.classList.add('d-none');
+      popUpCardContainerNew.classList.remove('d-flex');
+    });
+  }
 };
 
 seeProjectTonicBtn.addEventListener('click', function tonicBtnClickEvent() {
+  updatePopupContent('tonic-popup');
   popUpCardContainerNew.classList.remove('d-none');
   popUpCardContainerNew.classList.add('d-flex');
-  popUpCardImage.src = projectCardImages.zero;
 });
 
 seeProjectTonicTwoBtn.addEventListener('click', function tonicTwoBtnClickEvent() {
+  updatePopupContent('tonic-two-popup');
   popUpCardContainerNew.classList.remove('d-none');
   popUpCardContainerNew.classList.add('d-flex');
-  popUpCardImage.src = projectCardImages.one;
 });
 
 multiPostPopup.addEventListener('click', function multiPopupClickEvent() {
+  updatePopupContent('multipost-popup');
   popUpCardContainerNew.classList.remove('d-none');
   popUpCardContainerNew.classList.add('d-flex');
-  popUpCardImage.src = projectCardImages.two;
 });
 
 multiPostTwoPopup.addEventListener('click', function multiPopupTwoClickEvent() {
+  updatePopupContent('multipost-two-popup');
   popUpCardContainerNew.classList.remove('d-none');
   popUpCardContainerNew.classList.add('d-flex');
-  popUpCardImage.src = projectCardImages.three;
 });
 
 faceBookPopup.addEventListener('click', function fbPopupClickEvent() {
+  updatePopupContent('facebook-popup');
   popUpCardContainerNew.classList.remove('d-none');
   popUpCardContainerNew.classList.add('d-flex');
-  popUpCardImage.src = projectCardImages.four;
 });
 
 naturePopup.addEventListener('click', function naturePopupClickEvent() {
+  updatePopupContent('nature-popup');
   popUpCardContainerNew.classList.remove('d-none');
   popUpCardContainerNew.classList.add('d-flex');
-  popUpCardImage.src = projectCardImages.five;
 });
