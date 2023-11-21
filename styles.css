@@ -513,7 +513,7 @@ textarea:focus-visible {
   height: 15%;
 }
 
-.popup-card-projects li {
+.popup-card-projects-li {
   list-style: none;
   margin: 2px;
   background-color: var(--cards-background);
