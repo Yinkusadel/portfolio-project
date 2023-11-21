@@ -65,8 +65,8 @@ const generateProjectCard = (imgSrc, imgTitle, imgAlt, popupClass, tags) => `
       <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
     </figure>
     
-     <ul class="card-projects">
-     ${tags.map((tag) => `<li>${tag}</li>`)}
+     <ul class="card-projects d-flex">
+     ${tags.map((tag) => `<li>${tag}</li>`).join('')}
      </ul>
     
     <div class="card-button">

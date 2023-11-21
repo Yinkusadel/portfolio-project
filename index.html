@@ -9,8 +9,8 @@
 
   <body class="body">
     <div class="popup-card-container d-none">
-      <div class="popup-card">
-        <div class="popup-card-close-btn-container">
+      <div class="popup-card d-flex">
+        <div class="popup-card-close-btn-container d-flex">
           <svg
             class="popup-card-close-btn"
             xmlns="http://www.w3.org/2000/svg"
@@ -34,14 +34,14 @@
         <div class="project-card-details">
           <div class="popup-card-text">Keeping track of hundreds of components</div>
 
-          <ul class="popup-card-projects">
+          <ul class="popup-card-projects md-d-flex">
             <li class="popup-card-projects-li">Ruby on rails</li>
             <li class="popup-card-projects-li">css</li>
             <li class="popup-card-projects-li">JavaScript</li>
             <li class="popup-card-projects-li">html</li>
           </ul>
 
-          <div class="popup-loremipsum-text-container">
+          <div class="popup-loremipsum-text-container d-flex">
             <p class="popup-loremipsum-text">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
               has been the industry's standard dummy text ever since the 1500s, when an unknown
@@ -52,8 +52,8 @@
             </p>
           </div>
 
-          <div class="popup-card-button">
-            <button class="popup-button">
+          <div class="popup-card-button d-flex">
+            <button class="popup-button d-flex">
               See Live<svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -69,7 +69,7 @@
                 />
               </svg>
             </button>
-            <button class="popup-button">
+            <button class="popup-button d-flex">
               See Source<svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -100,11 +100,11 @@
       </div>
     </div>
 
-    <div class="md-header-background">
+    <div class="md-header-background md-d-flex">
       <div class="md-header-content-center">
         <div class="welcome-nav">
-          <div class="md-header-nav small-header-nav d-none">
-            <div class="close-menu-div d-none">
+          <div class="md-header-nav small-header-nav d-none md-d-flex">
+            <div class="close-menu-div d-flex md-d-none">
               <svg class="close-menu-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                 <path
                   d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
@@ -112,7 +112,7 @@
               </svg>
             </div>
 
-            <ul class="md-header-nav-ul small-header-nav-ul">
+            <ul class="md-header-nav-ul small-header-nav-ul md-d-flex">
               <li class="md-header-nav-li">
                 <a class="md-header-nav-li-a" href="#portfolio-projects" title="portfolio link"
                   >Portfolio</a
@@ -126,7 +126,7 @@
               </li>
             </ul>
           </div>
-          <nav class="welcome-content">
+          <nav class="welcome-content d-flex md-d-none">
             <header>Welcome</header>
             <svg
               class="open-menu-svg"
@@ -147,12 +147,12 @@
         </div>
         <main>
           <section class="hero-section">
-            <h1 class="my-info">
+            <h1 class="my-info d-flex">
               <span class="info-name">Hey there. i'm Ibrohim</span>
               <span class="occupation">I'm a software developer</span>
             </h1>
 
-            <div class="description">
+            <div class="description d-flex">
               <p class="description-text">
                 I can help you build a product , feature or website Look through some of my work and
                 experience! If you like what you see and have a project you need coded, don’t
@@ -267,7 +267,7 @@
                 </li>
               </ul>
             </div>
-            <nav class="arrowdown">
+            <nav class="arrowdown d-flex">
               <a href="#portfolio-projects" title="arrowdown"
                 ><svg
                   class="arrowdown-icon"
@@ -291,15 +291,15 @@
     </div>
     <section id="portfolio-projects">
       <div class="recent-works">
-        <h2 class="my-info">
+        <h2 class="my-info d-flex">
           <span class="info-name">My Recent Works</span>
         </h2>
-        <div class="green-border"></div>
-        <div class="card-container">
+        <div class="green-border md-d-none"></div>
+        <div class="card-container md-d-flex">
           <div class="md-multipost-cards-container">
             <div class="md-multipost-cards-container-ul">
               <div class="md-multipost">
-                <ul class="md-multipost-card-flex"></ul>
+                <ul class="md-multipost-card-flex md-d-flex"></ul>
               </div>
             </div>
           </div>
@@ -307,7 +307,7 @@
       </div>
     </section>
 
-    <section class="about-me" id="about-me">
+    <section class="about-me md-d-flex" id="about-me">
       <div class="about-me-md">
         <div class="about-me-header-background-right">
           <div class="aboutme-header">
@@ -323,14 +323,14 @@
           </div>
         </div>
 
-        <div class="aboutme-footer">
+        <div class="aboutme-footer d-flex">
           <button>Get My Resume</button>
         </div>
 
         <div class="languagescard-container">
-          <ul class="md-languagescard-container">
+          <ul class="md-languagescard-container md-d-flex">
             <li class="languages-card">
-              <div class="languages-icon">
+              <div class="languages-icon d-flex">
                 <span class="languages-icon-span"
                   ><img
                     src="/images/iconlanguage.png"
@@ -340,8 +340,8 @@
               </div>
               <h2>Languages</h2>
 
-              <nav class="card-projects">
-                <ul class="language-project">
+              <nav class="card-projects d-flex">
+                <ul class="language-project d-flex">
                   <li>Ruby on rails</li>
                   <li>css</li>
                   <li>JavaScript</li>
@@ -351,15 +351,15 @@
             </li>
 
             <li class="languages-card">
-              <div class="languages-icon">
+              <div class="languages-icon d-flex">
                 <span
                   ><img src="/images/group.png" title="group image" alt="framework icon"
                 /></span>
               </div>
               <h2>Frameworks</h2>
 
-              <nav class="card-projects">
-                <ul class="language-project">
+              <nav class="card-projects d-flex">
+                <ul class="language-project d-flex">
                   <li>Bootstrap</li>
                   <li>Ruby on rails</li>
                   <li>RSpec</li>
@@ -370,13 +370,13 @@
             </li>
 
             <li class="languages-card">
-              <div class="languages-icon">
+              <div class="languages-icon d-flex">
                 <span><img src="/images/bolt.png" title="bolt image" alt="skills icon" /></span>
               </div>
               <h2>Skills</h2>
 
-              <nav class="card-projects">
-                <ul class="language-project">
+              <nav class="card-projects d-flex">
+                <ul class="language-project d-flex">
                   <li>Codekit</li>
                   <li>GitHub</li>
                   <li>Codepen</li>
@@ -390,20 +390,24 @@
       </div>
     </section>
     <section class="contacts" id="contacts">
-      <div class="contact-body">
-        <div class="md-contact-body">
-          <div class="contact-header">
+      <div class="contact-body md-d-flex">
+        <div class="md-contact-body md-d-flex">
+          <div class="contact-header d-flex md-d-flex">
             <header class="intrest-header">
               I'm always interested in hearing about new projects, so if you'd like to chat please
               get in touch.
             </header>
           </div>
 
-          <div class="customer-contacts">
-            <form action="https://formspree.io/f/xzblbbzd" method="post">
+          <div class="customer-contacts d-flex">
+            <form
+              action="https://formspree.io/f/xzblbbzd"
+              method="post"
+              class="customer-contacts-form d-flex"
+            >
               <label for="fname">
                 <input
-                  class="fname"
+                  class="fname md-d-none"
                   id="fname"
                   name="fname"
                   type="text"
@@ -581,7 +585,7 @@
       </div>
     </div>
 
-    <div class="black-border"></div>
+    <div class="black-border md-d-none"></div>
     <script src="project.js"></script>
     <script src="script.js"></script>
     <script src="popup.js"></script>
