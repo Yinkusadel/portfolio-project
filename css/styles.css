@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url('./reset.css');
+@import url('./utility.css');
 
 * {
   margin: 0;
@@ -32,7 +34,7 @@ textarea {
 }
 
 .hero-section {
-  background: url("images/header-illsutration-mobile@2x.png") center/100% 100% no-repeat;
+  background: url("/images/header-illsutration-mobile@2x.png") center/100% 100% no-repeat;
 }
 
 /* Header welcome nav styled */
@@ -79,10 +81,6 @@ textarea {
   margin-bottom: 50px;
 }
 
-.description {
-  justify-content: center;
-}
-
 .description-text {
   text-align: center;
   font: 400 20px/28px Inter, sans-serif;
@@ -92,8 +90,6 @@ textarea {
 /* social media icon style starts here  */
 
 .socialmedias {
-  display: flex;
-  justify-content: center;
   margin: 40px 0;
 }
 
@@ -134,7 +130,6 @@ textarea {
 
 /*             arrow   nav            */
 .arrowdown {
-  justify-content: center;
   margin-bottom: 40px;
 }
 
@@ -194,7 +189,6 @@ textarea {
 }
 
 .card-projects {
-  justify-content: center;
   align-items: center;
   padding-top: 20px;
   font: 600 12px/16px Inter, sans-serif;
@@ -224,11 +218,6 @@ textarea {
   padding: 10px 15px;
   border-radius: 4px;
   text-align: center;
-}
-
-.card-button {
-  display: flex;
-  justify-content: center;
 }
 
 .see-projects {
@@ -275,7 +264,6 @@ textarea {
 .aboutme-footer {
   background: url("images/leftimage.png") left/70px 70px no-repeat;
   height: 150px;
-  justify-content: center;
   align-items: center;
 }
 
@@ -313,7 +301,6 @@ textarea {
 
 .languages-icon {
   height: 150px;
-  justify-content: center;
   align-items: center;
 }
 
@@ -347,19 +334,11 @@ textarea {
   background: url("/images/contactimg.png") bottom right/50px 200px no-repeat;
 }
 
-.contact-header {
-  justify-content: center;
-}
-
 .intrest-header {
   text-align: center;
   font: 700 40px/52px Inter, sans-serif;
   color: var(--text-color-blue);
   width: 70%;
-}
-
-.customer-contacts {
-  justify-content: center;
 }
 
 .customer-contacts-form {
@@ -460,7 +439,6 @@ textarea:focus-visible {
   background-color: #fcfcfc;
   width: 100%;
   height: 100%;
-  justify-content: center;
   align-items: center;
 }
 
@@ -482,33 +460,23 @@ textarea:focus-visible {
   height: 30%;
 }
 
-.popup-card-image{
-  width: 100%;
-  height: 100%;
-
-}
-
 .project-card-details {
   height: 70%;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .popup-card-projects {
-  display: flex;
   height: 10%;
 }
 
 .popup-card-projects-li {
-  list-style: none;
   margin: 2px;
   background-color: var(--cards-background);
   padding: 5px 10px;
   border-radius: 4px;
   font-size: 70%;
   font-weight: 400;
-  display: flex;
   align-items: center;
 }
 
@@ -523,7 +491,6 @@ textarea:focus-visible {
 }
 
 .popup-card-button {
-  display: flex;
   justify-content: space-between;
   height: 10%;
   margin-top: 10px;
@@ -535,7 +502,6 @@ textarea:focus-visible {
   border: none;
   color: #ffff;
   border-radius: 4px;
-  justify-content: center;
   align-items: center;
   text-decoration: none;
 }
@@ -546,18 +512,6 @@ textarea:focus-visible {
 
 .popup-button:active {
   background-color:#36b37e;
-}
-
-.d-none {
-  display: none;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.d-block {
-  display: block;
 }
 
 /*  styles for desktop version begins here */
@@ -588,12 +542,10 @@ textarea:focus-visible {
   }
 
   .small-header-nav-ul {
-    list-style-type: none;
     width: 90%;
     height: 150px;
     font-size: 25px;
     font-weight: bold;
-    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
@@ -639,22 +591,9 @@ textarea:focus-visible {
 }
 
 @media screen and (width >= 768px) {
-  .md-d-none {
-    display: none;
-  }
-  
-  .md-d-flex {
-    display: flex;
-  }
-  
-  .md-d-block {
-    display: block;
-  }
-
   .md-header-background {
-    background: url("images/desktop-version/Header-llustration-desktop.png") center/100% 100% no-repeat;
+    background: url("/images/desktop-version/Header-llustration-desktop.png") center/100% 100% no-repeat;
     height: 1000px;
-    justify-content: center;
   }
 
   .md-header-content-center {
@@ -667,7 +606,6 @@ textarea:focus-visible {
 
   /*  styles for desktop version header nav begins here */
   .md-header-nav {
-    justify-content: center;
     margin-top: 20px;
     margin-bottom: 100px;
   }
@@ -678,7 +616,6 @@ textarea:focus-visible {
   }
 
   .md-header-nav-li {
-    list-style-type: none;
     font: 600 15px/20px Inter, sans-serif;
   }
 
@@ -702,14 +639,6 @@ textarea:focus-visible {
     align-items: center;
   }
 
-  .md-multipost-cards-container {
-    list-style-type: none;
-  }
-
-  .md-multipost {
-    list-style-type: none;
-  }
-
   .md-multipost-card-flex {
     flex-wrap: wrap;
     width: 100%;
@@ -724,7 +653,6 @@ textarea:focus-visible {
   position: fixed;
   width: 100%;
   height: 100%;
-  justify-content: center;
   background-color:rgb(168 164 162 / 70%)
 }
 
@@ -819,8 +747,6 @@ textarea:focus-visible {
 .popup-button {
   color: #f8f2f2;
   border-radius: 6px;
-  display: flex;
-  justify-content: center;
   align-items: center;
   width: 118px;
   text-decoration: none;
@@ -828,10 +754,6 @@ textarea:focus-visible {
 }
 
   /*   styles for desktop version aboutme background begins here    */
-
-  .about-me {
-    justify-content: center;
-  }
 
   .about-me-header-background-right {
     background: url("/images/rightimage.png") right bottom/100px 250px no-repeat;
@@ -873,7 +795,6 @@ textarea:focus-visible {
 
   .contact-header {
     width: 40%;
-    display: flex;
     justify-content: flex-start;
     height: 400px;
     padding-top: 50px;
@@ -889,7 +810,6 @@ textarea:focus-visible {
   }
 
   .md-version-form-container {
-    display: flex;
     width: 100%;
   }
 

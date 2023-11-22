@@ -63,11 +63,11 @@ const generateProjectCard = (imgSrc, imgTitle, imgAlt, imgDescription, popupClas
       <figcaption class="card-text">${imgDescription}</figcaption>
     </figure>
     
-     <ul class="card-projects d-flex">
+     <ul class="card-projects d-flex justify-center">
      ${tags.map((tag) => `<li>${tag}</li>`).join('')}
      </ul>
     
-    <div class="card-button">
+    <div class="card-button d-flex justify-center">
       <button class="see-projects ${popupClass}">See Projects</button>
     </div>
     </li>`;

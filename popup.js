@@ -12,6 +12,7 @@ const popupImageAttributesArray = [
     src: 'images/tonic.png',
     title: 'Image 0',
     alt: 'Image 0 Alt Text',
+    description: 'Keeping track of hundreds of components',
     tagLi: ['Ruby on rails', 'Css', 'JavaScript', 'html'],
     btnHrefFirst: 'hjdfhjdfjhfj',
     btnHrefSecond: 'https://github.com/Yinkusadel/odin-project-rock-paper-scissors/pull/1',
@@ -22,6 +23,7 @@ const popupImageAttributesArray = [
     src: 'images/tonic2.png',
     title: 'Image 1',
     alt: 'Image 1 Alt Text',
+    description: 'Keeping track of hundreds of components',
     tagLi: ['C++', 'Ruby', 'Python', 'Jquery'],
     btnHrefFirst: 'hjdfhjdfjhfj',
     btnHrefSecond: 'https://github.com/Yinkusadel/random-password-generator/pull/1',
@@ -32,6 +34,7 @@ const popupImageAttributesArray = [
     src: 'images/multipost.png',
     title: 'Image 2',
     alt: 'Image 2 Alt Text',
+    description: 'Keeping track of hundreds of components',
     tagLi: ['Ember', 'Spring', 'Django', 'Vue'],
     btnHrefFirst: 'hjdfhjdfjhfj',
     btnHrefSecond: 'https://github.com/Yinkusadel/basketball-scoreboard/pull/1',
@@ -42,6 +45,7 @@ const popupImageAttributesArray = [
     src: 'images/multipost2.png',
     title: 'Image 3',
     alt: 'Image 3 Alt Text',
+    description: 'Keeping track of hundreds of components',
     tagLi: ['Laravel', 'Angular', 'React', 'Express'],
     btnHrefFirst: 'hjdfhjdfjhfj',
     btnHrefSecond: 'https://github.com/Yinkusadel/adel-js-calculator-app/pull/6',
@@ -52,6 +56,7 @@ const popupImageAttributesArray = [
     src: 'images/facebook.png',
     title: 'Image 4',
     alt: 'Image 4 Alt Text',
+    description: 'Keeping track of hundreds of components',
     tagLi: ['Symfony4', 'Codeigniter', 'Backbone', 'Flask'],
     btnHrefFirst: 'hjdfhjdfjhfj',
     btnHrefSecond: 'https://github.com/Yinkusadel/scrimba-building-blackjack/pull/1',
@@ -62,6 +67,7 @@ const popupImageAttributesArray = [
     src: 'images/nature.png',
     title: 'Image 5',
     alt: 'Image 5 Alt Text',
+    description: 'Keeping track of hundreds of components',
     tagLi: ['Svelte', 'Css', 'Software framework', 'Asp.net'],
     btnHrefFirst: 'hjdfhjdfjhfj',
     btnHrefSecond: 'https://github.com/Yinkusadel/scrimba-passenger-counter-app/pull/1',
@@ -76,6 +82,7 @@ const generatePopupProjectCard = (
   imgSrc,
   imgTitle,
   imgAlt,
+  cardDescription,
   tags,
   btnHrefOne,
   btnHrefTwo,
@@ -103,11 +110,11 @@ const generatePopupProjectCard = (
   />
 </div>
 
-<div class="project-card-details">
-  <div class="popup-card-text">Keeping track of hundreds of components</div>
+<div class="project-card-details d-flex">
+  <div class="popup-card-text">${cardDescription}</div>
 
-  <ul class="popup-card-projects md-d-flex">
-  ${tags.map((tag) => `<li class="popup-card-projects-li">${tag}</li>`).join('')}
+  <ul class="popup-card-projects d-flex">
+  ${tags.map((tag) => `<li class="popup-card-projects-li d-flex">${tag}</li>`).join('')}
   </ul>
 
   <div class="popup-loremipsum-text-container d-flex">
@@ -122,7 +129,7 @@ const generatePopupProjectCard = (
   </div>
 
   <div class="popup-card-button d-flex">
-    <a href=""${btnHrefOne}" class="popup-button d-flex">
+    <a href=""${btnHrefOne}" class="popup-button d-flex justify-center">
       See Live<svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -138,7 +145,7 @@ const generatePopupProjectCard = (
         />
       </svg>
     </a>
-    <a href="${btnHrefTwo}" class="popup-button d-flex">
+    <a href="${btnHrefTwo}" class="popup-button d-flex justify-center">
       See Source<svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -176,6 +183,7 @@ const generatePopupProjectCardAttr = () => {
       attributes.src,
       attributes.title,
       attributes.alt,
+      attributes.description,
       attributes.tagLi,
       attributes.btnHrefFirst,
       attributes.btnHrefSecond,
@@ -196,6 +204,7 @@ const updatePopupContent = (id) => {
       popupAttributes.src,
       popupAttributes.title,
       popupAttributes.alt,
+      popupAttributes.description,
       popupAttributes.tagLi,
       popupAttributes.btnHrefFirst,
       popupAttributes.btnHrefSecond,
