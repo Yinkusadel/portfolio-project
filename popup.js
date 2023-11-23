@@ -1,9 +1,4 @@
-const seeProjectTonicBtn = document.querySelector('.tonic-popup');
-const seeProjectTonicTwoBtn = document.querySelector('.tonic-two-popup');
-const multiPostPopup = document.querySelector('.multipost-popup');
-const multiPostTwoPopup = document.querySelector('.multipost-two-popup');
-const faceBookPopup = document.querySelector('.facebook-popup');
-const naturePopup = document.querySelector('.nature-popup');
+const cardPopupContainer = document.querySelector('.popup-card-container');
 const popUpCardContainerNew = document.querySelector('.popup-card-container');
 const popupAttributes = [
   {
@@ -74,10 +69,8 @@ const popupAttributes = [
   },
 ];
 
-const cardPopupContainer = document.querySelector('.popup-card-container');
-
 const generatePopupProjectCard = (
-  cardId,
+  closeBtnContainerId,
   closeBtn,
   imgSrc,
   imgTitle,
@@ -89,7 +82,7 @@ const generatePopupProjectCard = (
 ) => `
 
 <div class="popup-card d-flex">
-<div class="popup-card-close-btn-container d-flex" id="${cardId}" >
+<div class="popup-card-close-btn-container d-flex" id="${closeBtnContainerId}" >
   <svg
     class="popup-card-close-btn ${closeBtn}"
     xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +188,7 @@ generatePopupProjectCardAttr();
 const updatePopupContent = (id) => {
   const newPopupAttributes = popupAttributes.find((attr) => attr.id === id);
 
-  if (popupAttributes) {
+  if (newPopupAttributes) {
     const projectCard = generatePopupProjectCard(
       newPopupAttributes.class,
       newPopupAttributes.id,
@@ -218,38 +211,38 @@ const updatePopupContent = (id) => {
   }
 };
 
-seeProjectTonicBtn.addEventListener('click', function tonicBtnClickEvent() {
-  updatePopupContent('tonic-popup');
-  popUpCardContainerNew.classList.remove('d-none');
-  popUpCardContainerNew.classList.add('d-flex');
-});
+const buttonPopupMap = {
+  seeProjectTonicBtn: 'tonic-popup',
+  seeProjectTonicTwoBtn: 'tonic-two-popup',
+  multiPostPopup: 'multipost-popup',
+  multiPostTwoPopup: 'multipost-two-popup',
+  faceBookPopup: 'facebook-popup',
+  naturePopup: 'nature-popup',
+};
 
-seeProjectTonicTwoBtn.addEventListener('click', function tonicTwoBtnClickEvent() {
-  updatePopupContent('tonic-two-popup');
-  popUpCardContainerNew.classList.remove('d-none');
-  popUpCardContainerNew.classList.add('d-flex');
-});
+function handlePopupButtonClick(event) {
+  const buttonId = event.target.id;
+  const popupType = buttonPopupMap[buttonId];
 
-multiPostPopup.addEventListener('click', function multiPopupClickEvent() {
-  updatePopupContent('multipost-popup');
-  popUpCardContainerNew.classList.remove('d-none');
-  popUpCardContainerNew.classList.add('d-flex');
-});
+  if (popupType) {
+    updatePopupContent(popupType);
+    popUpCardContainerNew.classList.remove('d-none');
+    popUpCardContainerNew.classList.add('d-flex');
+  }
+}
 
-multiPostTwoPopup.addEventListener('click', function multiPopupTwoClickEvent() {
-  updatePopupContent('multipost-two-popup');
-  popUpCardContainerNew.classList.remove('d-none');
-  popUpCardContainerNew.classList.add('d-flex');
-});
+const buttonIds = [
+  'seeProjectTonicBtn',
+  'seeProjectTonicTwoBtn',
+  'multiPostPopup',
+  'multiPostTwoPopup',
+  'faceBookPopup',
+  'naturePopup',
+];
 
-faceBookPopup.addEventListener('click', function fbPopupClickEvent() {
-  updatePopupContent('facebook-popup');
-  popUpCardContainerNew.classList.remove('d-none');
-  popUpCardContainerNew.classList.add('d-flex');
-});
-
-naturePopup.addEventListener('click', function naturePopupClickEvent() {
-  updatePopupContent('nature-popup');
-  popUpCardContainerNew.classList.remove('d-none');
-  popUpCardContainerNew.classList.add('d-flex');
+buttonIds.forEach((buttonId) => {
+  const button = document.getElementById(buttonId);
+  if (button) {
+    button.addEventListener('click', handlePopupButtonClick);
+  }
 });
