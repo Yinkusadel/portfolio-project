@@ -5,7 +5,7 @@ const multiPostTwoPopup = document.querySelector('.multipost-two-popup');
 const faceBookPopup = document.querySelector('.facebook-popup');
 const naturePopup = document.querySelector('.nature-popup');
 const popUpCardContainerNew = document.querySelector('.popup-card-container');
-const popupImageAttributesArray = [
+const popupAttributes = [
   {
     id: 'tonic-popup',
     class: 'popup-card-close-btn',
@@ -101,14 +101,12 @@ const generatePopupProjectCard = (
     ></path>
   </svg>
 </div>
-<div class="popup-card-image-container">
   <img
     class="popup-card-image"
     src="${imgSrc}"
     title="${imgTitle}"
     alt="${imgAlt}"
   />
-</div>
 
 <div class="project-card-details d-flex">
   <div class="popup-card-text">${cardDescription}</div>
@@ -176,7 +174,7 @@ const generatePopupProjectCard = (
 </div>`;
 
 const generatePopupProjectCardAttr = () => {
-  popupImageAttributesArray.forEach((attributes) => {
+  popupAttributes.forEach((attributes) => {
     const projectCard = generatePopupProjectCard(
       attributes.class,
       attributes.id,
@@ -195,19 +193,19 @@ const generatePopupProjectCardAttr = () => {
 generatePopupProjectCardAttr();
 
 const updatePopupContent = (id) => {
-  const popupAttributes = popupImageAttributesArray.find((attr) => attr.id === id);
+  const newPopupAttributes = popupAttributes.find((attr) => attr.id === id);
 
   if (popupAttributes) {
     const projectCard = generatePopupProjectCard(
-      popupAttributes.class,
-      popupAttributes.id,
-      popupAttributes.src,
-      popupAttributes.title,
-      popupAttributes.alt,
-      popupAttributes.description,
-      popupAttributes.tagLi,
-      popupAttributes.btnHrefFirst,
-      popupAttributes.btnHrefSecond,
+      newPopupAttributes.class,
+      newPopupAttributes.id,
+      newPopupAttributes.src,
+      newPopupAttributes.title,
+      newPopupAttributes.alt,
+      newPopupAttributes.description,
+      newPopupAttributes.tagLi,
+      newPopupAttributes.btnHrefFirst,
+      newPopupAttributes.btnHrefSecond,
     );
 
     popUpCardContainerNew.innerHTML = projectCard;
