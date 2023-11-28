@@ -202,15 +202,6 @@ const updatePopupContent = (id) => {
   }
 };
 
-const buttonPopupMap = {
-  seeProjectTonicBtn: 'tonic-popup',
-  seeProjectTonicTwoBtn: 'tonic-two-popup',
-  multiPostPopup: 'multipost-popup',
-  multiPostTwoPopup: 'multipost-two-popup',
-  faceBookPopup: 'facebook-popup',
-  naturePopup: 'nature-popup',
-};
-
 function handlePopupButtonClick(event) {
   const button = event.target;
   const popupType = button.value;

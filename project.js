@@ -7,7 +7,7 @@ const projectCardAttributes = [
     class: 'tonic-popup',
     id: 'seeProjectTonicBtn',
     tagLi: ['Ruby on rails', 'Css', 'JavaScript', 'html'],
-    value:'tonic-popup'
+    value: 'tonic-popup',
   },
   {
     src: 'images/tonic2.png',
@@ -17,7 +17,7 @@ const projectCardAttributes = [
     class: 'tonic-two-popup',
     id: 'seeProjectTonicTwoBtn',
     tagLi: ['C++', 'Ruby', 'Python', 'Jquery'],
-    value:'tonic-two-popup'
+    value: 'tonic-two-popup',
   },
   {
     src: 'images/multipost.png',
@@ -27,7 +27,7 @@ const projectCardAttributes = [
     class: 'multipost-popup',
     id: 'multiPostPopup',
     tagLi: ['Ember', 'Spring', 'Django', 'Vue'],
-    value:'multipost-popup'
+    value: 'multipost-popup',
   },
   {
     src: 'images/multipost2.png',
@@ -37,7 +37,7 @@ const projectCardAttributes = [
     class: 'multipost-two-popup',
     id: 'multiPostTwoPopup',
     tagLi: ['Laravel', 'Angular', 'React', 'Express'],
-    value:'nature-popup'
+    value: 'nature-popup',
   },
   {
     src: 'images/facebook.png',
@@ -47,7 +47,7 @@ const projectCardAttributes = [
     class: 'facebook-popup',
     id: 'faceBookPopup',
     tagLi: ['Symfony4', 'Codeigniter', 'Backbone', 'Flask'],
-    value:'multipost-two-popup'
+    value: 'multipost-two-popup',
   },
   {
     src: 'images/nature.png',
@@ -57,7 +57,7 @@ const projectCardAttributes = [
     class: 'nature-popup',
     id: 'naturePopup',
     tagLi: ['Svelte', 'Css', 'Software framework', 'Asp.net'],
-    value:'nature-popup'
+    value: 'nature-popup',
   },
 ];
 
@@ -71,7 +71,7 @@ const generateProjectCard = (
   popupClass,
   popupID,
   tags,
-  btnValue
+  btnValue,
 ) => `
     <li class="cards">
     <figure>
@@ -103,7 +103,7 @@ const generateProjectCardsAttr = () => {
       attributes.class,
       attributes.id,
       attributes.tagLi,
-      attributes.value
+      attributes.value,
     );
     cardUl.innerHTML += projectCard;
   });
