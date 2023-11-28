@@ -3,7 +3,6 @@ const popUpCardContainerNew = document.querySelector('.popup-card-container');
 const popupAttributes = [
   {
     id: 'tonic-popup',
-    class: 'popup-card-close-btn',
     src: 'images/tonic.png',
     title: 'Image 0',
     alt: 'Image 0 Alt Text',
@@ -14,7 +13,6 @@ const popupAttributes = [
   },
   {
     id: 'tonic-two-popup',
-    class: 'popup-card-close-btn',
     src: 'images/tonic2.png',
     title: 'Image 1',
     alt: 'Image 1 Alt Text',
@@ -25,7 +23,6 @@ const popupAttributes = [
   },
   {
     id: 'multipost-popup',
-    class: 'popup-card-close-btn',
     src: 'images/multipost.png',
     title: 'Image 2',
     alt: 'Image 2 Alt Text',
@@ -36,7 +33,6 @@ const popupAttributes = [
   },
   {
     id: 'multipost-two-popup',
-    class: 'popup-card-close-btn',
     src: 'images/multipost2.png',
     title: 'Image 3',
     alt: 'Image 3 Alt Text',
@@ -47,7 +43,6 @@ const popupAttributes = [
   },
   {
     id: 'facebook-popup',
-    class: 'popup-card-close-btn',
     src: 'images/facebook.png',
     title: 'Image 4',
     alt: 'Image 4 Alt Text',
@@ -58,7 +53,6 @@ const popupAttributes = [
   },
   {
     id: 'nature-popup',
-    class: 'popup-card-close-btn',
     src: 'images/nature.png',
     title: 'Image 5',
     alt: 'Image 5 Alt Text',
@@ -71,7 +65,6 @@ const popupAttributes = [
 
 const generatePopupProjectCard = (
   closeBtnContainerId,
-  closeBtn,
   imgSrc,
   imgTitle,
   imgAlt,
@@ -84,7 +77,7 @@ const generatePopupProjectCard = (
 <div class="popup-card d-flex">
 <div class="popup-card-close-btn-container d-flex" id="${closeBtnContainerId}" >
   <svg
-    class="popup-card-close-btn ${closeBtn}"
+    class="popup-card-close-btn"
     xmlns="http://www.w3.org/2000/svg"
     width="20"
     height="20"
@@ -169,7 +162,6 @@ const generatePopupProjectCard = (
 const generatePopupProjectCardAttr = () => {
   popupAttributes.forEach((attributes) => {
     const projectCard = generatePopupProjectCard(
-      attributes.class,
       attributes.id,
       attributes.src,
       attributes.title,
@@ -190,7 +182,6 @@ const updatePopupContent = (id) => {
 
   if (newPopupAttributes) {
     const projectCard = generatePopupProjectCard(
-      newPopupAttributes.class,
       newPopupAttributes.id,
       newPopupAttributes.src,
       newPopupAttributes.title,
@@ -221,8 +212,8 @@ const buttonPopupMap = {
 };
 
 function handlePopupButtonClick(event) {
-  const buttonId = event.target.id;
-  const popupType = buttonPopupMap[buttonId];
+  const button = event.target;
+  const popupType = button.value;
 
   if (popupType) {
     updatePopupContent(popupType);
