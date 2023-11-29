@@ -1,34 +1,33 @@
 .d-none {
   display: none;
 }
-  
+
 .d-flex {
   display: flex;
 }
-  
+
 .d-block {
   display: block;
 }
 
-.justify-center{
+.justify-center {
   justify-content: center;
 }
 
 @media screen and (width >= 768px) {
   .md-d-none {
-      display: none;
+    display: none;
   }
-    
+
   .md-d-flex {
     display: flex;
   }
-    
+
   .md-d-block {
     display: block;
   }
 
-  .md-justify-center{
+  .md-justify-center {
     justify-content: center;
   }
-
 }

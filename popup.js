@@ -1,70 +1,7 @@
-const cardPopupContainer = document.querySelector('.popup-card-container');
+import projectCardAttributes from "./attributes.js";
 const popUpCardContainerNew = document.querySelector('.popup-card-container');
-const popupAttributes = [
-  {
-    id: 'tonic-popup',
-    src: 'images/tonic.png',
-    title: 'Image 0',
-    alt: 'Image 0 Alt Text',
-    description: 'Keeping track of hundreds of components',
-    tagLi: ['Ruby on rails', 'Css', 'JavaScript', 'html'],
-    btnHrefFirst: 'hjdfhjdfjhfj',
-    btnHrefSecond: 'https://github.com/Yinkusadel/odin-project-rock-paper-scissors/pull/1',
-  },
-  {
-    id: 'tonic-two-popup',
-    src: 'images/tonic2.png',
-    title: 'Image 1',
-    alt: 'Image 1 Alt Text',
-    description: 'Lets exercise and keep fit today',
-    tagLi: ['C++', 'Ruby', 'Python', 'Jquery'],
-    btnHrefFirst: 'hjdfhjdfjhfj',
-    btnHrefSecond: 'https://github.com/Yinkusadel/random-password-generator/pull/1',
-  },
-  {
-    id: 'multipost-popup',
-    src: 'images/multipost.png',
-    title: 'Image 2',
-    alt: 'Image 2 Alt Text',
-    description: 'You got days few days off mon tue wed',
-    tagLi: ['Ember', 'Spring', 'Django', 'Vue'],
-    btnHrefFirst: 'hjdfhjdfjhfj',
-    btnHrefSecond: 'https://github.com/Yinkusadel/basketball-scoreboard/pull/1',
-  },
-  {
-    id: 'multipost-two-popup',
-    src: 'images/multipost2.png',
-    title: 'Image 3',
-    alt: 'Image 3 Alt Text',
-    description: 'Explore art on a whole new level',
-    tagLi: ['Laravel', 'Angular', 'React', 'Express'],
-    btnHrefFirst: 'hjdfhjdfjhfj',
-    btnHrefSecond: 'https://github.com/Yinkusadel/adel-js-calculator-app/pull/6',
-  },
-  {
-    id: 'facebook-popup',
-    src: 'images/facebook.png',
-    title: 'Image 4',
-    alt: 'Image 4 Alt Text',
-    description: 'Exploring the future of media ',
-    tagLi: ['Symfony4', 'Codeigniter', 'Backbone', 'Flask'],
-    btnHrefFirst: 'hjdfhjdfjhfj',
-    btnHrefSecond: 'https://github.com/Yinkusadel/scrimba-building-blackjack/pull/1',
-  },
-  {
-    id: 'nature-popup',
-    src: 'images/nature.png',
-    title: 'Image 5',
-    alt: 'Image 5 Alt Text',
-    description: 'All about nature and temperature ',
-    tagLi: ['Svelte', 'Css', 'Software framework', 'Asp.net'],
-    btnHrefFirst: 'hjdfhjdfjhfj',
-    btnHrefSecond: 'https://github.com/Yinkusadel/scrimba-passenger-counter-app/pull/1',
-  },
-];
 
 const generatePopupProjectCard = (
-  closeBtnContainerId,
   imgSrc,
   imgTitle,
   imgAlt,
@@ -75,7 +12,7 @@ const generatePopupProjectCard = (
 ) => `
 
 <div class="popup-card d-flex">
-<div class="popup-card-close-btn-container d-flex" id="${closeBtnContainerId}" >
+<div class="popup-card-close-btn-container d-flex">
   <svg
     class="popup-card-close-btn"
     xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +50,7 @@ const generatePopupProjectCard = (
   </div>
 
   <div class="popup-card-button d-flex">
-    <a href=""${btnHrefOne}" class="popup-button d-flex justify-center">
+    <a href="${btnHrefOne}" class="popup-button d-flex justify-center">
       See Live<svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -159,34 +96,15 @@ const generatePopupProjectCard = (
 </div>
 </div>`;
 
-const generatePopupProjectCardAttr = () => {
-  popupAttributes.forEach((attributes) => {
-    const projectCard = generatePopupProjectCard(
-      attributes.id,
-      attributes.src,
-      attributes.title,
-      attributes.alt,
-      attributes.description,
-      attributes.tagLi,
-      attributes.btnHrefFirst,
-      attributes.btnHrefSecond,
-    );
-    cardPopupContainer.innerHTML += projectCard;
-  });
-};
-
-generatePopupProjectCardAttr();
-
 const updatePopupContent = (id) => {
-  const newPopupAttributes = popupAttributes.find((attr) => attr.id === id);
+  const newPopupAttributes = projectCardAttributes.find((attr) => attr.id === id);
 
   if (newPopupAttributes) {
     const projectCard = generatePopupProjectCard(
-      newPopupAttributes.id,
       newPopupAttributes.src,
       newPopupAttributes.title,
       newPopupAttributes.alt,
-      newPopupAttributes.description,
+      newPopupAttributes.mdDescription,
       newPopupAttributes.tagLi,
       newPopupAttributes.btnHrefFirst,
       newPopupAttributes.btnHrefSecond,
@@ -206,25 +124,12 @@ function handlePopupButtonClick(event) {
   const button = event.target;
   const popupType = button.value;
 
-  if (popupType) {
-    updatePopupContent(popupType);
+  if (popupType === 'see-popup') {
+    updatePopupContent(button.id);
     popUpCardContainerNew.classList.remove('d-none');
     popUpCardContainerNew.classList.add('d-flex');
   }
 }
 
-const buttonIds = [
-  'seeProjectTonicBtn',
-  'seeProjectTonicTwoBtn',
-  'multiPostPopup',
-  'multiPostTwoPopup',
-  'faceBookPopup',
-  'naturePopup',
-];
 
-buttonIds.forEach((buttonId) => {
-  const button = document.getElementById(buttonId);
-  if (button) {
-    button.addEventListener('click', handlePopupButtonClick);
-  }
-});
+document.querySelector('.md-multipost-card-flex').addEventListener('click', handlePopupButtonClick);

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('./reset.css');
 @import url('./utility.css');
 
@@ -34,7 +34,7 @@ textarea {
 }
 
 .hero-section {
-  background: url("/images/header-illsutration-mobile@2x.png") center/100% 100% no-repeat;
+  background: url('/images/header-illsutration-mobile@2x.png') center/100% 100% no-repeat;
 }
 
 /* Header welcome nav styled */
@@ -65,7 +65,9 @@ textarea {
 .my-info {
   flex-direction: column;
   align-items: center;
-  font: 700 40px/52px Inter, sans-serif;
+  font:
+    700 40px/52px Inter,
+    sans-serif;
   text-align: center;
   padding-top: 50px;
 }
@@ -83,7 +85,9 @@ textarea {
 
 .description-text {
   text-align: center;
-  font: 400 20px/28px Inter, sans-serif;
+  font:
+    400 20px/28px Inter,
+    sans-serif;
   width: 90%;
 }
 
@@ -176,6 +180,7 @@ textarea {
 
 .card-images {
   width: 100%;
+  height: 300px;
 }
 
 .card-text {
@@ -184,14 +189,18 @@ textarea {
   display: block;
   padding-top: 20px;
   text-align: center;
-  font: 600 24px/32px Inter, sans-serif;
+  font:
+    600 24px/32px Inter,
+    sans-serif;
   color: #3a4a42;
 }
 
 .card-projects {
   align-items: center;
   padding-top: 20px;
-  font: 600 12px/16px Inter, sans-serif;
+  font:
+    600 12px/16px Inter,
+    sans-serif;
   letter-spacing: 3%;
 }
 
@@ -202,7 +211,9 @@ textarea {
 .mymail-link a {
   text-decoration: none;
   color: var(--text-color-lightblue);
-  font: 400 20px/32px Inter, sans-serif;
+  font:
+    400 20px/32px Inter,
+    sans-serif;
   text-align: center;
 }
 
@@ -227,7 +238,9 @@ textarea {
   color: var(--button-text);
   border-radius: 4px;
   border: none;
-  font: 500 17px/24px Inter, sans-serif;
+  font:
+    500 17px/24px Inter,
+    sans-serif;
 }
 
 .see-projects:hover {
@@ -242,14 +255,16 @@ textarea {
 /* section about me  */
 
 .aboutme-header {
-  background: url("/images/rightimage.png") right top/100px 130px no-repeat;
+  background: url('/images/rightimage.png') right top/100px 130px no-repeat;
   height: 150px;
 }
 
 .aboutme-header h2 {
   text-align: center;
   padding-top: 60px;
-  font: 700 40px/52px Inter, sans-serif;
+  font:
+    700 40px/52px Inter,
+    sans-serif;
   color: var(--text-color-blue);
 }
 
@@ -257,12 +272,14 @@ textarea {
   text-align: center;
   width: 81%;
   margin: auto;
-  font: 400 20px/32px Inter, sans-serif;
+  font:
+    400 20px/32px Inter,
+    sans-serif;
   color: var(--text-color-lightblue);
 }
 
 .aboutme-footer {
-  background: url("images/leftimage.png") left/70px 70px no-repeat;
+  background: url('images/leftimage.png') left/70px 70px no-repeat;
   height: 150px;
   align-items: center;
 }
@@ -273,7 +290,9 @@ textarea {
   border-radius: 4px;
   height: 48px;
   background-color: var(--button-background);
-  font: 500 17px/24px Inter, sans-serif;
+  font:
+    500 17px/24px Inter,
+    sans-serif;
   text-align: center;
   letter-spacing: 3%;
   color: var(--button-text);
@@ -313,7 +332,9 @@ textarea {
 .languages-card h2 {
   text-align: center;
   color: var(--light-blue);
-  font: 600 24px/32px Inter, sans-serif;
+  font:
+    600 24px/32px Inter,
+    sans-serif;
   padding: 30px 0;
 }
 
@@ -331,12 +352,14 @@ textarea {
 /*    contact section    */
 
 .contact-body {
-  background: url("/images/contactimg.png") bottom right/50px 200px no-repeat;
+  background: url('/images/contactimg.png') bottom right/50px 200px no-repeat;
 }
 
 .intrest-header {
   text-align: center;
-  font: 700 40px/52px Inter, sans-serif;
+  font:
+    700 40px/52px Inter,
+    sans-serif;
   color: var(--text-color-blue);
   width: 70%;
 }
@@ -362,7 +385,7 @@ textarea {
   width: 100%;
 }
 
-.customer-contacts input[type="submit"] {
+.customer-contacts input[type='submit'] {
   background-color: var(--button-background);
   border: none;
   color: white;
@@ -372,16 +395,18 @@ textarea {
   border-radius: 4px;
   height: 48px;
   width: 129px;
-  font: 500 17px/24px Inter, sans-serif;
+  font:
+    500 17px/24px Inter,
+    sans-serif;
   letter-spacing: 3%;
 }
 
-.customer-contacts input[type="submit"]:hover {
+.customer-contacts input[type='submit']:hover {
   box-shadow: 0 8px 16px 0 #36b37f3d;
   background-color: var(--button-background);
 }
 
-.customer-contacts input[type="submit"]:active {
+.customer-contacts input[type='submit']:active {
   background-color: var(--active-green);
 }
 
@@ -391,7 +416,9 @@ textarea {
   height: 114px;
   width: 100%;
   padding: 10px;
-  font: 400 15px/24px Inter, sans-serif;
+  font:
+    400 15px/24px Inter,
+    sans-serif;
 }
 
 input:focus-visible,
@@ -447,12 +474,13 @@ textarea:focus-visible {
   flex-direction: column;
 }
 
-.popup-card-text{
-  font: 600 25px/30px Inter, sans-serif;
+.popup-card-text {
+  font:
+    600 25px/30px Inter,
+    sans-serif;
   color: var(--text-color-blue);
   width: 90%;
   height: 20%;
-
 }
 
 .popup-card-image {
@@ -484,7 +512,7 @@ textarea:focus-visible {
   font-size: 14px;
 }
 
-.popup-loremipsum-text{
+.popup-loremipsum-text {
   color: var(--text-color-blue);
   height: 100%;
 }
@@ -495,9 +523,9 @@ textarea:focus-visible {
   margin-top: 10px;
 }
 
-.popup-button{
+.popup-button {
   width: 48%;
-  background-color:#36b37e;
+  background-color: #36b37e;
   border: none;
   color: #ffff;
   border-radius: 4px;
@@ -510,7 +538,7 @@ textarea:focus-visible {
 }
 
 .popup-button:active {
-  background-color:#36b37e;
+  background-color: #36b37e;
 }
 
 /*  styles for desktop version begins here */
@@ -584,14 +612,20 @@ textarea:focus-visible {
   }
 
   @keyframes displaymenu {
-    from { left: 100%; }
-    to { left: 0; }
+    from {
+      left: 100%;
+    }
+
+    to {
+      left: 0;
+    }
   }
 }
 
 @media screen and (width >= 768px) {
   .md-header-background {
-    background: url("/images/desktop-version/Header-llustration-desktop.png") center/100% 100% no-repeat;
+    background: url('/images/desktop-version/Header-llustration-desktop.png') center/100% 100%
+      no-repeat;
     height: 1000px;
   }
 
@@ -615,7 +649,9 @@ textarea:focus-visible {
   }
 
   .md-header-nav-li {
-    font: 600 15px/20px Inter, sans-serif;
+    font:
+      600 15px/20px Inter,
+      sans-serif;
   }
 
   .md-header-nav-li-a {
@@ -648,108 +684,107 @@ textarea:focus-visible {
     width: 30%;
   }
 
-.popup-card-container {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color:rgb(168 164 162 / 70%)
-}
+  .popup-card-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(168 164 162 / 70%);
+  }
 
-.popup-card-close-btn-container {
-  height: 7%;
-  justify-content: flex-end;
-  align-items: center;
-}
+  .popup-card-close-btn-container {
+    height: 7%;
+    justify-content: flex-end;
+    align-items: center;
+  }
 
-.popup-card-close-btn {
-  fill: #93a79d;
-  margin-right: 0;
-  position: relative;
-  top: 0;
-  padding: 4px;
-  background-color: #EBECF0;
-}
+  .popup-card-close-btn {
+    fill: #93a79d;
+    margin-right: 0;
+    position: relative;
+    top: 0;
+    padding: 4px;
+    background-color: #ebecf0;
+  }
 
+  .popup-card-close-btn:hover {
+    transform: scale(1.2);
+    transition-duration: 0.4s;
+  }
 
+  .popup-card-close-btn:not(:hover) {
+    transition-duration: 0.4s;
+  }
 
-.popup-card-close-btn:hover {
-  transform: scale(1.2);
-  transition-duration: 0.4s;
-}
+  .popup-card {
+    max-width: 500px;
+    height: 85%;
+    background-color: #ffff;
+    border-radius: 10px;
+    padding: 0 30px;
+  }
 
-.popup-card-close-btn:not(:hover) {
-  transition-duration: 0.4s;
-}
+  .project-card-details {
+    height: 40%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.popup-card {
-  max-width: 500px;
-  height: 85%;
-  background-color: #ffff;
-  border-radius: 10px;
-  padding: 0 30px;
-}
+  .popup-card-text {
+    font:
+      700 15px/24px Inter,
+      sans-serif;
+    color: var(--text-color-blue);
+    width: 40%;
+    height: 20%;
+    order: -2;
+  }
 
-.project-card-details {
-  height: 40%;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-}
+  .popup-loremipsum-text {
+    color: var(--text-color-blue);
+    font-size: 12px;
+  }
 
-.popup-card-text {
-  font: 700 15px/24px Inter, sans-serif;
-  color: var(--text-color-blue);
-  width: 40%;
-  height: 20%;
-  order: -2;
-}
+  .popup-card-projects {
+    height: 15%;
+    font-weight: 700;
+  }
 
-.popup-loremipsum-text{
-  color: var(--text-color-blue);
-  font-size: 12px;
-}
+  .popup-card-projects li {
+    list-style: none;
+    background-color: #dad0d0;
+    color: var(--text-color-blue);
+    padding: 14px 15px;
+    border-radius: 4px;
+    text-align: center;
+  }
 
-.popup-card-projects {
-  height: 15%;
-  font-weight: 700;
-}
+  .popup-card-button {
+    align-items: center;
+    justify-content: space-between;
+    width: 52%;
+    height: 20%;
+    order: -1;
+    margin-top: 0;
+  }
 
-.popup-card-projects li{
-  list-style: none;
-  background-color: #dad0d0;
-  color: var(--text-color-blue);
-  padding: 14px 15px;
-  border-radius: 4px;
-  text-align: center;
-}
- 
-.popup-card-button {
-  align-items: center;
-  justify-content: space-between;
-  width: 52%;
-  height: 20%;
-  order: -1;
-  margin-top: 0;
-
-}
-
-.popup-button {
-  color: #f8f2f2;
-  border-radius: 6px;
-  align-items: center;
-  width: 118px;
-  text-decoration: none;
-  padding: 5px;
-}
+  .popup-button {
+    color: #f8f2f2;
+    border-radius: 6px;
+    align-items: center;
+    width: 118px;
+    text-decoration: none;
+    padding: 5px;
+  }
 
   /*   styles for desktop version aboutme background begins here    */
 
   .about-me-header-background-right {
-    background: url("/images/rightimage.png") right bottom/100px 250px no-repeat;
+    background: url('/images/rightimage.png') right bottom/100px 250px no-repeat;
   }
 
   .aboutme-footer {
-    background: url("images/leftimage.png") left/100px 150px no-repeat;
+    background: url('images/leftimage.png') left/100px 150px no-repeat;
   }
 
   /*   styles for desktop version languages card begins here    */
@@ -766,7 +801,8 @@ textarea:focus-visible {
 
   /*   styles for desktop version contacts begins here    */
   .contact-body {
-    background: url("/images/desktop-version/contact-form-illustratoin-3-desktop.png") bottom right/100px 270px no-repeat;
+    background: url('/images/desktop-version/contact-form-illustratoin-3-desktop.png') bottom
+      right/100px 270px no-repeat;
     padding: 0 72px;
   }
 
@@ -777,7 +813,9 @@ textarea:focus-visible {
   }
 
   .intrest-header {
-    font: 700 30px/52px Inter, sans-serif;
+    font:
+      700 30px/52px Inter,
+      sans-serif;
     width: 100%;
     text-align: left;
   }
@@ -787,7 +825,8 @@ textarea:focus-visible {
     justify-content: flex-start;
     height: 400px;
     padding-top: 50px;
-    background: url("/images/desktop-version/illustration-1-contact-form-desktop.png") bottom center/100px 100px no-repeat;
+    background: url('/images/desktop-version/illustration-1-contact-form-desktop.png') bottom
+      center/100px 100px no-repeat;
   }
 
   .customer-contacts form {
@@ -812,7 +851,7 @@ textarea:focus-visible {
     margin-left: 5px;
   }
 
-  .customer-contacts input[type="email"] {
+  .customer-contacts input[type='email'] {
     width: 97%;
   }
 
@@ -821,12 +860,13 @@ textarea:focus-visible {
     margin-top: 10px;
   }
 
-  .customer-contacts input[type="submit"] {
+  .customer-contacts input[type='submit'] {
     align-self: flex-start;
   }
 
   .contacts {
-    background: url("/images/desktop-version/illustration-1-contact-form-desktop.png") bottom left/100px 200px no-repeat;
+    background: url('/images/desktop-version/illustration-1-contact-form-desktop.png') bottom
+      left/100px 200px no-repeat;
   }
 
   /* content not to be displayed when screen size is >= 768px stays here */
