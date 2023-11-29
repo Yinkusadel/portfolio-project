@@ -723,6 +723,10 @@ textarea:focus-visible {
     padding: 0 30px;
   }
 
+  .popup-card-image {
+    height: 400px;
+  }
+
   .project-card-details {
     height: 40%;
     flex-flow: row wrap;
