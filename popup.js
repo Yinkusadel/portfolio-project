@@ -1,4 +1,5 @@
-import projectCardAttributes from "./attributes.js";
+import projectCardAttributes from './attributes.js';
+
 const popUpCardContainerNew = document.querySelector('.popup-card-container');
 
 const generatePopupProjectCard = (
@@ -130,6 +131,5 @@ function handlePopupButtonClick(event) {
     popUpCardContainerNew.classList.add('d-flex');
   }
 }
-
 
 document.querySelector('.md-multipost-card-flex').addEventListener('click', handlePopupButtonClick);
