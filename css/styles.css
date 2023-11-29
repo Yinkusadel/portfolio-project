@@ -479,12 +479,12 @@ textarea:focus-visible {
     600 25px/30px Inter,
     sans-serif;
   color: var(--text-color-blue);
-  width: 60%;
-  height: 15%;
+  width: 90%;
+  height: 20%;
 }
 
 .popup-card-image {
-  height: 400px;
+  height: 250px;
 }
 
 .project-card-details {
@@ -502,13 +502,14 @@ textarea:focus-visible {
   background-color: var(--cards-background);
   padding: 5px 10px;
   border-radius: 4px;
+  font-size: 70%;
   font-weight: 400;
   align-items: center;
 }
 
 .popup-loremipsum-text-container {
-  height: 50%;
-  font-size: 20px;
+  height: 45%;
+  font-size: 14px;
 }
 
 .popup-loremipsum-text {
