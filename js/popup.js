@@ -1,4 +1,4 @@
-import projectCardAttributes from './attributes.js';
+import projectCardAttributes from '../attributes.js';
 
 const popUpCardContainerNew = document.querySelector('.popup-card-container');
 

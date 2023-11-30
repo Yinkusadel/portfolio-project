@@ -1,4 +1,4 @@
-import projectCardAttributes from './attributes.js';
+import projectCardAttributes from '../attributes.js';
 
 const cardUl = document.querySelector('.md-multipost-card-flex');
 
