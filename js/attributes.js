@@ -10,6 +10,8 @@ const projectAttributes = [
     btnHrefFirst: 'https://deploy-preview-1--odin-project-rock-paper-scissors.netlify.app/',
     btnHrefSecond: 'https://github.com/Yinkusadel/odin-project-rock-paper-scissors/pull/1',
     class: 'tonic-popup',
+    popupNavPrevious: `popup-nav-previous`,
+    popupNavNext: `popup-nav-next`,
   },
   {
     id: 'seeProjectTonicTwoBtn',
@@ -22,6 +24,8 @@ const projectAttributes = [
     btnHrefFirst: 'https://deploy-preview-1--random-pasword-gen.netlify.app/',
     btnHrefSecond: 'https://github.com/Yinkusadel/random-password-generator/pull/1',
     class: 'tonic-two-popup',
+    popupNavPrevious: `popup-nav-previous`,
+    popupNavNext: `popup-nav-next`,
   },
   {
     id: 'multiPostPopup',
@@ -34,6 +38,8 @@ const projectAttributes = [
     btnHrefFirst: 'https://deploy-preview-1--basketballs-score-board.netlify.app/',
     btnHrefSecond: 'https://github.com/Yinkusadel/basketball-scoreboard/pull/1',
     class: 'multipost-popup',
+    popupNavPrevious: `popup-nav-previous`,
+    popupNavNext: `popup-nav-next`,
   },
   {
     id: 'multiPostTwoPopup',
@@ -46,6 +52,8 @@ const projectAttributes = [
     btnHrefFirst: 'https://deploy-preview-6--adels-calculator-app.netlify.app/',
     btnHrefSecond: 'https://github.com/Yinkusadel/adel-js-calculator-app/pull/6',
     class: 'multipost-two-popup',
+    popupNavPrevious: `popup-nav-previous`,
+    popupNavNext: `popup-nav-next`,
   },
   {
     id: 'faceBookPopup',
@@ -58,6 +66,8 @@ const projectAttributes = [
     btnHrefFirst: 'https://deploy-preview-1--scrimba-building-blackjack.netlify.app/',
     btnHrefSecond: 'https://github.com/Yinkusadel/scrimba-building-blackjack/pull/1',
     class: 'facebook-popup',
+    popupNavPrevious: `popup-nav-previous`,
+    popupNavNext: `popup-nav-next`,
   },
   {
     id: 'naturePopup',
@@ -70,6 +80,8 @@ const projectAttributes = [
     btnHrefFirst: 'https://deploy-preview-1--scrimba-passengercounter-app.netlify.app',
     btnHrefSecond: 'https://github.com/Yinkusadel/scrimba-passenger-counter-app/pull/1',
     class: 'nature-popup',
+    popupNavPrevious: `popup-nav-previous`,
+    popupNavNext: `popup-nav-next`,
   },
 ];
 

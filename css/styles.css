@@ -781,6 +781,24 @@ textarea:focus-visible {
     padding: 5px;
   }
 
+  .popup-navigate {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 10%;
+    align-items: center;
+  }
+
+  .popup-nav-previous {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup-nav-next {
+    justify-content: center;
+    align-items: center;
+  }
+
   /*   styles for desktop version aboutme background begins here    */
 
   .about-me-header-background-right {

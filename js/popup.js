@@ -1,6 +1,8 @@
-import projectCardAttributes from '../attributes.js';
+import projectCardAttributes from './attributes.js';
 
 const popUpCardContainerNew = document.querySelector('.popup-card-container');
+// const popupNavPrevious = document.querySelector('.popup-nav-previous');
+// const popupNavNext = document.querySelector('.popup-nav-next');
 
 const generatePopupProjectCard = (
   imgSrc,
@@ -10,6 +12,8 @@ const generatePopupProjectCard = (
   tags,
   btnHrefOne,
   btnHrefTwo,
+  popupNavPrevious,
+  popupNavNext,
 ) => `
 
 <div class="popup-card d-flex">
@@ -48,6 +52,17 @@ const generatePopupProjectCard = (
       industry's standard dummy text ever since the 1500s, when an unknown printer took a
       galley of type and scrambled it 1960s with the relea
     </p>
+  </div>
+
+  <div class="popup-navigate md-d-flex d-none "> 
+    <div class="popup-nav-previous md-d-flex" id="${popupNavPrevious}">
+      <svg class="svg-nav-left" fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="-400 -400 1200.00 1200.00" xml:space="preserve" transform="matrix(1, 0, 0, 1, 0, 0)" stroke="#000000" stroke-width="0.004000040000000001"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.800008"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757 c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072 c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315 C400.004,190.438,392.251,182.686,382.688,182.686z"></path> </g> </g></svg>
+      <span>previous</span>
+    </div> 
+    <div class="popup-nav-next md-d-flex" id="${popupNavNext}">
+      <span>next</span>
+      <svg class="svg-nav-right" fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="-400 -400 1200.00 1200.00" xml:space="preserve" transform="matrix(1, 0, 0, 1, 0, 0)rotate(180)" stroke="#000000" stroke-width="0.004000040000000001"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.800008"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757 c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072 c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315 C400.004,190.438,392.251,182.686,382.688,182.686z"></path> </g> </g></svg>
+    </div> 
   </div>
 
   <div class="popup-card-button d-flex">
@@ -98,7 +113,8 @@ const generatePopupProjectCard = (
 </div>`;
 
 const updatePopupContent = (id) => {
-  const newPopupAttributes = projectCardAttributes.find((attr) => attr.id === id);
+  const popupIndex = projectCardAttributes.findIndex((attr) => attr.id === id);
+  const newPopupAttributes = projectCardAttributes[popupIndex]
 
   if (newPopupAttributes) {
     const projectCard = generatePopupProjectCard(
@@ -109,6 +125,8 @@ const updatePopupContent = (id) => {
       newPopupAttributes.tagLi,
       newPopupAttributes.btnHrefFirst,
       newPopupAttributes.btnHrefSecond,
+      newPopupAttributes.popupNavPrevious,
+      newPopupAttributes.popupNavNext,
     );
 
     popUpCardContainerNew.innerHTML = projectCard;
@@ -118,10 +136,11 @@ const updatePopupContent = (id) => {
       popUpCardContainerNew.classList.add('d-none');
       popUpCardContainerNew.classList.remove('d-flex');
     });
+    const popupNavNext = document.querySelector('.popup-nav-next');
   }
 };
 
-function handlePopupButtonClick(event) {
+const handlePopupButtonClick = (event) => {
   const button = event.target;
   const popupType = button.value;
 
@@ -133,3 +152,29 @@ function handlePopupButtonClick(event) {
 }
 
 document.querySelector('.md-multipost-card-flex').addEventListener('click', handlePopupButtonClick);
+
+
+
+
+
+
+
+    // popupNavNext.addEventListener('click', function popupNavNextForPopup() {
+    //     projectCardAttributes.forEach((newPopupAttributes, index) => {
+    //         if (index === popupIndex + 1) {
+    //             const projectCard = generatePopupProjectCard(
+    //                 newPopupAttributes.src,
+    //                 newPopupAttributes.title,
+    //                 newPopupAttributes.alt,
+    //                 newPopupAttributes.mdDescription,
+    //                 newPopupAttributes.tagLi,
+    //                 newPopupAttributes.btnHrefFirst,
+    //                 newPopupAttributes.btnHrefSecond,
+    //                 newPopupAttributes.popupNavPrevious,
+    //                 newPopupAttributes.popupNavNext,
+    //             );
+    
+    //             popUpCardContainerNew.innerHTML = projectCard;
+    //         }
+    //     });
+    // });
