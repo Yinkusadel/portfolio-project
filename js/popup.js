@@ -55,15 +55,14 @@ const generatePopupProjectCard = (
   </div>
 
   <div class="popup-navigate md-d-flex d-none "> 
-    <div class="popup-nav-previous md-d-flex" id="${popupNavPrevious}">
-      <svg class="svg-nav-left" fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="-400 -400 1200.00 1200.00" xml:space="preserve" transform="matrix(1, 0, 0, 1, 0, 0)" stroke="#000000" stroke-width="0.004000040000000001"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.800008"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757 c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072 c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315 C400.004,190.438,392.251,182.686,382.688,182.686z"></path> </g> </g></svg>
+    <button class="popup-nav-previous md-d-flex" id="${popupNavPrevious}">
+      <svg class="svg-nav-left" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
       <span>previous</span>
-    </div> 
-    <div class="popup-nav-next md-d-flex" id="${popupNavNext}">
+    </button> 
+    <button class="popup-nav-next md-d-flex" id="${popupNavNext}">
       <span>next</span>
-      <svg class="svg-nav-right" fill="#000000" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-330 -330 990.00 990.00" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_27_" d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255 s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0 c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"></path> </g></svg>
-    </div> 
-  </div>
+      <svg class="svg-nav-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button> 
+    </div>
 
   <div class="popup-card-button d-flex">
     <a href="${btnHrefOne}" class="popup-button d-flex justify-center">
@@ -152,6 +151,15 @@ const updatePopupContent = (id) => {
 
     updatePopupContent(projectCardAttributes[popupIndexClick].id);
   };
+
+  if (popupIndexClick === 0) {
+    popupNavPrevious.setAttribute('disabled', 'true');
+  }
+
+  if (popupIndexClick === projectCardAttributes.length - 1) {
+    popupNavNext.setAttribute('disabled', 'true');
+  }
+
   popupNavNext.addEventListener('click', () => updateAndMove('next'));
   popupNavPrevious.addEventListener('click', () => updateAndMove('previous'));
 };

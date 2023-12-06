@@ -791,25 +791,23 @@ textarea:focus-visible {
   }
 
   .popup-nav-previous {
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    width: 15%;
+    justify-content: space-between;
   }
 
   .popup-nav-next {
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    width: 10%;
+    justify-content: space-between;
   }
 
-  .popup-nav-next:active .svg-nav-right,
-  .popup-nav-next:active span {
+  .popup-nav-next:not(:disabled):active .svg-nav-right,
+  .popup-nav-next:not(:disabled):active span {
     fill: red;
     color: red;
   }
 
-  .popup-nav-previous:active .svg-nav-left,
-  .popup-nav-previous:active span {
+  .popup-nav-previous:not(:disabled):active .svg-nav-left,
+  .popup-nav-previous:not(:disabled):active span {
     fill: red;
     color: red;
   }
