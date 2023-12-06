@@ -1,8 +1,6 @@
 import projectCardAttributes from './attributes.js';
 
 const popUpCardContainerNew = document.querySelector('.popup-card-container');
-// const popupNavPrevious = document.querySelector('.popup-nav-previous');
-// const popupNavNext = document.querySelector('.popup-nav-next');
 
 const generatePopupProjectCard = (
   imgSrc,
