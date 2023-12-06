@@ -508,7 +508,7 @@ textarea:focus-visible {
 }
 
 .popup-loremipsum-text-container {
-  height: 45%;
+  height: 40%;
   font-size: 14px;
 }
 
@@ -785,18 +785,31 @@ textarea:focus-visible {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    height: 10%;
     align-items: center;
   }
 
   .popup-nav-previous {
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 
   .popup-nav-next {
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+  }
+
+  .popup-nav-next:active .svg-nav-right,
+  .popup-nav-next:active span {
+    fill: red;
+    color: red;
+  }
+
+  .popup-nav-previous:active .svg-nav-left,
+  .popup-nav-previous:active span {
+    fill: red;
+    color: red;
   }
 
   /*   styles for desktop version aboutme background begins here    */
