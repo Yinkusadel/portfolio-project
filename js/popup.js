@@ -123,14 +123,17 @@ const handlePopupButtonClick = (event) => {
     const popupNavNextId = popupNavNext ? popupNavNext.id : null;
 
     if (newPopupAttributes) {
+      const { src, title, alt, mdDescription, tagLi, btnHrefFirst, btnHrefSecond } =
+        newPopupAttributes;
+
       const projectCard = generatePopupProjectCard(
-        newPopupAttributes.src,
-        newPopupAttributes.title,
-        newPopupAttributes.alt,
-        newPopupAttributes.mdDescription,
-        newPopupAttributes.tagLi,
-        newPopupAttributes.btnHrefFirst,
-        newPopupAttributes.btnHrefSecond,
+        src,
+        title,
+        alt,
+        mdDescription,
+        tagLi,
+        btnHrefFirst,
+        btnHrefSecond,
         popupNavPreviousId,
         popupNavNextId,
       );
@@ -142,7 +145,7 @@ const handlePopupButtonClick = (event) => {
         .forEach((button) => button.addEventListener('click', handlePopupButtonClick));
 
       const closeBtn = document.querySelector('.popup-card-close-btn');
-      closeBtn.addEventListener('click', function closeBtnForPopup() {
+      closeBtn.addEventListener('click', () => {
         popUpCardContainerNew.classList.add('d-none');
         popUpCardContainerNew.classList.remove('d-flex');
       });

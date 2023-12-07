@@ -24,15 +24,8 @@ const generateProjectCard = (imgSrc, imgTitle, imgAlt, imgDescription, popupID, 
     </li>`;
 
 const generateProjectCardsAttr = () => {
-  projectCardAttributes.forEach((attributes) => {
-    const projectCard = generateProjectCard(
-      attributes.src,
-      attributes.title,
-      attributes.alt,
-      attributes.smDescription,
-      attributes.id,
-      attributes.tagLi,
-    );
+  projectCardAttributes.forEach(({ src, title, alt, smDescription, id, tagLi }) => {
+    const projectCard = generateProjectCard(src, title, alt, smDescription, id, tagLi);
     cardUl.innerHTML += projectCard;
   });
 };
