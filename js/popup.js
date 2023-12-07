@@ -63,7 +63,7 @@ const generatePopupProjectCard = (
     </div>
 
   <div class="popup-card-button d-flex">
-    <a href="${btnHrefOne}" class="popup-button d-flex justify-center">
+    <a href="${btnHrefOne}" class="popup-button d-flex justify-center" target="_blank">
       See Live<svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -79,7 +79,7 @@ const generatePopupProjectCard = (
         />
       </svg>
     </a>
-    <a href="${btnHrefTwo}" class="popup-button d-flex justify-center">
+    <a href="${btnHrefTwo}" class="popup-button d-flex justify-center" target="_blank">
       See Source<svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
