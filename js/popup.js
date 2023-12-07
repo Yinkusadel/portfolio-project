@@ -10,8 +10,8 @@ const generatePopupProjectCard = (
   tags,
   btnHrefOne,
   btnHrefTwo,
-  popupNavPrevious,
-  popupNavNext,
+  popupNavPreviousId,
+  popupNavNextId,
 ) => `
 
 <div class="popup-card d-flex">
@@ -53,11 +53,15 @@ const generatePopupProjectCard = (
   </div>
 
   <div class="popup-navigate md-d-flex d-none "> 
-    <button class="popup-nav-previous md-d-flex" id="${popupNavPrevious}">
+  <button type="button" class="popup-nav-previous md-d-flex" ${
+    popupNavPreviousId ? `id="${popupNavPreviousId}" value="see-popup"` : 'disabled="disabled"'
+  } >
       <svg class="svg-nav-left" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
       <span>previous</span>
     </button> 
-    <button class="popup-nav-next md-d-flex" id="${popupNavNext}">
+    <button type="button" class="popup-nav-next md-d-flex" ${
+      popupNavNextId ? `id="${popupNavNextId}" value="see-popup"` : 'disabled="disabled"'
+    }>
       <span>next</span>
       <svg class="svg-nav-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button> 
     </div>
@@ -109,68 +113,49 @@ const generatePopupProjectCard = (
 </div>
 </div>`;
 
-const updatePopupContent = (id) => {
-  const popupIndex = projectCardAttributes.findIndex((attr) => attr.id === id);
-  const newPopupAttributes = projectCardAttributes[popupIndex];
+const handlePopupButtonClick = (event) => {
+  const updatePopupContent = (id) => {
+    const popupIndex = projectCardAttributes.findIndex((attr) => attr.id === id);
+    const newPopupAttributes = projectCardAttributes[popupIndex];
+    const popupNavPrevious = projectCardAttributes[popupIndex - 1];
+    const popupNavPreviousId = popupNavPrevious ? popupNavPrevious.id : null;
+    const popupNavNext = projectCardAttributes[popupIndex + 1];
+    const popupNavNextId = popupNavNext ? popupNavNext.id : null;
 
-  if (newPopupAttributes) {
-    const projectCard = generatePopupProjectCard(
-      newPopupAttributes.src,
-      newPopupAttributes.title,
-      newPopupAttributes.alt,
-      newPopupAttributes.mdDescription,
-      newPopupAttributes.tagLi,
-      newPopupAttributes.btnHrefFirst,
-      newPopupAttributes.btnHrefSecond,
-      newPopupAttributes.popupNavPrevious,
-      newPopupAttributes.popupNavNext,
-    );
+    if (newPopupAttributes) {
+      const projectCard = generatePopupProjectCard(
+        newPopupAttributes.src,
+        newPopupAttributes.title,
+        newPopupAttributes.alt,
+        newPopupAttributes.mdDescription,
+        newPopupAttributes.tagLi,
+        newPopupAttributes.btnHrefFirst,
+        newPopupAttributes.btnHrefSecond,
+        popupNavPreviousId,
+        popupNavNextId,
+      );
 
-    popUpCardContainerNew.innerHTML = projectCard;
+      popUpCardContainerNew.innerHTML = projectCard;
 
-    const closeBtn = document.querySelector('.popup-card-close-btn');
-    closeBtn.addEventListener('click', function closeBtnForPopup() {
-      popUpCardContainerNew.classList.add('d-none');
-      popUpCardContainerNew.classList.remove('d-flex');
-    });
-  }
+      popUpCardContainerNew
+        .querySelectorAll('button[value="see-popup"]')
+        .forEach((button) => button.addEventListener('click', handlePopupButtonClick));
 
-  const popupNavNext = document.querySelector('.popup-nav-next');
-  const popupNavPrevious = document.querySelector('.popup-nav-previous');
-
-  let popupIndexClick = projectCardAttributes.findIndex((attr) => attr.id === id);
-  const updateAndMove = (direction) => {
-    if (direction === 'next') {
-      popupIndexClick =
-        popupIndexClick < projectCardAttributes.length - 1 ? popupIndexClick + 1 : popupIndexClick;
-    } else if (direction === 'previous') {
-      popupIndexClick = popupIndexClick > 0 ? popupIndexClick - 1 : popupIndexClick;
+      const closeBtn = document.querySelector('.popup-card-close-btn');
+      closeBtn.addEventListener('click', function closeBtnForPopup() {
+        popUpCardContainerNew.classList.add('d-none');
+        popUpCardContainerNew.classList.remove('d-flex');
+      });
     }
-
-    updatePopupContent(projectCardAttributes[popupIndexClick].id);
   };
 
-  if (popupIndexClick === 0) {
-    popupNavPrevious.setAttribute('disabled', 'true');
-  }
+  const button = event.currentTarget;
 
-  if (popupIndexClick === projectCardAttributes.length - 1) {
-    popupNavNext.setAttribute('disabled', 'true');
-  }
-
-  popupNavNext.addEventListener('click', () => updateAndMove('next'));
-  popupNavPrevious.addEventListener('click', () => updateAndMove('previous'));
+  updatePopupContent(button.id);
+  popUpCardContainerNew.classList.remove('d-none');
+  popUpCardContainerNew.classList.add('d-flex');
 };
 
-const handlePopupButtonClick = (event) => {
-  const button = event.target;
-  const popupType = button.value;
-
-  if (popupType === 'see-popup') {
-    updatePopupContent(button.id);
-    popUpCardContainerNew.classList.remove('d-none');
-    popUpCardContainerNew.classList.add('d-flex');
-  }
-};
-
-document.querySelector('.md-multipost-card-flex').addEventListener('click', handlePopupButtonClick);
+document
+  .querySelectorAll('button[value="see-popup"]')
+  .forEach((button) => button.addEventListener('click', handlePopupButtonClick));

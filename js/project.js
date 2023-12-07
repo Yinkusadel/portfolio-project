@@ -2,15 +2,7 @@ import projectCardAttributes from './attributes.js';
 
 const cardUl = document.querySelector('.md-multipost-card-flex');
 
-const generateProjectCard = (
-  imgSrc,
-  imgTitle,
-  imgAlt,
-  imgDescription,
-  popupClass,
-  popupID,
-  tags,
-) => `
+const generateProjectCard = (imgSrc, imgTitle, imgAlt, imgDescription, popupID, tags) => `
     <li class="cards">
     <figure>
       <img
@@ -27,7 +19,7 @@ const generateProjectCard = (
      </ul>
     
     <div class="card-button d-flex justify-center">
-      <button class="see-projects ${popupClass}" id="${popupID}" value="see-popup">See Projects</button>
+      <button class="see-projects " id="${popupID}" value="see-popup">See Projects</button>
     </div>
     </li>`;
 
@@ -38,7 +30,6 @@ const generateProjectCardsAttr = () => {
       attributes.title,
       attributes.alt,
       attributes.smDescription,
-      attributes.class,
       attributes.id,
       attributes.tagLi,
     );
