@@ -1,18 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ibrohim Software Developer Portfolio Project</title>
-    <link href="styles.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
   </head>
 
-  <body>
-    <div class="md-header-background">
+  <body class="body">
+    <div class="popup-card-container d-none justify-center"></div>
+
+    <div class="md-header-background md-d-flex md-justify-center">
       <div class="md-header-content-center">
         <div class="welcome-nav">
-          <div class="md-header-nav small-header-nav d-none">
-            <div class="close-menu-div d-none">
+          <div class="md-header-nav small-header-nav d-none md-d-flex md-justify-center">
+            <div class="close-menu-div d-flex md-d-none">
               <svg class="close-menu-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                 <path
                   d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
@@ -20,7 +22,7 @@
               </svg>
             </div>
 
-            <ul class="md-header-nav-ul small-header-nav-ul">
+            <ul class="md-header-nav-ul small-header-nav-ul d-flex">
               <li class="md-header-nav-li">
                 <a class="md-header-nav-li-a" href="#portfolio-projects" title="portfolio link"
                   >Portfolio</a
@@ -34,7 +36,7 @@
               </li>
             </ul>
           </div>
-          <nav class="welcome-content">
+          <nav class="welcome-content d-flex md-d-none">
             <header>Welcome</header>
             <svg
               class="open-menu-svg"
@@ -55,12 +57,12 @@
         </div>
         <main>
           <section class="hero-section">
-            <h1 class="my-info">
+            <h1 class="my-info d-flex">
               <span class="info-name">Hey there. i'm Ibrohim</span>
               <span class="occupation">I'm a software developer</span>
             </h1>
 
-            <div class="description">
+            <div class="description d-flex justify-center">
               <p class="description-text">
                 I can help you build a product , feature or website Look through some of my work and
                 experience! If you like what you see and have a project you need coded, don’t
@@ -68,7 +70,7 @@
               </p>
             </div>
 
-            <div class="socialmedias">
+            <div class="socialmedias d-flex justify-center">
               <ul>
                 <li>
                   <a
@@ -175,7 +177,7 @@
                 </li>
               </ul>
             </div>
-            <nav class="arrowdown">
+            <nav class="arrowdown d-flex justify-center">
               <a href="#portfolio-projects" title="arrowdown"
                 ><svg
                   class="arrowdown-icon"
@@ -199,153 +201,15 @@
     </div>
     <section id="portfolio-projects">
       <div class="recent-works">
-        <h2 class="my-info">
+        <h2 class="my-info d-flex">
           <span class="info-name">My Recent Works</span>
         </h2>
-        <div class="green-border"></div>
-        <div class="card-container">
+        <div class="green-border md-d-none"></div>
+        <div class="card-container md-d-flex">
           <div class="md-multipost-cards-container">
             <div class="md-multipost-cards-container-ul">
               <div class="md-multipost">
-                <ul class="md-multipost-card-flex">
-                  <li class="cards">
-                    <figure>
-                      <img
-                        class="card-images"
-                        src="images/tonic.png"
-                        title="tonic image"
-                        alt="tonic project"
-                      />
-                      <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
-                    </figure>
-
-                    <ul class="card-projects">
-                      <li>Ruby on rails</li>
-                      <li>css</li>
-                      <li>JavaScript</li>
-                      <li>html</li>
-                    </ul>
-
-                    <div class="card-button">
-                      <button class="see-projects">See Projects</button>
-                    </div>
-                  </li>
-
-                  <li class="cards">
-                    <figure>
-                      <img
-                        class="card-images"
-                        src="images/tonic2.png"
-                        title="tonic 2 image"
-                        alt="tonic project"
-                      />
-                      <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
-                    </figure>
-
-                    <ul class="card-projects">
-                      <li>Ruby on rails</li>
-                      <li>css</li>
-                      <li>JavaScript</li>
-                      <li>html</li>
-                    </ul>
-
-                    <div class="card-button">
-                      <button class="see-projects">See Projects</button>
-                    </div>
-                  </li>
-
-                  <li class="cards">
-                    <figure>
-                      <img
-                        class="card-images"
-                        src="images/multipost.png"
-                        title="multi post story image"
-                        alt="multi-post stories project"
-                      />
-                      <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
-                    </figure>
-
-                    <ul class="card-projects">
-                      <li>Ruby on rails</li>
-                      <li>css</li>
-                      <li>JavaScript</li>
-                      <li>html</li>
-                    </ul>
-
-                    <div class="card-button">
-                      <button class="see-projects">See Projects</button>
-                    </div>
-                  </li>
-
-                  <li class="cards">
-                    <figure>
-                      <img
-                        class="card-images"
-                        src="images/multipost2.png"
-                        title="multi post story image"
-                        alt="professional art printing project"
-                      />
-                      <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
-                    </figure>
-
-                    <ul class="card-projects">
-                      <li>Ruby on rails</li>
-                      <li>css</li>
-                      <li>JavaScript</li>
-                      <li>html</li>
-                    </ul>
-
-                    <div class="card-button">
-                      <button class="see-projects">See Projects</button>
-                    </div>
-                  </li>
-
-                  <li class="cards">
-                    <figure>
-                      <img
-                        class="card-images"
-                        src="images/facebook.png"
-                        title="facebook360 project image"
-                        alt="facebook 360 project"
-                      />
-                      <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
-                    </figure>
-
-                    <ul class="card-projects">
-                      <li>Ruby on rails</li>
-                      <li>css</li>
-                      <li>JavaScript</li>
-                      <li>html</li>
-                    </ul>
-
-                    <div class="card-button">
-                      <button class="see-projects">See Projects</button>
-                    </div>
-                  </li>
-
-                  <li class="cards">
-                    <figure>
-                      <img
-                        class="card-images"
-                        src="images/nature.png"
-                        title="nature image"
-                        alt="printing and typesetting project"
-                      />
-                      <figcaption class="card-text">Multi-Post Stories Gain+Glory</figcaption>
-                    </figure>
-
-                    <ul class="card-projects">
-                      <li>Ruby on rails</li>
-                      <li>css</li>
-                      <li>JavaScript</li>
-                      <li>html</li>
-                    </ul>
-
-                    <div class="card-button">
-                      <button class="see-projects">See Projects</button>
-                    </div>
-                  </li>
-                </ul>
+                <ul class="md-multipost-card-flex md-d-flex"></ul>
               </div>
             </div>
           </div>
@@ -353,7 +217,7 @@
       </div>
     </section>
 
-    <section class="about-me" id="about-me">
+    <section class="about-me md-d-flex md-justify-center" id="about-me">
       <div class="about-me-md">
         <div class="about-me-header-background-right">
           <div class="aboutme-header">
@@ -369,14 +233,14 @@
           </div>
         </div>
 
-        <div class="aboutme-footer">
+        <div class="aboutme-footer d-flex justify-center">
           <button>Get My Resume</button>
         </div>
 
         <div class="languagescard-container">
-          <ul class="md-languagescard-container">
+          <ul class="md-languagescard-container md-d-flex">
             <li class="languages-card">
-              <div class="languages-icon">
+              <div class="languages-icon d-flex justify-center">
                 <span class="languages-icon-span"
                   ><img
                     src="/images/iconlanguage.png"
@@ -386,8 +250,8 @@
               </div>
               <h2>Languages</h2>
 
-              <nav class="card-projects">
-                <ul class="language-project">
+              <nav class="card-projects d-flex justify-center">
+                <ul class="language-project d-flex">
                   <li>Ruby on rails</li>
                   <li>css</li>
                   <li>JavaScript</li>
@@ -397,15 +261,15 @@
             </li>
 
             <li class="languages-card">
-              <div class="languages-icon">
+              <div class="languages-icon d-flex justify-center">
                 <span
                   ><img src="/images/group.png" title="group image" alt="framework icon"
                 /></span>
               </div>
               <h2>Frameworks</h2>
 
-              <nav class="card-projects">
-                <ul class="language-project">
+              <nav class="card-projects d-flex justify-center">
+                <ul class="language-project d-flex">
                   <li>Bootstrap</li>
                   <li>Ruby on rails</li>
                   <li>RSpec</li>
@@ -416,13 +280,13 @@
             </li>
 
             <li class="languages-card">
-              <div class="languages-icon">
+              <div class="languages-icon d-flex justify-center">
                 <span><img src="/images/bolt.png" title="bolt image" alt="skills icon" /></span>
               </div>
               <h2>Skills</h2>
 
-              <nav class="card-projects">
-                <ul class="language-project">
+              <nav class="card-projects d-flex justify-center">
+                <ul class="language-project d-flex">
                   <li>Codekit</li>
                   <li>GitHub</li>
                   <li>Codepen</li>
@@ -436,20 +300,24 @@
       </div>
     </section>
     <section class="contacts" id="contacts">
-      <div class="contact-body">
-        <div class="md-contact-body">
-          <div class="contact-header">
+      <div class="contact-body md-d-flex">
+        <div class="md-contact-body md-d-flex">
+          <div class="contact-header d-flex justify-center">
             <header class="intrest-header">
               I'm always interested in hearing about new projects, so if you'd like to chat please
               get in touch.
             </header>
           </div>
 
-          <div class="customer-contacts">
-            <form action="https://formspree.io/f/xzblbbzd" method="post">
+          <div class="customer-contacts d-flex justify-center">
+            <form
+              class="customer-contacts-form d-flex"
+              action="https://formspree.io/f/xzblbbzd"
+              method="post"
+            >
               <label for="fname">
                 <input
-                  class="fname"
+                  class="fname md-d-none"
                   id="fname"
                   name="fname"
                   type="text"
@@ -460,7 +328,7 @@
                 />
               </label>
 
-              <div class="md-version-form-container d-none">
+              <div class="md-version-form-container d-none md-d-flex">
                 <label for="firstname">
                   <input
                     class="firstname"
@@ -518,7 +386,7 @@
     </section>
 
     <div class="md-version-ending-socialmedia">
-      <div class="socialmedias" id="socialmedias">
+      <div class="socialmedias d-flex justify-center" id="socialmedias">
         <ul>
           <li>
             <a
@@ -627,7 +495,9 @@
       </div>
     </div>
 
-    <div class="black-border"></div>
-    <script src="script.js"></script>
+    <div class="black-border md-d-none"></div>
+    <script src="js/project.js" type="module"></script>
+    <script src="js/mobilemenu.js"></script>
+    <script src="js/popup.js" type="module"></script>
   </body>
 </html>

@@ -13,7 +13,7 @@ const closeMenuBtnFunc = () => {
 };
 
 mdHeaderNavLinks.forEach((mobileMenuLinks) => {
-  mobileMenuLinks.addEventListener('click', function () {
+  mobileMenuLinks.addEventListener('click', () => {
     mdHeaderNav.classList.remove('d-flex');
     openMenuBtn.classList.remove('d-none');
   });
