@@ -1,44 +1,65 @@
-const fillFieldErrorMessage = document.querySelector('.fill-field-error-message');
+const form = document.getElementById('customer-contacts-form');
+const output = document.getElementById('fill-field-error-message');
 
-const validateEmail = (event) => {
-  const emailInput = document.getElementById('email').value;
-  const errorMessage = document.querySelector('.error-message');
+const displayErrorMessage = (field, message) => {
+  const errorMessage = document.createElement('p');
+  errorMessage.classList.add('error-message');
+  errorMessage.textContent = message;
 
-  if (emailInput !== emailInput.toLowerCase()) {
-    errorMessage.innerText = '*Email must be in lowercase.';
-    fillFieldErrorMessage.innerText = '';
-    event.preventDefault();
-  } else {
-    errorMessage.innerText = '';
+  field.insertAdjacentElement('afterend', errorMessage);
+};
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+
+  output.textContent = '';
+  document.querySelectorAll('.error-message').forEach((el) => el.remove());
+
+  let isValid = true;
+  const isFirstNameEmpty = !formData.get('firstname');
+  const isLastNameEmpty = !formData.get('lastname');
+  let isFullNameErrorDisplayed = false;
+
+  if (!formData.get('fname') && !isFirstNameEmpty && !isLastNameEmpty) {
+    const firstName = formData.get('firstname');
+    const lastName = formData.get('lastname');
+    formData.set('fname', `${firstName} ${lastName}`);
   }
-};
 
-document.querySelector('.contact-get-in-touch-button').addEventListener('click', validateEmail);
+  const errorMessages = new Set();
 
-const isHidden = (element) => {
-  return element.offsetWidth === 0 && element.offsetHeight === 0;
-};
+  formData.forEach((value, key) => {
+    const field = document.getElementById(key);
 
-const validateForm = () => {
-  const inputs = document.querySelectorAll('.customer-contacts-form input');
-
-  for (let i = 0; i < inputs.length; i += 1) {
-    if (inputs[i].type === 'text' && isHidden(inputs[i])) {
-      fillFieldErrorMessage.innerText = '';
-    } else {
-      if (inputs[i].value.trim() === '') {
-        fillFieldErrorMessage.innerText = '*Please fill in all fields.';
-        return false;
+    if (key === 'email' && value.trim() !== value.toLowerCase()) {
+      displayErrorMessage(field, 'Email should be in lowercase');
+      isValid = false;
+    } else if (key === 'fname' && !value.trim() && isFirstNameEmpty && isLastNameEmpty) {
+      if (!isFullNameErrorDisplayed) {
+        displayErrorMessage(field, 'Full name is required');
+        isValid = false;
+        isFullNameErrorDisplayed = true;
       }
-      fillFieldErrorMessage.innerText = '';
+    } else if (key === 'firstname' && value.trim() && isLastNameEmpty) {
+      displayErrorMessage(document.getElementById('fname'), 'Full name is required');
+      isValid = false;
+    } else if (key === 'lastname' && value.trim() && isFirstNameEmpty) {
+      displayErrorMessage(document.getElementById('fname'), 'Full name is required');
+      isValid = false;
+    } else if (key !== 'fname' && key !== 'firstname' && key !== 'lastname' && !value.trim()) {
+      displayErrorMessage(field, `${key} is required`);
+      isValid = false;
+      errorMessages.add(`${key} is required`);
+    } else {
+      output.textContent += `${key}: ${value}\n`;
     }
-  }
+  });
 
-  return true;
-};
-
-document.querySelector('.customer-contacts-form').addEventListener('submit', (event) => {
-  if (!validateForm()) {
-    event.preventDefault();
+  if (isValid) {
+    output.textContent = '';
+  } else {
+    output.textContent = Array.from(errorMessages).join('\n');
   }
 });
