@@ -316,6 +316,8 @@
               name="customerContactsForm"
               action="https://formspree.io/f/xzblbbzd"
               method="post"
+              required
+              novalidate
             >
               <p class="fill-field-error-message" id="fill-field-error-message"></p>
               <label for="fname">
@@ -327,6 +329,7 @@
                   title="Full name:"
                   placeholder="Full name"
                   maxlength="30"
+                  required
                 />
               </label>
 
@@ -340,6 +343,7 @@
                     title="First name:"
                     placeholder="First name"
                     maxlength="30"
+                    required
                   />
                 </label>
 
@@ -352,6 +356,7 @@
                     title="Last name:"
                     placeholder="Last name"
                     maxlength="30"
+                    required
                   />
                 </label>
               </div>
@@ -363,6 +368,7 @@
                   type="email"
                   title="Enter your email:"
                   placeholder="Email address"
+                  required
                 />
               </label>
               <p class="error-message" id="error-message"></p>
@@ -374,6 +380,7 @@
                   title="Enter text here:"
                   placeholder="Enter text here"
                   maxlength="500"
+                  required
                 ></textarea>
               </label>
 

@@ -11,19 +11,30 @@ const form = document.getElementById('customer-contacts-form');
 form.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  const formData = new FormData(form);
-
   document.querySelectorAll('.error-message').forEach((el) => el.remove());
 
-  let isValid = true;
-  const isFirstNameEmpty = !formData.get('firstname');
-  const isLastNameEmpty = !formData.get('lastname');
-  let isFullNameErrorDisplayed = false;
+  const formData = new FormData(form);
 
-  if (!formData.get('fname') && !isFirstNameEmpty && !isLastNameEmpty) {
-    const firstName = formData.get('firstname');
-    const lastName = formData.get('lastname');
+  const firstName = formData.get('firstname');
+  const lastName = formData.get('lastname');
+
+  if ((firstName.trim() && !lastName.trim()) || (!firstName.trim() && lastName.trim())) {
+    displayErrorMessage(
+      document.getElementById('fname'),
+      'Both First name and Last name are required to create Full name',
+    );
+    return;
+  }
+
+  if (firstName.trim() && lastName.trim()) {
     formData.set('fname', `${firstName} ${lastName}`);
+  }
+
+  let isValid = form.checkValidity();
+
+  if (isValid) {
+    form.submit();
+    return;
   }
 
   const errorMessages = new Set();
@@ -31,25 +42,22 @@ form.addEventListener('submit', function (event) {
   formData.forEach((value, key) => {
     const field = document.getElementById(key);
 
-    if (key === 'email' && value.trim() !== value.toLowerCase()) {
+    if (key === 'fname' && value.trim()) {
+      return;
+    }
+
+    if ((key === 'fname' || key === 'firstname' || key === 'lastname') && !value.trim()) {
+      displayErrorMessage(field, `${key === 'fname' ? 'Full name' : key} is required`);
+    } else if (key === 'email' && value.trim() !== value.toLowerCase()) {
       displayErrorMessage(field, 'Email should be in lowercase');
       isValid = false;
-    } else if (
-      (key === 'fname' || key === 'firstname' || key === 'lastname') &&
-      !value.trim() &&
-      !isFullNameErrorDisplayed
-    ) {
-      displayErrorMessage(document.getElementById('fname'), 'Full name is required');
-      isValid = false;
-      isFullNameErrorDisplayed = true;
     } else if (key !== 'fname' && key !== 'firstname' && key !== 'lastname' && !value.trim()) {
       displayErrorMessage(field, `${key} is required`);
-      isValid = false;
       errorMessages.add(`${key} is required`);
     }
   });
 
-  if (isValid) {
+  if (errorMessages.size === 0) {
     form.submit();
   }
 });
