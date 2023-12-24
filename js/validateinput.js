@@ -17,27 +17,17 @@ form.addEventListener('submit', function (event) {
 
   const firstName = formData.get('firstname');
   const lastName = formData.get('lastname');
+  const fullName = formData.get('fname');
 
-  if ((firstName.trim() && !lastName.trim()) || (!firstName.trim() && lastName.trim())) {
-    displayErrorMessage(
-      document.getElementById('fname'),
-      'Both First name and Last name are required to create Full name',
-    );
-    return;
-  }
+  let isValid = true;
+  let emailValid = true;
 
-  if (firstName.trim() && lastName.trim()) {
+  if (!fullName.trim() && (!firstName.trim() || !lastName.trim())) {
+    displayErrorMessage(document.getElementById('fname'));
+    isValid = false;
+  } else if (!fullName.trim() && (firstName.trim() || lastName.trim())) {
     formData.set('fname', `${firstName} ${lastName}`);
   }
-
-  let isValid = form.checkValidity();
-
-  if (isValid) {
-    form.submit();
-    return;
-  }
-
-  const errorMessages = new Set();
 
   formData.forEach((value, key) => {
     const field = document.getElementById(key);
@@ -46,18 +36,22 @@ form.addEventListener('submit', function (event) {
       return;
     }
 
-    if ((key === 'fname' || key === 'firstname' || key === 'lastname') && !value.trim()) {
-      displayErrorMessage(field, `${key === 'fname' ? 'Full name' : key} is required`);
+    if (key === 'fname' && !value.trim() && (!firstName.trim() || !lastName.trim())) {
+      displayErrorMessage(document.getElementById('fname'), 'Full name is required');
+      isValid = false;
+    } else if ((key === 'firstname' || key === 'lastname') && !value.trim() && !fullName.trim()) {
+      displayErrorMessage(field, `${key} is required`);
+      isValid = false;
     } else if (key === 'email' && value.trim() !== value.toLowerCase()) {
       displayErrorMessage(field, 'Email should be in lowercase');
-      isValid = false;
+      emailValid = false;
     } else if (key !== 'fname' && key !== 'firstname' && key !== 'lastname' && !value.trim()) {
       displayErrorMessage(field, `${key} is required`);
-      errorMessages.add(`${key} is required`);
+      isValid = false;
     }
   });
 
-  if (errorMessages.size === 0) {
+  if (isValid && emailValid) {
     form.submit();
   }
 });
