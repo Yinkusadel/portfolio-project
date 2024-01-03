@@ -27,7 +27,7 @@ form.addEventListener('submit', function (event) {
   if (!fullName.trim() && (!firstName.trim() || !lastName.trim()) && isMobileView) {
     displayErrorMessage(document.getElementById('fname'));
     isValid = false;
-  } else if (!fullName.trim() && (firstName.trim() || lastName.trim()) && !isMobileView) {
+  } else if (!fullName.trim() && firstName.trim() && lastName.trim() && !isMobileView) {
     formData.set('fname', `${firstName} ${lastName}`);
   }
 
@@ -60,7 +60,7 @@ form.addEventListener('submit', function (event) {
     } else if (key === 'text-here' && !value.trim()) {
       displayErrorMessage(field, 'Email body is required');
       isValid = false;
-    } else if (key === 'email' && !value.trim() && isMobileView) {
+    } else if (key === 'email' && !value.trim()) {
       displayErrorMessage(field, 'Email is required');
       isValid = false;
     } else if (
@@ -119,33 +119,3 @@ window.addEventListener('resize', function () {
 
   isMobileView = isCurrentMobileView;
 });
-
-// let formSubmission = document.getElementById("customer-contacts-form");
-// async function handleSubmit(event) {
-// event.preventDefault();
-// let status = document.getElementById("fill-field-error-message");
-// let data = new FormData(event.target);
-// fetch(event.target.action, {
-//   method: formSubmission.method,
-//   body: data,
-//   headers: {
-//     'Accept': 'application/json'
-// }
-// }).then(response => {
-//   if (response.ok) {
-//     status.innerHTML = "Thanks for your submission!";
-//     formSubmission.reset()
-//   } else {
-//     response.json().then(data => {
-//     if (Object.hasOwn(data, 'errors')) {
-//       status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-//     } else {
-//       status.innerHTML = "Oops! There was a problem submitting your form"
-//     }
-//   })
-// }
-// }).catch(error => {
-//   status.innerHTML = "Oops! There was a problem submitting your form"
-// });
-// }
-// formSubmission.addEventListener("submit", handleSubmit)
