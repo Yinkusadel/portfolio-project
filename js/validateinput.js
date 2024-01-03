@@ -22,10 +22,12 @@ form.addEventListener('submit', function (event) {
   let isValid = true;
   let emailValid = true;
 
-  if (!fullName.trim() && (!firstName.trim() || !lastName.trim())) {
+  const isMobileView = window.innerWidth <= 767;
+
+  if (!fullName.trim() && (!firstName.trim() || !lastName.trim()) && isMobileView) {
     displayErrorMessage(document.getElementById('fname'));
     isValid = false;
-  } else if (!fullName.trim() && (firstName.trim() || lastName.trim())) {
+  } else if (!fullName.trim() && (firstName.trim() || lastName.trim()) && !isMobileView) {
     formData.set('fname', `${firstName} ${lastName}`);
   }
 
@@ -36,16 +38,39 @@ form.addEventListener('submit', function (event) {
       return;
     }
 
-    if (key === 'fname' && !value.trim() && (!firstName.trim() || !lastName.trim())) {
+    if (
+      key === 'fname' &&
+      !value.trim() &&
+      (!firstName.trim() || !lastName.trim()) &&
+      isMobileView
+    ) {
       displayErrorMessage(document.getElementById('fname'), 'Full name is required');
       isValid = false;
-    } else if ((key === 'firstname' || key === 'lastname') && !value.trim() && !fullName.trim()) {
-      displayErrorMessage(field, `${key} is required`);
+    } else if (
+      (key === 'firstname' || key === 'lastname') &&
+      !value.trim() &&
+      !fullName.trim() &&
+      !isMobileView
+    ) {
+      displayErrorMessage(field, `${key === 'firstname' ? 'First' : 'Last'} name is required`);
       isValid = false;
     } else if (key === 'email' && value.trim() !== value.toLowerCase()) {
       displayErrorMessage(field, 'Email should be in lowercase');
       emailValid = false;
-    } else if (key !== 'fname' && key !== 'firstname' && key !== 'lastname' && !value.trim()) {
+    } else if (key === 'text-here' && !value.trim()) {
+      displayErrorMessage(field, 'Email body is required');
+      isValid = false;
+    } else if (key === 'email' && !value.trim() && isMobileView) {
+      displayErrorMessage(field, 'Email is required');
+      isValid = false;
+    } else if (
+      key !== 'fname' &&
+      key !== 'firstname' &&
+      key !== 'lastname' &&
+      key !== 'emailbody' &&
+      !value.trim() &&
+      !isMobileView
+    ) {
       displayErrorMessage(field, `${key} is required`);
       isValid = false;
     }
@@ -54,6 +79,45 @@ form.addEventListener('submit', function (event) {
   if (isValid && emailValid) {
     form.submit();
   }
+});
+
+const clearInputData = (isMobileView) => {
+  if (isMobileView) {
+    document.getElementById('firstname').value = '';
+    document.getElementById('lastname').value = '';
+    document.getElementById('fname').value = '';
+    document.getElementById('text-here').value = '';
+    document.getElementById('email').value = '';
+  } else {
+    document.getElementById('firstname').value = '';
+    document.getElementById('lastname').value = '';
+    document.getElementById('fname').value = '';
+    document.getElementById('text-here').value = '';
+    document.getElementById('email').value = '';
+  }
+};
+
+const clearErrors = () => {
+  document.querySelectorAll('.error-message').forEach((el) => el.remove());
+};
+
+const clearFormAndErrors = (isMobileView) => {
+  clearInputData(isMobileView);
+
+  clearErrors();
+};
+
+let isMobileView = window.innerWidth <= 767;
+
+window.addEventListener('resize', function () {
+  const currentWidth = window.innerWidth;
+  const isCurrentMobileView = currentWidth <= 767;
+
+  if (isCurrentMobileView !== isMobileView) {
+    clearFormAndErrors(isCurrentMobileView);
+  }
+
+  isMobileView = isCurrentMobileView;
 });
 
 // let formSubmission = document.getElementById("customer-contacts-form");
