@@ -67,7 +67,6 @@ form.addEventListener('submit', function (event) {
       key !== 'fname' &&
       key !== 'firstname' &&
       key !== 'lastname' &&
-      key !== 'emailbody' &&
       !value.trim() &&
       !isMobileView
     ) {
@@ -85,15 +84,8 @@ const clearInputData = (isMobileView) => {
   if (isMobileView) {
     document.getElementById('firstname').value = '';
     document.getElementById('lastname').value = '';
-    document.getElementById('fname').value = '';
-    document.getElementById('text-here').value = '';
-    document.getElementById('email').value = '';
   } else {
-    document.getElementById('firstname').value = '';
-    document.getElementById('lastname').value = '';
     document.getElementById('fname').value = '';
-    document.getElementById('text-here').value = '';
-    document.getElementById('email').value = '';
   }
 };
 
