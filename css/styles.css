@@ -426,6 +426,18 @@ textarea:focus-visible {
   border: 2px solid var(--textarea-green-border);
 }
 
+.error-message {
+  align-self: flex-start;
+  color: var(--red-color);
+  font-size: 12px;
+}
+
+.fill-field-error-message {
+  align-self: flex-start;
+  color: var(--red-color);
+  font-size: 12px;
+}
+
 .black-border {
   border-bottom: 0;
   border-left: 0;
