@@ -8,7 +8,7 @@ const displayErrorMessage = (field, message) => {
 
 const form = document.getElementById('customer-contacts-form');
 
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', function handleSubmit(event) {
   event.preventDefault();
 
   document.querySelectorAll('.error-message').forEach((el) => el.remove());
@@ -101,7 +101,7 @@ const clearFormAndErrors = (isMobileView) => {
 
 let isMobileView = window.innerWidth <= 767;
 
-window.addEventListener('resize', function () {
+window.addEventListener('resize', function resizeWindow() {
   const currentWidth = window.innerWidth;
   const isCurrentMobileView = currentWidth <= 767;
 
