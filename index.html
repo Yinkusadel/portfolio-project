@@ -312,9 +312,13 @@
           <div class="customer-contacts d-flex justify-center">
             <form
               class="customer-contacts-form d-flex"
+              id="customer-contacts-form"
+              name="customerContactsForm"
               action="https://formspree.io/f/xzblbbzd"
               method="post"
+              novalidate
             >
+              <p class="fill-field-error-message" id="fill-field-error-message"></p>
               <label for="fname">
                 <input
                   class="fname md-d-none"
@@ -366,6 +370,7 @@
                   required
                 />
               </label>
+              <p class="error-message" id="error-message"></p>
               <label for="text-here">
                 <textarea
                   class="customer-textarea"
@@ -373,8 +378,8 @@
                   name="text-here"
                   title="Enter text here:"
                   placeholder="Enter text here"
-                  required
                   maxlength="500"
+                  required
                 ></textarea>
               </label>
 
@@ -499,5 +504,6 @@
     <script src="js/project.js" type="module"></script>
     <script src="js/mobilemenu.js"></script>
     <script src="js/popup.js" type="module"></script>
+    <script src="js/validateinput.js" type="module"></script>
   </body>
 </html>
