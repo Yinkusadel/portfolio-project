@@ -1,16 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('form');
+  const form = document.customerContactsForm;
 
-  form.addEventListener('change', (e) => {
-    e.preventDefault();
+  form.addEventListener('change', () => {
     const formData = new FormData(form);
     const obj = Object.fromEntries(formData);
 
-    const json = JSON.stringify(obj);
-    localStorage.setItem('form', json);
+    const inputsToString = JSON.stringify(obj);
+    localStorage.setItem('portfolio-project.git', inputsToString);
   });
 
-  const storedData = localStorage.getItem('form');
+  const storedData = localStorage.getItem('portfolio-project.git');
 
   if (storedData) {
     const parsedData = JSON.parse(storedData);

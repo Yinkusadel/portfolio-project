@@ -78,7 +78,7 @@ form.addEventListener('submit', async function handleSubmit(event) {
 
   if (isValid && emailValid) {
     try {
-      const response = await fetch('https://formspree.io/f/xzblbbzd', {
+      const response = await fetch(form.action, {
         method: 'POST',
         body: formData,
         headers: {
@@ -86,12 +86,14 @@ form.addEventListener('submit', async function handleSubmit(event) {
         },
       });
 
-      if (!response.ok) {
-        responseMessage.textContent = 'Failed to submit the form. Please try again.';
-        responseMessage.classList.add('error-message');
-      } else {
+      if (response.ok) {
         responseMessage.textContent = 'Form submitted successfully!';
         responseMessage.classList.remove('error-message');
+        form.reset();
+        localStorage.clear();
+      } else {
+        responseMessage.textContent = 'Failed to submit the form. Please try again.';
+        responseMessage.classList.add('error-message');
       }
     } catch (error) {
       responseMessage.textContent = 'Error submitting the form. Please try again.';
