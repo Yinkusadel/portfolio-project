@@ -1,3 +1,5 @@
+const localStorageKey = 'portfolio-project.git';
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.customerContactsForm;
 
@@ -6,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const obj = Object.fromEntries(formData);
 
     const inputsToString = JSON.stringify(obj);
-    localStorage.setItem('portfolio-project.git', inputsToString);
+    localStorage.setItem(localStorageKey, inputsToString);
   });
 
-  const storedData = localStorage.getItem('portfolio-project.git');
+  const storedData = localStorage.getItem(localStorageKey);
 
   if (storedData) {
     const parsedData = JSON.parse(storedData);
@@ -22,3 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+export default localStorageKey;

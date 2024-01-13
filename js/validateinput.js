@@ -1,3 +1,5 @@
+import localStorageKey from './localstorage.js';
+
 const displayErrorMessage = (field, message) => {
   const errorMessage = document.createElement('p');
   errorMessage.classList.add('error-message');
@@ -90,7 +92,7 @@ form.addEventListener('submit', async function handleSubmit(event) {
         responseMessage.textContent = 'Form submitted successfully!';
         responseMessage.classList.remove('error-message');
         form.reset();
-        localStorage.clear();
+        localStorage.setItem(localStorageKey, null);
       } else {
         responseMessage.textContent = 'Failed to submit the form. Please try again.';
         responseMessage.classList.add('error-message');
