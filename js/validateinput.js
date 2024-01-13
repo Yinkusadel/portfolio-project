@@ -1,3 +1,5 @@
+import localStorageKey from './localstorage.js';
+
 const displayErrorMessage = (field, message) => {
   const errorMessage = document.createElement('p');
   errorMessage.classList.add('error-message');
@@ -7,8 +9,9 @@ const displayErrorMessage = (field, message) => {
 };
 
 const form = document.getElementById('customer-contacts-form');
+const responseMessage = document.createElement('p');
 
-form.addEventListener('submit', function handleSubmit(event) {
+form.addEventListener('submit', async function handleSubmit(event) {
   event.preventDefault();
 
   document.querySelectorAll('.error-message').forEach((el) => el.remove());
@@ -76,7 +79,30 @@ form.addEventListener('submit', function handleSubmit(event) {
   });
 
   if (isValid && emailValid) {
-    form.submit();
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        responseMessage.textContent = 'Form submitted successfully!';
+        responseMessage.classList.remove('error-message');
+        form.reset();
+        localStorage.setItem(localStorageKey, null);
+      } else {
+        responseMessage.textContent = 'Failed to submit the form. Please try again.';
+        responseMessage.classList.add('error-message');
+      }
+    } catch (error) {
+      responseMessage.textContent = 'Error submitting the form. Please try again.';
+      responseMessage.classList.add('error-message');
+    }
+
+    form.appendChild(responseMessage);
   }
 });
 
@@ -91,11 +117,11 @@ const clearInputData = (isMobileView) => {
 
 const clearErrors = () => {
   document.querySelectorAll('.error-message').forEach((el) => el.remove());
+  responseMessage.textContent = '';
 };
 
 const clearFormAndErrors = (isMobileView) => {
   clearInputData(isMobileView);
-
   clearErrors();
 };
 
